@@ -1,0 +1,43 @@
+<<<<<<< HEAD
+export const API_URL = "http://localhost:3001/api";
+
+export const loginUser = async (userData) => {
+  try {
+    const response = await fetch(`${API_URL}/users`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(userData),
+    });
+
+    const data = await response.json();
+    if (!response.ok) throw new Error("فشل في إنشاء الحساب، حاول مرة أخرى.");
+
+    return data;
+  } catch (error) {
+    throw error;
+  }
+};
+=======
+export const API_URL = "http://localhost:3001/api";
+
+export const loginUser = async (userData) => {
+  try {
+    const response = await fetch(`${API_URL}/users`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(userData),
+    });
+
+    const data = await response.json();
+    if (!response.ok) throw new Error("فشل في إنشاء الحساب، حاول مرة أخرى.");
+
+    return data;
+  } catch (error) {
+    throw error;
+  }
+};
+>>>>>>> e8a0b93e4ade8906b6713cf98a567d34cb64f685

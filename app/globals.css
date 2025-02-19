@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Bold";
+  src: url("./fonts/IBMPlexSansArabic-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Semi";
+  src: url("./fonts/IBMPlexSansArabic-SemiBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Regular";
+  src: url("./fonts/IBMPlexSansArabic-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.regular {
+  font-family: "Regular";
+}
+.semi {
+  font-family: "Semi";
+}
+.bold {
+  font-family: "Bold";
+}
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.wave-animation {
+  animation: wave 2s ease-in-out infinite;
+  transform-origin: 50% 90%;
+}
+.custom-checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #1d1a49;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.custom-checkbox:checked {
+  background-color: #1d1a49;
+  border-color: #1d1a49;
+}
+
+.custom-checkbox:checked::after {
+  content: "✔";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 14px;
+}
