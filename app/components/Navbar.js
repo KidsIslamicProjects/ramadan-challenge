@@ -29,10 +29,10 @@ const Navbar = () => {
       <Image src={Logo} alt="Logo" width={80} height={40} />
       <Link
         href="https://wa.me/96171708103"
-        className="flex gap-2 items-center"
+        className="flex flex-col items-center"
       >
-        <FaWhatsapp />
-        <span className="text-main semi">مجموعة الواتساب</span>
+        <FaWhatsapp className="text-main" />
+        <span className="text-main text-sm semi">مجموعة الواتساب</span>
       </Link>
     </nav>
   );

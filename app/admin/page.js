@@ -27,7 +27,10 @@ const Page = () => {
     e.preventDefault();
     try {
       // Adjust the URL to match your API endpoint
-      await axios.post("http://localhost:3001/api/task", formData);
+      await axios.post(
+        "https://ramadan-server-topaz.vercel.app/api/task",
+        formData
+      );
       alert("تم نشر المفكرة اليومية بنجاح!");
     } catch (error) {
       console.error("Error posting data", error);

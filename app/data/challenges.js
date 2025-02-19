@@ -1,6 +1,6 @@
 import Boy from "./images/Boy.svg";
 import Family from "./images/family.svg";
-import Palms from "./images/Palms.svg";
+import Palms from "./images/Palms.png";
 
 export const challenges = [
   {

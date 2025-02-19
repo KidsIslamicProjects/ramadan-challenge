@@ -69,7 +69,7 @@ export default function MaribChallenge() {
               </>
             )}
             <div className="absolute bottom-0 left-2">
-              <Image src={challenge.image} alt="Boy" width={65} height={65} />
+              <Image src={challenge.image} alt="Boy" width={75} height={75} />
             </div>
           </div>
         ))}
