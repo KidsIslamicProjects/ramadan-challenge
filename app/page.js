@@ -10,7 +10,7 @@ import Navbar from "./components/Navbar";
 export default function MaribChallenge() {
   const handleLogout = () => {
     localStorage.removeItem("userId");
-    window.location.href = "/login"; // Redirect after logout
+    window.location.href = "/login";
   };
   const [userId, setUserId] = useState(null);
 
