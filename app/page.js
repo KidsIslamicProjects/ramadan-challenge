@@ -8,6 +8,10 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import Navbar from "./components/Navbar";
 
 export default function MaribChallenge() {
+  const handleLogout = () => {
+    localStorage.removeItem("userId");
+    window.location.href = "/login"; // Redirect after logout
+  };
   const [userId, setUserId] = useState(null);
 
   useEffect(() => {
@@ -16,7 +20,7 @@ export default function MaribChallenge() {
   return (
     <div dir="rtl" className="bg-white min-h-screen">
       <Navbar />
-
+      <button onClick={handleLogout}>Logout</button>
       {/* Banner */}
       <div className="w-full h-auto mt-4">
         <Image src={Banner} alt="Banner" className="px-2" />
