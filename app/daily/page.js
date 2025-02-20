@@ -1,31 +1,105 @@
-import React from "react";
-import Image from "next/image";
-import Ribbon from "../data/images/Ribbon.svg";
+"use client";
+
+import React, { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import axios from "axios";
+import { IoLockClosed, IoLockOpen } from "react-icons/io5";
 import Lattern from "../data/images/latterns.png";
-import Notification from "../components/Notification";
+import Logo from "../data/images/LogoWithNoSlugn.svg";
+import Image from "next/image";
+const DailyPage = () => {
+  const [tasks, setTasks] = useState([]);
+  const [userProgress, setUserProgress] = useState([]);
+  const router = useRouter();
+  const [userId, setUserId] = useState(null);
 
-// Reusable Checkbox Component
-const Checkbox = ({ label }) => (
-  <label className="flex items-center gap-2 text-sm">
-    <input type="checkbox" className="custom-checkbox" />
-    {label}
-  </label>
-);
+  useEffect(() => {
+    const storedUserId = localStorage.getItem("userId");
+    if (!storedUserId) {
+      router.push("/login");
+    } else {
+      setUserId(storedUserId);
+    }
+  }, [router]);
 
-// Checkbox Data
-const checkboxes = [
-  "صلاة الفجر",
-  "صلاة الظهر",
-  "صلاة العصر",
-  "صلاة المغرب",
-  "صلاة العشاء",
-  "الورد القرآني",
-  "صيامي",
-  "زرع الفَسيلة",
-  "الصلاة على النّبي",
-];
+  useEffect(() => {
+    if (userId) {
+      axios
+        .get("https://ramadan-server-topaz.vercel.app/api/tasks")
+        .then((response) => {
+          const sortedTasks = response.data.sort(
+            (a, b) => a.gregorianDay - b.gregorianDay
+          );
+          setTasks(sortedTasks);
+        });
 
-const Page = () => {
+      axios
+        .get(`https://ramadan-server-topaz.vercel.app/api/users/${userId}`)
+        .then((response) => {
+          setUserProgress(response.data.dailyProgress);
+        });
+    }
+  }, [userId]);
+
+  if (userId === null) return null;
+
+  const today = new Date().getDate(); // Get today's Gregorian day
+
+  const getTaskStatus = (task) => {
+    const completedTask = userProgress.find(
+      (progress) => progress.hijriDate === task.hijriDate
+    );
+
+    if (completedTask) {
+      return {
+        status: "completed",
+        score: completedTask.score,
+      };
+    }
+
+    if (task.gregorianDay === today) {
+      return { status: "available" };
+    }
+
+    return { status: "locked" };
+  };
+
+  const arabicNumbers = [
+    "الأول",
+    "الثاني",
+    "الثالث",
+    "الرابع",
+    "الخامس",
+    "السادس",
+    "السابع",
+    "الثامن",
+    "التاسع",
+    "العاشر",
+    "الحادي عشر",
+    "الثاني عشر",
+    "الثالث عشر",
+    "الرابع عشر",
+    "الخامس عشر",
+    "السادس عشر",
+    "السابع عشر",
+    "الثامن عشر",
+    "التاسع عشر",
+    "العشرين",
+    "الحادي والعشرين",
+    "الثاني والعشرين",
+    "الثالث والعشرين",
+    "الرابع والعشرين",
+    "الخامس والعشرين",
+    "السادس والعشرين",
+    "السابع والعشرين",
+    "الثامن والعشرين",
+    "التاسع والعشرين",
+    "الثلاثين",
+  ];
+
+  const getArabicOrdinal = (index) =>
+    arabicNumbers[index] || `اليوم ${index + 1}`;
+
   return (
     <>
       <div className="absolute top-0 left-0 z-10">
@@ -33,96 +107,56 @@ const Page = () => {
       </div>
       <div className="absolute top-0 right-0 z-10">
         <Image src={Lattern} width={55} height={77} alt="lattern" />
-      </div>
+      </div>{" "}
       <div
+        className="flex bg-white min-h-screen flex-col items-center w-full py-6"
         dir="rtl"
-        className="bg-white relative flex flex-col items-center w-full py-6"
       >
-        <h1 className="text-xl bold text-main mb-2">
-          تحدّي مأرَب - يوميّات قائِد المُستقبَل
+        <Image src={Logo} width={50} height={50} alt="Logo" />
+        <h1 className="text-xl bold text-main my-2">
+          يوميّات قائِد المُستقبَل
         </h1>
-        <p className="text-sm text-secondary regular text-center mb-4 w-[65%]">
-          لا توجد خطوة عملاقة تصل بك إلى ما تريد, إنما يحتاج الأمر إلى الكثير من
+        <p className="text-sm text-secondary regular text-center mb-4 w-[90%]">
+          لا توجد خطوة عملاقة تصل بك إلى ما تريد، إنما يحتاج الأمر إلى الكثير من
           الخطوات الصغيرة لتبلغ ما تريد
         </p>
-        <div className="relative flex justify-center items-center w-full mb-2 mt-2">
-          <Image src={Ribbon} alt="Ribbon" className="w-[40%] max-w-lg" />
-          <span className="absolute text-white semi">الأوّل من رمضان</span>
-        </div>
+        <div className="w-[90%] p-4">
+          {tasks.length > 0 ? (
+            tasks.map((task, index) => {
+              const { status, score } = getTaskStatus(task);
 
-        <div className="flex justify-between items-end w-full px-6 mt-4 mb-2">
-          <h3 className=" text-secondary semi text-lg"> عِباداتي اليوميّة</h3>
-          <p className=" text-main bold text-sm">9 نقاط</p>
+              return (
+                <button
+                  key={task.gregorianDay}
+                  onClick={() =>
+                    status !== "locked" &&
+                    router.push(`/daily/${task.gregorianDay}`)
+                  }
+                  className={`w-full py-2 px-4 semi rounded-xs mb-2 flex items-center justify-between ${
+                    status === "locked"
+                      ? "bg-gray-400 text-main cursor-not-allowed"
+                      : status === "completed"
+                      ? "bg-green-700 text-white"
+                      : "bg-main text-white"
+                  }`}
+                  disabled={status === "locked"}
+                >
+                  <span>
+                    تحدّي اليَوم {getArabicOrdinal(index)}
+                    {status === "completed" && ` -  علامتك هي ${score}`}
+                    {status === "locked" && " -  غير مُتاح الآن"}
+                  </span>
+                  {status === "locked" ? <IoLockClosed /> : <IoLockOpen />}
+                </button>
+              );
+            })
+          ) : (
+            <p className="text-center text-gray-500">لا توجد تحديات متاحة</p>
+          )}
         </div>
-        <div className="bg-[#f7f6f6] w-[90%] p-4">
-          <div className="grid grid-cols-3 gap-4 w-full text-xl semi">
-            {checkboxes.map((label, index) => (
-              <Checkbox key={index} label={label} />
-            ))}
-          </div>
-        </div>
-        <div className="flex justify-between items-end w-full px-6 mt-4 mb-2">
-          <h3 className=" text-secondary semi text-lg">الورد الحديثي</h3>
-          <p className=" text-main bold text-sm">نقطتين</p>
-        </div>
-
-        <div className="bg-[#f7f6f6] w-[90%] p-4">
-          <p className="semi text-main text-lg text-right">
-            {" "}
-            قَالَ النَّبِيُّ صلى الله عليه وسلم : ”مَن صامَ رَمَضانَ إيمانًا
-            واحْتِسابًا غُفِرَ له ما تَقَدَّمَ مِن ذَنْبِهِ.“{" "}
-          </p>
-        </div>
-        <div className="flex justify-between items-end w-full px-6 mt-1">
-          <div className="flex gap-2">
-            <input type="checkbox" className="custom-checkbox w-2 h-2" />
-            <label className="text-secondary semi">
-              تمّ حفظ وفهم الحديث بفضل الله
-            </label>
-          </div>
-          <div></div>
-        </div>
-        <div className="flex justify-between items-end w-full px-6 mt-4 mb-2">
-          <h3 className=" text-secondary semi text-lg"> تفسير اليوم</h3>
-          <p className=" text-main bold text-sm">نقطتين</p>
-        </div>
-
-        <div className="bg-[#f7f6f6] w-[90%] p-4">
-          <p className="semi text-main text-lg text-right">
-            مَن هُم ﴿الْمَغْضُوبِ عَلَيْهِم﴾ و ﴿الضَّالِّينَ﴾ المذكورين في سورة
-            الفاتحة؟
-          </p>
-          <p className="regular text-main text-right mt-2">
-            الْمَغْضُوبِ عَلَيْهِم: هم اليَهود. والضَّالِّينَ: هم النَصارى.
-          </p>
-        </div>
-        <div className="flex justify-between items-end w-full px-6 mt-1">
-          <div className="flex gap-2">
-            <input type="checkbox" className="custom-checkbox w-2 h-2" />
-            <label className="text-secondary semi">
-              تمّ حفظ وفهم التفسير بفضل الله
-            </label>
-          </div>
-          <div></div>
-        </div>
-        <div className="flex justify-between items-end w-full px-6 mt-4 mb-2">
-          <h3 className=" text-secondary semi text-lg"> شاركنا مشاعرك اليوم</h3>
-          <p className=" text-main bold text-sm">نقطتين</p>
-        </div>
-
-        <div className="bg-[#f7f6f6] w-[90%] p-4">
-          <textarea
-            className="w-full p-3 semi text-main rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-main focus:border-transparent"
-            rows="5"
-            placeholder="ما الذي أسعدك، أحزنك، أو أزعجك اليوم؟"
-          ></textarea>
-        </div>
-        <button className="bg-main text-white py-2 w-[80%] rounded-xs semi text-lg  mt-4">
-          إرســــــــال الأجــوبــــــــــــــة
-        </button>
       </div>
     </>
   );
 };
 
-export default Page;
+export default DailyPage;

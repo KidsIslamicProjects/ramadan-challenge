@@ -1,12 +1,16 @@
 "use client";
 import React, { useState } from "react";
 import { FaCaretDown, FaCaretUp } from "react-icons/fa";
-import axios from "axios"; // You'll need axios to make API calls
+import axios from "axios";
+import StudentsTable from "./students";
 
 const Page = () => {
+  const [isLoading, setIsLoading] = useState(false);
   const [openIndex, setOpenIndex] = useState(null);
   const [formData, setFormData] = useState({
     hijriDate: "",
+    gregorianDate: "",
+    gregorianMonth: "",
     hadith: "",
     tafseerQuestion: "",
     tafseerAnswer: "",
@@ -25,15 +29,17 @@ const Page = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
     try {
-      // Adjust the URL to match your API endpoint
       await axios.post(
         "https://ramadan-server-topaz.vercel.app/api/task",
         formData
       );
+      setIsLoading(false);
       alert("تم نشر المفكرة اليومية بنجاح!");
     } catch (error) {
       console.error("Error posting data", error);
+      setIsLoading(false);
       alert("حدث خطأ أثناء نشر المفكرة اليومية");
     }
   };
@@ -42,6 +48,24 @@ const Page = () => {
       title: "نشر الـمفكرة اليومية",
       content: (
         <form onSubmit={handleSubmit} className="space-y-4">
+          <div>
+            <label
+              htmlFor="gregorianDay"
+              className="block mb-2 semi text-secondary"
+            >
+              اليوم الميلادي
+            </label>
+            <input
+              id="gregorianDay"
+              type="number"
+              placeholder="أدخل اليوم الميلادي"
+              className="border p-2 regular rounded w-full"
+              value={formData.gregorianDay}
+              onChange={handleChange}
+              name="gregorianDay"
+            />
+          </div>
+
           <div>
             <label
               htmlFor="hijriDate"
@@ -111,7 +135,7 @@ const Page = () => {
             type="submit"
             className="w-full semi p-2 bg-main text-white rounded"
           >
-            نشــــــــــر
+            {isLoading ? "جاري نشر الوِرد" : "نشــــــــــر"}
           </button>
         </form>
       ),
@@ -140,6 +164,10 @@ const Page = () => {
         </form>
       ),
     },
+    {
+      title: "بيانات المشاركين",
+      content: <StudentsTable />,
+    },
   ];
   return (
     <div dir="rtl" className="bg-white min-h-screen p-6">
@@ -159,9 +187,9 @@ const Page = () => {
                 {item.title}
               </button>
               {openIndex === index ? (
-                <FaCaretUp className="text-main" />
+                <FaCaretUp className="text-main mx-3" />
               ) : (
-                <FaCaretDown className="text-main" />
+                <FaCaretDown className="text-main mx-3" />
               )}
             </div>
             {openIndex === index && (

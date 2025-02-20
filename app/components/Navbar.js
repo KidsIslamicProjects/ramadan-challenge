@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import Logo from "../data/images/logo.svg";
-import Hand from "../data/images/Hand.svg";
 import { FaWhatsapp } from "react-icons/fa";
 
 const Navbar = () => {
@@ -16,8 +15,11 @@ const Navbar = () => {
       {userId ? (
         <div className="flex gap-2">
           {" "}
-          <span className="text-main semi">مرحباً بك</span>
-          <Image alt="hand" src={Hand} className="w-5 mb-1 wave-animation" />
+          <Link href="/profile">
+            <button className="bg-main text-white text-xs px-2 py-1 rounded-sm regular">
+              ملفَك الشخصيّ
+            </button>
+          </Link>
         </div>
       ) : (
         <Link href="/login">
