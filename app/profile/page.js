@@ -5,6 +5,7 @@ import Lattern from "../data/images/latterns.png";
 import Logo from "../data/images/LogoWithNoSlugn.svg";
 import Image from "next/image";
 import Link from "next/link";
+
 const Profile = () => {
   const [user, setUser] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -60,9 +61,17 @@ const Profile = () => {
 
   if (!user) {
     return (
-      <div className="text-center mt-10 text-lg text-red-500">
-        حدث خطأ أثناء جلب البيانات
-      </div>
+      <>
+        <div className="text-center mt-10 text-lg text-red-700 semi">
+          حدث خطأ أثناء جلب البيانات
+        </div>
+        <button
+          onClick={handleLogout}
+          className="bg-red-700 semi text-white py-2 w-[75%] rounded-xs"
+        >
+          {isLoading ? "جاري تسجيل الخــــروج ..." : "تســــجيل خــــروج"}
+        </button>
+      </>
     );
   }
 
