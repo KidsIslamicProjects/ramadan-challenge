@@ -1,11 +1,14 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import Image from "next/image";
+import axios from "axios";
+import confetti from "canvas-confetti";
+import Notification from "../../components/Notification"; // Adjust path if needed
+
 import Ribbon from "../../data/images/Ribbon.svg";
 import Lattern from "../../data/images/latterns.png";
-import axios from "axios";
 
 const Checkbox = ({ label, onChange }) => (
   <label className="flex items-center gap-2 text-sm">
@@ -28,17 +31,20 @@ const checkboxes = [
 
 const DailyTaskPage = () => {
   const { gregorianDay } = useParams();
+  const router = useRouter();
   const [taskData, setTaskData] = useState(null);
   const [selectedTasks, setSelectedTasks] = useState([]);
   const [hadithChecked, setHadithChecked] = useState(false);
   const [tafseerChecked, setTafseerChecked] = useState(false);
   const [feelings, setFeelings] = useState("");
+  const [notification, setNotification] = useState({ message: "", type: "" });
 
   const handleCheckboxChange = (label) => {
     setSelectedTasks((prev) =>
       prev.includes(label) ? prev.filter((t) => t !== label) : [...prev, label]
     );
   };
+
   const handleSubmit = async () => {
     const userId = localStorage.getItem("userId");
     const payload = {
@@ -51,15 +57,33 @@ const DailyTaskPage = () => {
     };
 
     try {
-      const response = await axios.post(
+      await axios.post(
         "https://ramadan-server-topaz.vercel.app/api/tasks/submit",
         payload
       );
-      alert("تم إرسال الإجابات بنجاح!");
+
+      // Trigger confetti animation
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
+
+      // Show success notification
+      setNotification({ message: "تم إرسال الإجابات بنجاح!", type: "success" });
+
+      // Redirect to home page after a delay
+      setTimeout(() => {
+        router.push("/");
+      }, 2000);
     } catch (error) {
-      alert(error.response?.data?.error || "حدث خطأ أثناء الإرسال.");
+      setNotification({
+        message: error.response?.data?.error || "حدث خطأ أثناء الإرسال.",
+        type: "error",
+      });
     }
   };
+
   useEffect(() => {
     axios
       .get("https://ramadan-server-topaz.vercel.app/api/tasks")
@@ -81,12 +105,15 @@ const DailyTaskPage = () => {
 
   return (
     <>
+      <Notification message={notification.message} type={notification.type} />
+
       <div className="absolute top-0 left-0 z-10">
         <Image src={Lattern} width={55} height={77} alt="lattern" />
       </div>
       <div className="absolute top-0 right-0 z-10">
         <Image src={Lattern} width={55} height={77} alt="lattern" />
       </div>
+
       <div
         dir="rtl"
         className="bg-white relative flex flex-col items-center w-full py-6"
@@ -98,14 +125,12 @@ const DailyTaskPage = () => {
           لا توجد خطوة عملاقة تصل بك إلى ما تريد، إنما يحتاج الأمر إلى الكثير من
           الخطوات الصغيرة لتبلغ ما تريد
         </p>
+
         <div className="relative flex justify-center items-center w-full mb-2 mt-2">
           <Image src={Ribbon} alt="Ribbon" className="w-[40%] max-w-lg" />
           <span className="absolute text-white semi">{taskData.hijriDate}</span>
         </div>
-        <div className="flex justify-between items-end w-full px-6 mt-4 mb-2">
-          <h3 className="text-secondary semi text-lg">عِباداتي اليوميّة</h3>
-          <p className="text-main bold text-sm">9 نقاط</p>
-        </div>
+
         <div className="bg-[#f7f6f6] w-[90%] p-4">
           <div className="grid grid-cols-3 gap-4 w-full text-xl semi">
             {checkboxes.map((label, index) => (
@@ -117,13 +142,11 @@ const DailyTaskPage = () => {
             ))}
           </div>
         </div>
-        <div className="flex justify-between items-end w-full px-6 mt-4 mb-2">
-          <h3 className="text-secondary semi text-lg">الورد الحديثي</h3>
-          <p className="text-main bold text-sm">نقطتين</p>
-        </div>
+
         <div className="bg-[#f7f6f6] w-[90%] p-4">
           <p className="semi text-main text-lg text-right">{taskData.hadith}</p>
         </div>
+
         <div className="flex justify-between items-end w-full px-6 mt-1">
           <div className="flex gap-2">
             <input
@@ -137,10 +160,7 @@ const DailyTaskPage = () => {
             </label>
           </div>
         </div>
-        <div className="flex justify-between items-end w-full px-6 mt-4 mb-2">
-          <h3 className="text-secondary semi text-lg">تفسير اليوم</h3>
-          <p className="text-main bold text-sm">نقطتين</p>
-        </div>
+
         <div className="bg-[#f7f6f6] w-[90%] p-4">
           <p className="semi text-main text-lg text-right">
             {taskData.tafseerQuestion}
@@ -149,6 +169,7 @@ const DailyTaskPage = () => {
             {taskData.tafseerAnswer}
           </p>
         </div>
+
         <div className="flex justify-between items-end w-full px-6 mt-1">
           <div className="flex gap-2">
             <input
@@ -162,10 +183,7 @@ const DailyTaskPage = () => {
             </label>
           </div>
         </div>
-        <div className="flex justify-between items-end w-full px-6 mt-4 mb-2">
-          <h3 className="text-secondary semi text-lg">شاركنا مشاعرك اليوم</h3>
-          <p className="text-main bold text-sm"></p>
-        </div>
+
         <div className="bg-[#f7f6f6] w-[90%] p-4">
           <textarea
             onChange={(e) => setFeelings(e.target.value)}
@@ -175,6 +193,7 @@ const DailyTaskPage = () => {
             placeholder="ما الذي أسعدك، أحزنك، أو أزعجك اليوم؟"
           ></textarea>
         </div>
+
         <button
           onClick={handleSubmit}
           className="bg-main text-white py-2 w-[80%] rounded-xs semi text-lg mt-4"

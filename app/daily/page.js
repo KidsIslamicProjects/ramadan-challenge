@@ -7,9 +7,12 @@ import { IoLockClosed, IoLockOpen } from "react-icons/io5";
 import Lattern from "../data/images/latterns.png";
 import Logo from "../data/images/LogoWithNoSlugn.svg";
 import Image from "next/image";
+import Loading from "../loading";
 const DailyPage = () => {
   const [tasks, setTasks] = useState([]);
   const [userProgress, setUserProgress] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   const router = useRouter();
   const [userId, setUserId] = useState(null);
 
@@ -24,6 +27,7 @@ const DailyPage = () => {
 
   useEffect(() => {
     if (userId) {
+      setLoading(true);
       axios
         .get("https://ramadan-server-topaz.vercel.app/api/tasks")
         .then((response) => {
@@ -31,6 +35,7 @@ const DailyPage = () => {
             (a, b) => a.gregorianDay - b.gregorianDay
           );
           setTasks(sortedTasks);
+          setLoading(false);
         });
 
       axios
@@ -63,7 +68,9 @@ const DailyPage = () => {
 
     return { status: "locked" };
   };
-
+  if (loading) {
+    return <Loading />;
+  }
   const arabicNumbers = [
     "الأول",
     "الثاني",

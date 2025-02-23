@@ -52,7 +52,7 @@ export default function MaribChallenge() {
             {userId ? (
               <>
                 <Link href={challenge.link}>
-                  <button className="mt-4 bg-main semi flex gap-2 justify-center items-center text-white px-4 py-2 rounded">
+                  <button className="mt-4 bg-main semi flex gap-2 justify-center items-center text-white px-2 py-1 rounded-sm ">
                     <FaArrowRightLong className="text-lg" />
                     الانتقال للتحدي
                   </button>
@@ -68,8 +68,13 @@ export default function MaribChallenge() {
                 </button>
               </>
             )}
-            <div className="absolute bottom-0 left-2">
-              <Image src={challenge.image} alt="Boy" width={75} height={75} />
+            <div className="absolute bottom-0 left-1">
+              <Image
+                src={challenge.image}
+                alt="Boy"
+                className="w-auto h-[93px]"
+                style={{ width: challenge.width }}
+              />
             </div>
           </div>
         ))}

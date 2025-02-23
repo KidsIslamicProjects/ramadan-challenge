@@ -1,0 +1,32 @@
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+self["webpackHotUpdate_N_E"]("app/Fasael/page",{
+
+/***/ "(app-pages-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-client-entry-loader.js?modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CUser%5C%5CDesktop%5C%5CRamadan%5C%5Cramadan-ui%5C%5Capp%5C%5Cdata%5C%5Cimages%5C%5CSoil.svg%22%2C%22ids%22%3A%5B%22*%22%5D%7D&modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CUser%5C%5CDesktop%5C%5CRamadan%5C%5Cramadan-ui%5C%5Cnode_modules%5C%5Cnext%5C%5Cdist%5C%5Cclient%5C%5Cimage-component.js%22%2C%22ids%22%3A%5B%5D%7D&server=false!":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-flight-client-entry-loader.js?modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CUser%5C%5CDesktop%5C%5CRamadan%5C%5Cramadan-ui%5C%5Capp%5C%5Cdata%5C%5Cimages%5C%5CSoil.svg%22%2C%22ids%22%3A%5B%22*%22%5D%7D&modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CUser%5C%5CDesktop%5C%5CRamadan%5C%5Cramadan-ui%5C%5Cnode_modules%5C%5Cnext%5C%5Cdist%5C%5Cclient%5C%5Cimage-component.js%22%2C%22ids%22%3A%5B%5D%7D&server=false! ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+eval(__webpack_require__.ts("Promise.resolve(/*! import() eager */).then(__webpack_require__.bind(__webpack_require__, /*! ./app/data/images/Soil.svg */ \"(app-pages-browser)/./app/data/images/Soil.svg\"));\n;\nPromise.resolve(/*! import() eager */).then(__webpack_require__.t.bind(__webpack_require__, /*! ./node_modules/next/dist/client/image-component.js */ \"(app-pages-browser)/./node_modules/next/dist/client/image-component.js\", 23));\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwcC1wYWdlcy1icm93c2VyKS8uL25vZGVfbW9kdWxlcy9uZXh0L2Rpc3QvYnVpbGQvd2VicGFjay9sb2FkZXJzL25leHQtZmxpZ2h0LWNsaWVudC1lbnRyeS1sb2FkZXIuanM/bW9kdWxlcz0lN0IlMjJyZXF1ZXN0JTIyJTNBJTIyQyUzQSU1QyU1Q1VzZXJzJTVDJTVDVXNlciU1QyU1Q0Rlc2t0b3AlNUMlNUNSYW1hZGFuJTVDJTVDcmFtYWRhbi11aSU1QyU1Q2FwcCU1QyU1Q2RhdGElNUMlNUNpbWFnZXMlNUMlNUNTb2lsLnN2ZyUyMiUyQyUyMmlkcyUyMiUzQSU1QiUyMiolMjIlNUQlN0QmbW9kdWxlcz0lN0IlMjJyZXF1ZXN0JTIyJTNBJTIyQyUzQSU1QyU1Q1VzZXJzJTVDJTVDVXNlciU1QyU1Q0Rlc2t0b3AlNUMlNUNSYW1hZGFuJTVDJTVDcmFtYWRhbi11aSU1QyU1Q25vZGVfbW9kdWxlcyU1QyU1Q25leHQlNUMlNUNkaXN0JTVDJTVDY2xpZW50JTVDJTVDaW1hZ2UtY29tcG9uZW50LmpzJTIyJTJDJTIyaWRzJTIyJTNBJTVCJTVEJTdEJnNlcnZlcj1mYWxzZSEiLCJtYXBwaW5ncyI6IkFBQUEsOEtBQStHO0FBQy9HO0FBQ0Esb09BQXdJIiwic291cmNlcyI6WyIiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0KC8qIHdlYnBhY2tNb2RlOiBcImVhZ2VyXCIgKi8gXCJDOlxcXFxVc2Vyc1xcXFxVc2VyXFxcXERlc2t0b3BcXFxcUmFtYWRhblxcXFxyYW1hZGFuLXVpXFxcXGFwcFxcXFxkYXRhXFxcXGltYWdlc1xcXFxTb2lsLnN2Z1wiKTtcbjtcbmltcG9ydCgvKiB3ZWJwYWNrTW9kZTogXCJlYWdlclwiICovIFwiQzpcXFxcVXNlcnNcXFxcVXNlclxcXFxEZXNrdG9wXFxcXFJhbWFkYW5cXFxccmFtYWRhbi11aVxcXFxub2RlX21vZHVsZXNcXFxcbmV4dFxcXFxkaXN0XFxcXGNsaWVudFxcXFxpbWFnZS1jb21wb25lbnQuanNcIik7XG4iXSwibmFtZXMiOltdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(app-pages-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-client-entry-loader.js?modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CUser%5C%5CDesktop%5C%5CRamadan%5C%5Cramadan-ui%5C%5Capp%5C%5Cdata%5C%5Cimages%5C%5CSoil.svg%22%2C%22ids%22%3A%5B%22*%22%5D%7D&modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CUser%5C%5CDesktop%5C%5CRamadan%5C%5Cramadan-ui%5C%5Cnode_modules%5C%5Cnext%5C%5Cdist%5C%5Cclient%5C%5Cimage-component.js%22%2C%22ids%22%3A%5B%5D%7D&server=false!\n"));
+
+/***/ }),
+
+/***/ "(app-pages-browser)/./app/data/images/Soil.svg":
+/*!**********************************!*\
+  !*** ./app/data/images/Soil.svg ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval(__webpack_require__.ts("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\"src\":\"/_next/static/media/Soil.35645fbb.svg\",\"height\":85,\"width\":520,\"blurWidth\":0,\"blurHeight\":0});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwcC1wYWdlcy1icm93c2VyKS8uL2FwcC9kYXRhL2ltYWdlcy9Tb2lsLnN2ZyIsIm1hcHBpbmdzIjoiOzs7O0FBQUEsaUVBQWUsQ0FBQyxtR0FBbUciLCJzb3VyY2VzIjpbIkM6XFxVc2Vyc1xcVXNlclxcRGVza3RvcFxcUmFtYWRhblxccmFtYWRhbi11aVxcYXBwXFxkYXRhXFxpbWFnZXNcXFNvaWwuc3ZnIl0sInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBkZWZhdWx0IHtcInNyY1wiOlwiL19uZXh0L3N0YXRpYy9tZWRpYS9Tb2lsLjM1NjQ1ZmJiLnN2Z1wiLFwiaGVpZ2h0XCI6ODUsXCJ3aWR0aFwiOjUyMCxcImJsdXJXaWR0aFwiOjAsXCJibHVySGVpZ2h0XCI6MH07Il0sIm5hbWVzIjpbXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(app-pages-browser)/./app/data/images/Soil.svg\n"));
+
+/***/ })
+
+});
