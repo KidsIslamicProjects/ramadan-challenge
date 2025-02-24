@@ -4,10 +4,10 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import { IoLockClosed, IoLockOpen } from "react-icons/io5";
-import Lattern from "../data/images/latterns.png";
-import Logo from "../data/images/LogoWithNoSlugn.svg";
-import Image from "next/image";
 import Loading from "../loading";
+import Logo from "../components/Logo";
+import Header from "../components/Header";
+
 const DailyPage = () => {
   const [tasks, setTasks] = useState([]);
   const [userProgress, setUserProgress] = useState([]);
@@ -48,7 +48,7 @@ const DailyPage = () => {
 
   if (userId === null) return null;
 
-  const today = new Date().getDate(); // Get today's Gregorian day
+  const today = new Date().getDate();
 
   const getTaskStatus = (task) => {
     const completedTask = userProgress.find(
@@ -109,18 +109,13 @@ const DailyPage = () => {
 
   return (
     <>
-      <div className="absolute top-0 left-0 z-10">
-        <Image src={Lattern} width={55} height={77} alt="lattern" />
-      </div>
-      <div className="absolute top-0 right-0 z-10">
-        <Image src={Lattern} width={55} height={77} alt="lattern" />
-      </div>{" "}
+      <Header />
       <div
-        className="flex bg-white min-h-screen flex-col items-center w-full py-6"
+        className="flex bg-white min-h-screen flex-col items-center w-full py-8"
         dir="rtl"
       >
-        <Image src={Logo} width={50} height={50} alt="Logo" />
-        <h1 className="text-xl bold text-main my-2">
+        <Logo />
+        <h1 className="text-xl bold text-main mb-2">
           يوميّات قائِد المُستقبَل
         </h1>
         <p className="text-sm text-secondary regular text-center mb-4 w-[90%]">

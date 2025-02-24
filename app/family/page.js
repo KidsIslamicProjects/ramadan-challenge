@@ -1,28 +1,22 @@
 import React from "react";
 import Image from "next/image";
-import Lattern from "../data/images/latterns.png";
 import { challengesData } from "../data/challengesData";
 import { FaArrowRight } from "react-icons/fa6";
+import Header from "../components/Header";
+import Logo from "../components/Logo";
 
 export default function Page() {
   return (
     <div className="bg-white min-h-screen">
-      {/* Latern Decorations */}
-      <div className="absolute top-0 left-0 z-10">
-        <Image src={Lattern} width={55} height={77} alt="lattern" />
-      </div>
-      <div className="absolute top-0 right-0 z-10">
-        <Image src={Lattern} width={55} height={77} alt="lattern" />
-      </div>
+      <Header />
 
-      {/* Page Header */}
-      <div className="flex flex-col justify-center items-center pt-10">
+      <div className="flex flex-col justify-center items-center pt-8">
+        <Logo />
         <h1 className="text-xl bold text-main mb-2">
           عائلَتي تحتَ كنفِ النُّبوة
         </h1>
         <p className="text-sm text-secondary regular text-center mb-4 w-[65%]">
-          لا توجد خطوة عملاقة تصل بك إلى ما تريد، إنما يحتاج الأمر إلى الكثير من
-          الخطوات الصغيرة لتبلغ ما تريد.
+          لنجعل البيـــت منارة إيمانيّة إشراقُها التحديات العائلية{" "}
         </p>
       </div>
 

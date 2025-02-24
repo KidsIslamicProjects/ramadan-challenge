@@ -1,3 +1,7 @@
 {
-  "/Fasael/page": "app/Fasael/page.js"
+  "/daily/[gregorianDay]/page": "app/daily/[gregorianDay]/page.js",
+  "/page": "app/page.js",
+  "/profile/page": "app/profile/page.js",
+  "/admin/page": "app/admin/page.js",
+  "/daily/page": "app/daily/page.js"
 }

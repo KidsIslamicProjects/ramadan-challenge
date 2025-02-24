@@ -1,21 +1,23 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import SignupImage from "../data/images/Login.svg";
-import Lattern from "../data/images/latterns.png";
-import Logo from "../data/images/LogoWithNoSlugn.svg";
 import Image from "next/image";
 import Notification from "../components/Notification";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import confetti from "canvas-confetti";
+import Header from "../components/Header";
+import Logo from "../components/Logo";
+
 const Signup = () => {
   const [formData, setFormData] = useState({
     name: "",
     password: "",
     age: "",
+    gender: "",
+    phoneNumber: "",
   });
-
   const [isLoading, setIsLoading] = useState(false);
-
   const [notification, setNotification] = useState({ message: "", type: "" });
 
   const router = useRouter();
@@ -34,7 +36,7 @@ const Signup = () => {
     e.preventDefault();
     setIsLoading(true);
     setNotification(null);
-
+    console.log("Form Data before sending:", formData);
     try {
       const response = await fetch(
         "https://ramadan-server-topaz.vercel.app/api/users",
@@ -51,12 +53,16 @@ const Signup = () => {
 
       const user = await response.json();
       localStorage.setItem("userId", user._id);
-
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
       setNotification({ message: "تم إنشاء الحساب بنجاح!", type: "success" });
 
       setTimeout(() => {
         router.push("/");
-      }, 2000);
+      }, 3000);
     } catch (error) {
       setNotification({ message: error.message, type: "error" });
     } finally {
@@ -66,13 +72,7 @@ const Signup = () => {
 
   return (
     <>
-      {" "}
-      <div className="absolute top-0 left-0 z-10">
-        <Image src={Lattern} width={55} height={77} alt="lattern" />
-      </div>
-      <div className="absolute top-0 right-0 z-10">
-        <Image src={Lattern} width={55} height={77} alt="lattern" />
-      </div>
+      <Header />
       <div
         dir="rtl"
         className="flex flex-col-reverse justify-between px-4 pt-8 lg:flex-row-reverse lg:justify-between lg:gap-12"
@@ -85,21 +85,13 @@ const Signup = () => {
             src={SignupImage}
           />
         </div>
-
         {/* Vertical Line */}
         <div className="hidden lg:block w-px bg-gray-300 mx-4"></div>
         <hr className="block lg:hidden text-main my-12" />
-
-        {/* Login Form */}
+        {/* Signup Form */}
         <div className="flex-1">
           <div className="mb-6 flex flex-col gap-1 text-center md:text-right">
-            <Image
-              alt="logo"
-              src={Logo}
-              width={45}
-              height={45}
-              className="mb-2 mx-auto"
-            />
+            <Logo />
             <h3 className="text-main bold text-lg">صفحة إنشاء حساب جديد</h3>
             <p className="text-secondary regular">
               أهلاً وسهلاً بكَ في تحدّي مأرب! كن جاهزاً لرحلة مليئة بالتحدّيات
@@ -107,7 +99,6 @@ const Signup = () => {
             </p>
           </div>
 
-          {/* Notification */}
           {notification && (
             <Notification
               message={notification.message}
@@ -119,24 +110,30 @@ const Signup = () => {
             {[
               {
                 label: "اسمك الثلاثي -باللغة العربية-",
-                placeholder: "ادخل اسمك الثلاثي هنا(مثال: خضر خالد حسن)",
+                placeholder: "ادخل اسمك الثلاثي هنا",
                 type: "text",
                 name: "name",
               },
               {
                 label: "كلمة المرور",
-                placeholder: "ادخل كلمة المرور هنا، لا تنساها يا بطل!",
+                placeholder: "ادخل كلمة المرور هنا",
                 type: "password",
                 name: "password",
               },
               {
-                label: " العمر",
-                placeholder: "",
+                label: "العمر",
+                placeholder: "ادخل عمرك هنا، مثال: 12",
                 type: "number",
                 name: "age",
               },
+              {
+                label: "رقم الـهاتف",
+                placeholder: "ادخل رقم الهاتف",
+                type: "number",
+                name: "phoneNumber",
+              },
             ].map(({ label, placeholder, type, name }) => (
-              <div key={label} className="flex flex-col gap-1">
+              <div key={name} className="flex flex-col gap-1">
                 <label className="text-main text-right semi">{label}</label>
                 <input
                   type={type}
@@ -150,6 +147,21 @@ const Signup = () => {
               </div>
             ))}
 
+            {/* Gender Selection */}
+            <div className="flex flex-col gap-1">
+              <label className="text-main text-right semi">الجنس</label>
+              <select
+                name="gender"
+                value={formData.gender}
+                onChange={handleChange}
+                className="bg-[#F4F4F4] rounded-sm shadow py-2 px-3 w-full text-right regular"
+              >
+                <option value="">اختر الجنس</option>
+                <option value="ذكر">ذكر</option>
+                <option value="أنثى">أنثى</option>
+              </select>
+            </div>
+
             {/* Submit Button */}
             <div className="flex flex-col gap-2">
               <button
@@ -161,12 +173,13 @@ const Signup = () => {
               </button>
             </div>
           </form>
+
           <Link
             href="/login"
             className="text-secondary text-sm regular pt-4 flex items-center justify-center"
           >
             لديك حساب مُسبقاً؟{" "}
-            <span className="underline">الانتقال لصفحة تسجيل الدخول</span>
+            <span className="underline semi">الانتقال لصفحة تسجيل الدخول</span>
           </Link>
         </div>
       </div>

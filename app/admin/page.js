@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { FaCaretDown, FaCaretUp } from "react-icons/fa";
 import axios from "axios";
 import StudentsTable from "./students";
-
+import DoleAdminForm from "./DoleForm";
 const Page = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [openIndex, setOpenIndex] = useState(null);
@@ -154,15 +154,7 @@ const Page = () => {
     },
     {
       title: "نشر فسائل الخير",
-      content: (
-        <form>
-          <input
-            type="text"
-            placeholder="إدخال بيانات"
-            className="border p-2 rounded w-full"
-          />
-        </form>
-      ),
+      content: <DoleAdminForm />,
     },
     {
       title: "بيانات المشاركين",

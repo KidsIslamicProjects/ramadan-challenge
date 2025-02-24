@@ -159,7 +159,7 @@ const Login = () => {
             className="text-secondary text-sm regular pt-4 flex items-center justify-center"
           >
             ليس لديك حساب؟
-            <span className="underline"> أنشئ حساب جديد من هنا</span>
+            <span className="underline semi"> أنشئ حساب جديد من هنا</span>
           </Link>
         </div>
       </div>

@@ -1,10 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import Lattern from "../data/images/latterns.png";
-import Logo from "../data/images/LogoWithNoSlugn.svg";
-import Image from "next/image";
 import Link from "next/link";
+import Header from "../components/Header";
+import Logo from "../components/Logo";
 
 const Profile = () => {
   const [user, setUser] = useState({});
@@ -34,7 +33,6 @@ const Profile = () => {
           0;
 
         setUser({ ...data, totalScore });
-        console.log(data);
       } catch (error) {
         console.error(error);
       } finally {
@@ -62,19 +60,18 @@ const Profile = () => {
 
   return (
     <>
-      <div className="absolute top-0 left-0 z-10">
-        <Image src={Lattern} width={55} height={77} alt="lattern" />
-      </div>
-      <div className="absolute top-0 right-0 z-10">
-        <Image src={Lattern} width={55} height={77} alt="lattern" />
-      </div>
+      <Header />
       <div className="bg-white min-h-screen flex flex-col text-center">
         <div
           dir="rtl"
-          className=" flex flex-col items-center min-h-screen py-4"
+          className=" flex flex-col items-center min-h-screen py-8"
         >
-          <Image src={Logo} alt="Logo" width={40} height={40} />
+          <Logo />{" "}
           <h2 className="text-xl bold text-main mb-4 mt-2">الـملف الشخصي</h2>
+          <p className="text-secondary regular px-2 text-sm mt-1">
+            ملفّك الشخصيّ هو صحيفتُك، بقدرِ ما تهتم بمهامك اليوميّة يرتفع
+            مجموعك، وتحصل على تقييم أفضل من المُشرفين!
+          </p>
           <div className="flex flex-col justify-center mt-24">
             {" "}
             <div className="w-80 text-center flex flex-col gap-2">
@@ -86,7 +83,7 @@ const Profile = () => {
               </p>
 
               <p className="bg-[#f7f6f6] p-2 text-lg regular text-main">
-                المجموع الكلّي:{" "}
+                مجموعك الكلّي:{" "}
                 <span className="bold">{user.totalScore} نقطة</span>
               </p>
               <p className="text-secondary regular mt-2 flex flex-col">
