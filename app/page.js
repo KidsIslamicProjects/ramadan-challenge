@@ -12,25 +12,38 @@ export default function MaribChallenge() {
 
   useEffect(() => {
     const now = new Date().getTime();
-    setIsCountdownActive(targetDate > now);
+    const storedUserId = localStorage.getItem("userId");
+    const isAdmin = storedUserId === "67bdb95c6cc8e6f2e2415e76";
+
+    if (isAdmin) {
+      setIsCountdownActive(false);
+    } else {
+      setIsCountdownActive(targetDate > now);
+    }
   }, [targetDate]);
-
   return (
-    <div dir="rtl" className="bg-white min-h-screen relative">
-      {/* Always show Navbar */}
-      <Navbar />
+    <div
+      dir="rtl"
+      className="bg-white mx-auto overflow-x-hidden min-h-screen relative"
+    >
+      {/* Ensure Navbar stays clickable */}
+      <div className="relative z-50">
+        <Navbar />
+      </div>
 
-      {/* Countdown with overlay effect */}
+      {/* Countdown Overlay */}
       {isCountdownActive && (
-        <div className="absolute inset-0 flex items-center justify-center bg-transparent z-20 w-full">
-          <Countdown />
+        <div className="absolute w-full inset-0 flex items-center justify-center z-40 pointer-events-none">
+          <div className="pointer-events-auto w-full">
+            <Countdown />
+          </div>
         </div>
       )}
 
       {/* Content */}
       <div
         className={`${
-          isCountdownActive ? "opacity-70 blur-md" : "opacity-100"
+          isCountdownActive ? "opacity-40 blur-md" : "opacity-100"
         } transition-all duration-500`}
       >
         <div className="w-full h-auto mt-4">
@@ -47,6 +60,7 @@ export default function MaribChallenge() {
           </p>
         </div>
 
+        {/* Always show ChallengeItems */}
         <ChallengeItems />
       </div>
     </div>

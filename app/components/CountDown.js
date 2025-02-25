@@ -40,7 +40,7 @@ const Countdown = ({ onCountdownEnd }) => {
       dir="rtl"
       className="flex justify-center items-center px-4 min-h-screen mx-auto w-full"
     >
-      <div className="bg-white w-full p-3 rounded-sm shadow-2xl text-center">
+      <div className="bg-white w-full py-3 rounded-sm shadow-2xl text-center">
         <Logo />
         <h1 className="texl-xl mt-4 bold text-main">
           متبقّي على اللإطلاق الرسمي

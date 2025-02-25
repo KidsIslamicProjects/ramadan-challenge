@@ -6,6 +6,7 @@ import Image from "next/image";
 import axios from "axios";
 import confetti from "canvas-confetti";
 import Notification from "../../components/Notification";
+import { FaEdit } from "react-icons/fa";
 import Ribbon from "../../data/images/Ribbon.svg";
 import Header from "@/app/components/Header";
 import Logo from "@/app/components/Logo";
@@ -39,6 +40,14 @@ const DailyTaskPage = () => {
   const [feelings, setFeelings] = useState("");
   const [notification, setNotification] = useState({ message: "", type: "" });
   const [isLoading, setIsLoading] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
+
+  useEffect(() => {
+    const userId = localStorage.getItem("userId");
+    if (userId == "67bdb95c6cc8e6f2e2415e76") {
+      setIsAdmin(true);
+    }
+  }, []);
 
   const handleCheckboxChange = (label) => {
     setSelectedTasks((prev) =>
@@ -95,6 +104,11 @@ const DailyTaskPage = () => {
       });
   }, [gregorianDay]);
 
+  const handleEdit = () => {
+    if (isAdmin) {
+      router.push(`/edit-task/${gregorianDay}`);
+    }
+  };
   if (!taskData) {
     return (
       <div className="text-center bold text-lg text-main py-10">
@@ -137,55 +151,57 @@ const DailyTaskPage = () => {
             ))}
           </div>
         </div>
+        <div className="flex flex-col">
+          <div className="">
+            <h1 className="bold text-2xl text-main mb-2">الورد الحديثي</h1>
+            <div className="bg-[#f7f6f6] w-full p-4">
+              <p className="semi text-main text-lg text-right">
+                {taskData.hadith}
+              </p>
+            </div>
 
-        <div className="">
-          <h1 className="bold text-2xl text-main mb-2">الورد الحديثي</h1>
-          <div className="bg-[#f7f6f6] w-full p-4">
-            <p className="semi text-main text-lg text-right">
-              {taskData.hadith}
-            </p>
+            <div className="flex justify-between items-end w-full mt-2 mb-4">
+              <div className="flex gap-2">
+                <input
+                  type="checkbox"
+                  className="custom-checkbox w-2 h-2"
+                  checked={hadithChecked}
+                  onChange={() => setHadithChecked(!hadithChecked)}
+                />
+                <label className="text-secondary semi">
+                  تمّ حفظ وفهم الحديث بفضل الله
+                </label>
+              </div>
+            </div>
           </div>
+          <div>
+            <h1 className="bold text-2xl text-main my-2">ورد التفسير</h1>
 
-          <div className="flex justify-between items-end w-full mt-2 mb-4">
-            <div className="flex gap-2">
-              <input
-                type="checkbox"
-                className="custom-checkbox w-2 h-2"
-                checked={hadithChecked}
-                onChange={() => setHadithChecked(!hadithChecked)}
-              />
-              <label className="text-secondary semi">
-                تمّ حفظ وفهم الحديث بفضل الله
-              </label>
+            <div className="bg-[#f7f6f6] w-full p-4 mt-2">
+              <p className="semi text-main text-lg text-right">
+                {taskData.tafseerQuestion}
+              </p>
+              <p className="regular text-main text-right mt-2">
+                {taskData.tafseerAnswer}
+              </p>
+            </div>
+
+            <div className="flex justify-between items-end w-full mt-2 mb-4">
+              <div className="flex gap-2">
+                <input
+                  type="checkbox"
+                  className="custom-checkbox w-2 h-2"
+                  checked={tafseerChecked}
+                  onChange={() => setTafseerChecked(!tafseerChecked)}
+                />
+                <label className="text-secondary semi">
+                  تمّ حفظ وفهم التفسير بفضل الله
+                </label>
+              </div>
             </div>
           </div>
         </div>
-        <div>
-          <h1 className="bold text-2xl text-main my-2">ورد التفسير</h1>
 
-          <div className="bg-[#f7f6f6] w-full p-4 mt-2">
-            <p className="semi text-main text-lg text-right">
-              {taskData.tafseerQuestion}
-            </p>
-            <p className="regular text-main text-right mt-2">
-              {taskData.tafseerAnswer}
-            </p>
-          </div>
-
-          <div className="flex justify-between items-end w-full mt-2 mb-4">
-            <div className="flex gap-2">
-              <input
-                type="checkbox"
-                className="custom-checkbox w-2 h-2"
-                checked={tafseerChecked}
-                onChange={() => setTafseerChecked(!tafseerChecked)}
-              />
-              <label className="text-secondary semi">
-                تمّ حفظ وفهم التفسير بفضل الله
-              </label>
-            </div>
-          </div>
-        </div>
         <div className="w-full">
           <h1 className="bold text-2xl text-main my-2"> مشاعر اليوم</h1>
           <div className="bg-[#f7f6f6] ">
@@ -207,6 +223,14 @@ const DailyTaskPage = () => {
             ? "جاري إرســــال الأجوبـــة..."
             : " إرســــــــال الأجــوبــــــــــــــة"}
         </button>
+        {isAdmin && (
+          <button
+            onClick={handleEdit}
+            className="bg-secondary text-white py-2 w-[80%] rounded-xs semi text-lg mt-4"
+          >
+            تعديــــــل المُســـــابقة{" "}
+          </button>
+        )}
       </div>
     </>
   );

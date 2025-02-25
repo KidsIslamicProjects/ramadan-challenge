@@ -4,10 +4,11 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Header from "../components/Header";
 import Logo from "../components/Logo";
-
+import Notification from "../components/Notification";
 const Profile = () => {
   const [user, setUser] = useState({});
   const [isLoading, setIsLoading] = useState(false);
+  const [notification, setNotification] = useState({ message: "", type: "" });
   const router = useRouter();
 
   useEffect(() => {
@@ -51,8 +52,14 @@ const Profile = () => {
 
   const handleLogout = () => {
     setIsLoading(true);
+    setNotification(null);
     setTimeout(() => {
+      setNotification({
+        message: "تمّ تسجيل الخروج! لا تطيل الغياب علينا",
+        type: "error",
+      });
       localStorage.removeItem("userId");
+
       router.push("/login");
       setIsLoading(false);
     }, 2000);
@@ -116,6 +123,12 @@ const Profile = () => {
             </button>{" "}
           </Link>
         </div>
+        {notification && (
+          <Notification
+            message={notification.message}
+            type={notification.type}
+          />
+        )}
       </div>
     </>
   );

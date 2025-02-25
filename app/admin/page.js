@@ -1,12 +1,15 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaCaretDown, FaCaretUp } from "react-icons/fa";
 import axios from "axios";
 import StudentsTable from "./students";
 import DoleAdminForm from "./DoleForm";
+import { useRouter } from "next/navigation";
+
 const Page = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [openIndex, setOpenIndex] = useState(null);
+  const router = useRouter();
   const [formData, setFormData] = useState({
     hijriDate: "",
     gregorianDate: "",
@@ -43,6 +46,7 @@ const Page = () => {
       alert("حدث خطأ أثناء نشر المفكرة اليومية");
     }
   };
+
   const supervisorsData = [
     {
       title: "نشر الـمفكرة اليومية",
@@ -161,6 +165,13 @@ const Page = () => {
       content: <StudentsTable />,
     },
   ];
+
+  useEffect(() => {
+    const userId = localStorage.getItem("userId");
+    if (userId !== "67bdb95c6cc8e6f2e2415e76") {
+      router.push("/");
+    }
+  }, []);
   return (
     <div dir="rtl" className="bg-white min-h-screen p-6">
       <h1 className="text-main text-xl bold mb-4">صفحة الـمشرفين</h1>

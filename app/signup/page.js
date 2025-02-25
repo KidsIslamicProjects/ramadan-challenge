@@ -36,7 +36,6 @@ const Signup = () => {
     e.preventDefault();
     setIsLoading(true);
     setNotification(null);
-    console.log("Form Data before sending:", formData);
     try {
       const response = await fetch(
         "https://ramadan-server-topaz.vercel.app/api/users",
@@ -127,7 +126,8 @@ const Signup = () => {
                 name: "age",
               },
               {
-                label: "رقم الـهاتف",
+                label:
+                  "رقم الـهاتف(إذا كان الرقم غير لبناني، الرجاء ادخال رمز البلد) ",
                 placeholder: "ادخل رقم الهاتف",
                 type: "number",
                 name: "phoneNumber",

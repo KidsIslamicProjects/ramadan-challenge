@@ -1,4 +1,7 @@
 {
+  "/admin/page": "app/admin/page.js",
+  "/daily/[gregorianDay]/page": "app/daily/[gregorianDay]/page.js",
   "/page": "app/page.js",
-  "/daily/page": "app/daily/page.js"
+  "/daily/page": "app/daily/page.js",
+  "/edit-task/[gregorianDay]/page": "app/edit-task/[gregorianDay]/page.js"
 }
