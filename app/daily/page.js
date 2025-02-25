@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
@@ -12,6 +11,7 @@ const DailyPage = () => {
   const [tasks, setTasks] = useState([]);
   const [userProgress, setUserProgress] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [isAdmin, setIsAdmin] = useState(false);
 
   const router = useRouter();
   const [userId, setUserId] = useState(null);
@@ -22,6 +22,9 @@ const DailyPage = () => {
       router.push("/login");
     } else {
       setUserId(storedUserId);
+      if (storedUserId === "67bdb95c6cc8e6f2e2415e76") {
+        setIsAdmin(true);
+      }
     }
   }, [router]);
 
@@ -51,6 +54,16 @@ const DailyPage = () => {
   const today = new Date().getDate();
 
   const getTaskStatus = (task) => {
+    if (isAdmin) {
+      // Admin can access all levels
+      const completedTask = userProgress.find(
+        (progress) => progress.hijriDate === task.hijriDate
+      );
+      return completedTask
+        ? { status: "completed", score: completedTask.score }
+        : { status: "available" };
+    }
+
     const completedTask = userProgress.find(
       (progress) => progress.hijriDate === task.hijriDate
     );
@@ -68,9 +81,11 @@ const DailyPage = () => {
 
     return { status: "locked" };
   };
+
   if (loading) {
     return <Loading />;
   }
+
   const arabicNumbers = [
     "الأول",
     "الثاني",

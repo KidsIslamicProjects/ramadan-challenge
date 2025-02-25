@@ -7,18 +7,6 @@ import Notification from "../../components/Notification";
 import Header from "@/app/components/Header";
 import Logo from "@/app/components/Logo";
 
-const Checkbox = ({ label, checked, onChange }) => (
-  <label className="flex items-center gap-2 text-sm">
-    <input
-      type="checkbox"
-      className="custom-checkbox"
-      checked={checked}
-      onChange={onChange}
-    />
-    {label}
-  </label>
-);
-
 const EditTaskPage = () => {
   const { gregorianDay } = useParams();
   const router = useRouter();
@@ -57,12 +45,6 @@ const EditTaskPage = () => {
       });
   }, [gregorianDay]);
 
-  const handleCheckboxChange = (label) => {
-    setSelectedTasks((prev) =>
-      prev.includes(label) ? prev.filter((t) => t !== label) : [...prev, label]
-    );
-  };
-
   const handleSubmit = async () => {
     setIsLoading(true);
     const payload = {
@@ -74,9 +56,13 @@ const EditTaskPage = () => {
     };
 
     try {
-      await axios.put(`http://localhost:3001/api/task/${hijriDate}`, payload, {
-        headers: { "Content-Type": "application/json" },
-      });
+      await axios.put(
+        `https://ramadan-server-topaz.vercel.app/api/task/${hijriDate}`,
+        payload,
+        {
+          headers: { "Content-Type": "application/json" },
+        }
+      );
 
       setIsLoading(false);
       setNotification({ message: "تمت التعديلات بنجاح", type: "success" });
@@ -100,21 +86,6 @@ const EditTaskPage = () => {
         <h1 className="text-xl bold text-main mb-2">
           تعديل المهام ليوم {gregorianDay}
         </h1>
-
-        <div className="bg-[#f7f6f6] w-full p-4 my-4">
-          <div className="grid grid-cols-3 gap-4 w-full text-xl semi">
-            {taskData.checkboxes &&
-              Array.isArray(taskData.checkboxes) &&
-              taskData.checkboxes.map((label, index) => (
-                <Checkbox
-                  key={index}
-                  label={label}
-                  checked={selectedTasks.includes(label)}
-                  onChange={() => handleCheckboxChange(label)}
-                />
-              ))}
-          </div>
-        </div>
 
         <div className="flex flex-col">
           <div>

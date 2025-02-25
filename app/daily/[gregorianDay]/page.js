@@ -6,10 +6,10 @@ import Image from "next/image";
 import axios from "axios";
 import confetti from "canvas-confetti";
 import Notification from "../../components/Notification";
-import { FaEdit } from "react-icons/fa";
 import Ribbon from "../../data/images/Ribbon.svg";
 import Header from "@/app/components/Header";
 import Logo from "@/app/components/Logo";
+import Loading from "@/app/loading";
 
 const Checkbox = ({ label, onChange }) => (
   <label className="flex items-center gap-2 text-sm">
@@ -110,11 +110,7 @@ const DailyTaskPage = () => {
     }
   };
   if (!taskData) {
-    return (
-      <div className="text-center bold text-lg text-main py-10">
-        لا يوجد مهام لهذا اليوم
-      </div>
-    );
+    return <Loading />;
   }
 
   return (

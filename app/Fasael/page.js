@@ -10,7 +10,8 @@ import Notification from "../components/Notification";
 
 const Page = () => {
   const [firstName, setFirstName] = useState("");
-  const [dole, setDole] = useState(""); // Store the daily dole
+  const [dole, setDole] = useState("");
+  const [hijriDate, setHijriDate] = useState("");
   const [loading, setLoading] = useState(false);
   const [notification, setNotification] = useState({ message: "", type: "" });
   const router = useRouter();
@@ -32,13 +33,20 @@ const Page = () => {
   }, []);
 
   useEffect(() => {
-    const today = new Date().getDate(); // Get today's Gregorian day
+    const today = new Date().getDate();
 
     fetch("https://ramadan-server-topaz.vercel.app/api/doles")
       .then((res) => res.json())
       .then((data) => {
         const todayDole = data.find((item) => item.gregorianDay === today);
-        setDole(todayDole ? todayDole.dole : "لا يوجد فسيلة اليوم");
+
+        if (todayDole) {
+          setDole(todayDole.dole);
+          setHijriDate(todayDole.hijriDate);
+        } else {
+          setDole("لا يوجد فسيلة اليوم");
+          setHijriDate("No dole found for today.");
+        }
       })
       .catch((error) => console.error("Error fetching doles:", error));
   }, []);
@@ -57,7 +65,7 @@ const Page = () => {
           },
           body: JSON.stringify({
             userId: localStorage.getItem("userId"),
-            // hijriDate: hijriDate,
+            hijriDate: hijriDate,
             dole: dole,
           }),
         }
