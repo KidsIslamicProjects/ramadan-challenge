@@ -1,7 +1,7 @@
 {
-  "/profile/page": "app/profile/page.js",
-  "/login/page": "app/login/page.js",
-  "/daily/page": "app/daily/page.js",
+  "/page": "app/page.js",
   "/daily/[gregorianDay]/page": "app/daily/[gregorianDay]/page.js",
+  "/Fasael/page": "app/Fasael/page.js",
+  "/family/page": "app/family/page.js",
   "/edit-task/[gregorianDay]/page": "app/edit-task/[gregorianDay]/page.js"
 }

@@ -44,7 +44,7 @@ const DailyPage = () => {
       axios
         .get(`https://ramadan-server-topaz.vercel.app/api/users/${userId}`)
         .then((response) => {
-          setUserProgress(response.data.dailyProgress);
+          setUserProgress(response.data.dailyTasksProgress);
         });
     }
   }, [userId]);

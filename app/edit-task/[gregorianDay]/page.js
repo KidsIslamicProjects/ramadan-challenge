@@ -11,11 +11,7 @@ const EditTaskPage = () => {
   const { gregorianDay } = useParams();
   const router = useRouter();
   const [taskData, setTaskData] = useState(null);
-  const [hijriDate, setSelectedHijriDate] = useState(null);
-  const [selectedTasks, setSelectedTasks] = useState([]);
-  const [hadithChecked, setHadithChecked] = useState(false);
-  const [tafseerChecked, setTafseerChecked] = useState(false);
-  const [feelings, setFeelings] = useState("");
+  const [hijriDate, setHijriDate] = useState("");
   const [hadith, setHadith] = useState("");
   const [tafseerQuestion, setTafseerQuestion] = useState("");
   const [tafseerAnswer, setTafseerAnswer] = useState("");
@@ -31,10 +27,7 @@ const EditTaskPage = () => {
         );
         console.log(task);
         setTaskData(task);
-        setSelectedTasks(task.tasks || []);
-        setHadithChecked(task.hadithCompleted || false);
-        setTafseerChecked(task.tafseerAnswer === "Completed");
-        setFeelings(task.feelings || "");
+        setHijriDate(task.hijriDate || "");
         setHadith(task.hadith || "");
         setTafseerQuestion(task.tafseerQuestion || "");
         setTafseerAnswer(task.tafseerAnswer || "");
@@ -56,8 +49,9 @@ const EditTaskPage = () => {
     };
 
     try {
+      // Use taskData._id as the URL parameter instead of hijriDate
       await axios.put(
-        `https://ramadan-server-topaz.vercel.app/api/task/${hijriDate}`,
+        `https://ramadan-server-topaz.vercel.app/api/task/${taskData._id}`,
         payload,
         {
           headers: { "Content-Type": "application/json" },
@@ -70,6 +64,7 @@ const EditTaskPage = () => {
     } catch (error) {
       setIsLoading(false);
       setNotification({ message: "فشل في إرسال التعديلات", type: "error" });
+      console.log(error);
     }
   };
 
@@ -88,6 +83,19 @@ const EditTaskPage = () => {
         </h1>
 
         <div className="flex flex-col">
+          <div>
+            <h1 className="bold text-2xl text-main mb-2">
+              تعديل التاريخ الهجري
+            </h1>
+            <div className="bg-[#f7f6f6] w-full p-4">
+              <textarea
+                value={hijriDate}
+                onChange={(e) => setHijriDate(e.target.value)}
+                className="w-full p-3 semi text-main rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-main focus:border-transparent"
+                rows="5"
+              />
+            </div>
+          </div>
           <div>
             <h1 className="bold text-2xl text-main mb-2">
               تعديل الورد الحديثي
