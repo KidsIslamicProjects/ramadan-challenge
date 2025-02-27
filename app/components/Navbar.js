@@ -30,7 +30,7 @@ const Navbar = () => {
       )}{" "}
       <Image src={Logo} alt="Logo" width={80} height={40} />
       <Link
-        href="https://wa.me/96171708103"
+        href="https://chat.whatsapp.com/DQ2fbP0M6dWChruFp77mFe"
         className="flex flex-col items-center"
       >
         <FaWhatsapp className="text-main" />

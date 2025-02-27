@@ -55,7 +55,7 @@ export default function MaribChallenge() {
             ما هو تحدي مأرَب؟
           </h2>
           <p dir="rtl" className="text-main regular mt-2 text-xl">
-            تحدي رمضان يهدف إلى تنظيم الوقت وزيادة الفعالية خلال شهر رمضان
+            تحدي رمضاني يهدف إلى تنظيم الوقت وزيادة الفعالية خلال شهر رمضان
             المبارك.
           </p>
         </div>

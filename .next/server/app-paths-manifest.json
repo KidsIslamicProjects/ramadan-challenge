@@ -1,9 +1,4 @@
 {
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/_not-found/page": "app/_not-found/page.js",
-  "/daily/[gregorianDay]/page": "app/daily/[gregorianDay]/page.js",
-  "/admin/page": "app/admin/page.js",
-  "/admin/students/[id]/page": "app/admin/students/[id]/page.js",
-  "/page": "app/page.js",
-  "/profile/page": "app/profile/page.js"
+  "/page": "app/page.js"
 }
