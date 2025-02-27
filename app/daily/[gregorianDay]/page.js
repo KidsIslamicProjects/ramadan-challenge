@@ -43,7 +43,44 @@ const DailyTaskPage = () => {
   const [isAdmin, setIsAdmin] = useState(false);
   const [userProgress, setUserProgress] = useState([]);
   const [score, setScore] = useState("0");
+  const handleSubmit = async () => {
+    const userId = localStorage.getItem("userId");
+    setIsLoading(true);
+    const payload = {
+      userId,
+      hijriDate: taskData.hijriDate,
+      tasks: selectedTasks,
+      tafseerAnswer: tafseerChecked ? "Completed" : "Not completed",
+      hadith: hadithChecked,
+      feelings,
+    };
 
+    try {
+      await axios.post(
+        "https://ramadan-server-topaz.vercel.app/api/tasks/submit",
+        payload
+      );
+      setIsLoading(false);
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
+
+      setNotification({ message: "تم إرسال الإجابات بنجاح!", type: "success" });
+
+      setTimeout(() => {
+        router.push("/");
+      }, 2000);
+    } catch (error) {
+      setIsLoading(false);
+      setNotification({
+        message: error.response?.data?.error || "حدث خطأ أثناء الإرسال.",
+        type: "error",
+      });
+      console.log(error);
+    }
+  };
   useEffect(() => {
     const userId = localStorage.getItem("userId");
 
@@ -73,49 +110,17 @@ const DailyTaskPage = () => {
       });
   }, [taskData?.hijriDate]);
 
-  const handleCheckboxChange = (label) => {
-    setSelectedTasks((prev) =>
-      prev.includes(label) ? prev.filter((t) => t !== label) : [...prev, label]
-    );
+  const handleCheckboxChange = (task) => {
+    setSelectedTasks((prevSelectedTasks) => {
+      if (prevSelectedTasks.includes(task)) {
+        return prevSelectedTasks.filter((t) => t !== task);
+      } else {
+        return [...prevSelectedTasks, task];
+      }
+    });
   };
 
-  const handleSubmit = async () => {
-    const userId = localStorage.getItem("userId");
-    setIsLoading(true);
-    const payload = {
-      userId,
-      hijriDate: taskData.hijriDate,
-      tasks: selectedTasks,
-      tafseerAnswer: tafseerChecked ? "Completed" : "Not completed",
-      hadithCompleted: hadithChecked,
-      feelings,
-    };
-    try {
-      await axios.post(
-        "https://ramadan-server-topaz.vercel.app/api/tasks/submit",
-        payload
-      );
-      setIsLoading(false);
-      confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 },
-      });
-
-      setNotification({ message: "تم إرسال الإجابات بنجاح!", type: "success" });
-
-      setTimeout(() => {
-        router.push("/");
-      }, 2000);
-    } catch (error) {
-      setIsLoading(false);
-      setNotification({
-        message: error.response?.data?.error || "حدث خطأ أثناء الإرسال.",
-        type: "error",
-      });
-      console.log(error);
-    }
-  };
+  console.log("Selected Tasks:", selectedTasks);
 
   useEffect(() => {
     axios

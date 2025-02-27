@@ -1,7 +1,9 @@
 {
-  "/page": "app/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/_not-found/page": "app/_not-found/page.js",
   "/daily/[gregorianDay]/page": "app/daily/[gregorianDay]/page.js",
-  "/Fasael/page": "app/Fasael/page.js",
-  "/family/page": "app/family/page.js",
-  "/edit-task/[gregorianDay]/page": "app/edit-task/[gregorianDay]/page.js"
+  "/admin/page": "app/admin/page.js",
+  "/admin/students/[id]/page": "app/admin/students/[id]/page.js",
+  "/page": "app/page.js",
+  "/profile/page": "app/profile/page.js"
 }

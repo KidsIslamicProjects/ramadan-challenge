@@ -5,11 +5,13 @@ import Link from "next/link";
 import Header from "../components/Header";
 import Logo from "../components/Logo";
 import Notification from "../components/Notification";
+import Loading from "../loading";
 const Profile = () => {
   const [user, setUser] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [notification, setNotification] = useState({ message: "", type: "" });
   const router = useRouter();
+  const [isDataLoading, setIsDataLoading] = useState(true);
 
   useEffect(() => {
     const userId = localStorage.getItem("userId");
@@ -20,6 +22,7 @@ const Profile = () => {
     }
 
     const fetchUserData = async () => {
+      setIsDataLoading(true);
       try {
         const response = await fetch(
           `https://ramadan-server-topaz.vercel.app/api/users/${userId}`
@@ -36,20 +39,18 @@ const Profile = () => {
         setUser({ ...data, totalScore });
       } catch (error) {
         console.error(error);
+        setIsDataLoading(false);
       } finally {
+        setIsDataLoading(false);
       }
     };
 
     fetchUserData();
   }, [router]);
 
-  const getEvaluation = (score) => {
-    if (score >= 100) return "ممتاز جداً!";
-    if (score >= 50) return "جيد جداً!";
-    if (score >= 20) return "جيد!";
-    return "بحاجة إلى تحسين!";
-  };
-
+  if (isDataLoading) {
+    return <Loading />;
+  }
   const handleLogout = () => {
     setIsLoading(true);
     setNotification(null);
@@ -94,8 +95,7 @@ const Profile = () => {
                 <span className="bold">{user.totalScore} نقطة</span>
               </p>
               <p className="text-secondary regular mt-2 flex flex-col">
-                تقييم المُشرِف:{" "}
-                <span className="bold">{getEvaluation(user.totalScore)}</span>
+                تقييم المُشرِف: <span className="bold">{user.evaluation}</span>
               </p>
             </div>
             {/* Navigation & Logout */}
