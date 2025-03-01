@@ -13,7 +13,8 @@ const Page = () => {
   const [dole, setDole] = useState("");
   const [hijriDate, setHijriDate] = useState("");
   const [loading, setLoading] = useState(false);
-  const [notification, setNotification] = useState({ message: "", type: "" });
+  const [notification, setNotification] = useState(null);
+  const [taskCompleted, setTaskCompleted] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
@@ -27,10 +28,20 @@ const Page = () => {
             const nameParts = data.name.split(" ");
             setFirstName(nameParts[0]);
           }
+
+          // Check if today's task is already done
+          if (data?.dailyDoleProgress) {
+            const todayTask = data.dailyDoleProgress.find(
+              (task) => task.hijriDate === hijriDate && task.done === true
+            );
+            if (todayTask) {
+              setTaskCompleted(true);
+            }
+          }
         })
         .catch((error) => console.error("Error fetching user:", error));
     }
-  }, []);
+  }, [hijriDate]); // Depend on hijriDate to update when fetched
 
   useEffect(() => {
     const today = new Date().getDate();
@@ -52,6 +63,14 @@ const Page = () => {
   }, []);
 
   const handleSubmit = async () => {
+    if (taskCompleted) {
+      setNotification({
+        message: "لقد أكملت هذه المهمة بالفعل!",
+        type: "warning",
+      });
+      return;
+    }
+
     setLoading(true);
     setNotification(null);
 
@@ -78,6 +97,7 @@ const Page = () => {
           type: "success",
         });
 
+        setTaskCompleted(true); // Prevent resubmission
         setTimeout(() => {
           router.push("/");
         }, 2000);
@@ -116,18 +136,36 @@ const Page = () => {
           </h1>
           <p className="text-main semi text-lg mt-2 text-center">{dole}</p>
         </div>
-        <div className="flex justify-center items-center mt-20 gap-2">
-          <input type="checkbox" className="custom-checkbox" />
-          <h3 className="text-main semi text-lg">
-            لقد أتمَمت الـمُهمّة الحمدلله
-          </h3>
-        </div>
+        {taskCompleted ? (
+          <div>
+            <p className="text-lg text-[#457804] semi text-center">
+              لقد زرعتَ فسيلة اليوم يا بطل! نلقاكَ غداً بإذن الله
+            </p>
+          </div>
+        ) : (
+          <div className="flex justify-center items-center mt-20 gap-2">
+            <input
+              type="checkbox"
+              className="custom-checkbox"
+              disabled={taskCompleted}
+            />
+            <h3 className="text-main semi text-lg">
+              لقد أتمَمت الـمُهمّة الحمدلله
+            </h3>
+          </div>
+        )}
+
         <button
           onClick={handleSubmit}
-          className="bg-[#457804] flex justify-center items-center w-[75%] text-white py-2 mt-12 semi text-lg rounded-sm shadow mx-auto"
-          disabled={loading}
+          className={`${
+            taskCompleted ? "bg-gray-400" : "bg-[#457804]"
+          } flex justify-center items-center w-[75%] text-white py-2 mt-12 semi text-lg rounded-sm shadow mx-auto`}
         >
-          {loading ? "جاري الزرع..." : "ازرع الفَســــــــــيلة"}
+          {loading
+            ? "جاري الزرع..."
+            : taskCompleted
+            ? "المهمة مُكتملة"
+            : "ازرع الفَســــــــــيلة"}
         </button>
         <Image
           alt="soil"
