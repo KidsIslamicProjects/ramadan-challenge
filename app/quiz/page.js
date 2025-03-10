@@ -99,6 +99,8 @@ const FillInBlankQuiz = () => {
     const unansweredQuestions = shuffledQuestions.filter((q) => !answers[q.id]);
 
     if (unansweredQuestions.length > 0) {
+      setLoading(false);
+
       setNotification({
         message: "الرجاء أجب عن جميع الأسئلة.",
         type: "error",
