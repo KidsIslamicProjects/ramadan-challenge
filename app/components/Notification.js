@@ -21,7 +21,7 @@ const Notification = ({ message, type }) => {
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: "100%", opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className={`fixed top-5 right-5 z-50 p-4 rounded shadow-lg text-white ${
+          className={`fixed top-5 right-5 z-50 p-4 rounded shadow-lg text-white semi ${
             type === "success" ? "bg-green-700" : "bg-red-700"
           }`}
         >

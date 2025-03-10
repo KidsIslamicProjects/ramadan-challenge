@@ -3,10 +3,9 @@ import { useState, useEffect } from "react";
 import { questions } from "../data/quiz";
 import Header from "../components/Header";
 import Logo from "../components/Logo";
-import axios from "axios"; // For making HTTP requests
-import Notification from "../components/Notification"; // Import Notification component
-
-// Shuffle function for options
+import axios from "axios";
+import Notification from "../components/Notification";
+import { useRouter } from "next/navigation";
 const shuffleArray = (array) => {
   return array.sort(() => Math.random() - 0.5);
 };
@@ -19,17 +18,21 @@ const FillInBlankQuiz = () => {
   const [quizSubmitted, setQuizSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [shuffledQuestions, setShuffledQuestions] = useState([]);
+  const [totalScore, setTotalScore] = useState(null);
+  const router = useRouter();
 
   useEffect(() => {
-    // Shuffle options only once when the component is mounted
+    const userId = localStorage.getItem("userId");
+    if (!userId) {
+      router.push("/signup");
+      return;
+    }
     const shuffled = questions.map((question) => ({
       ...question,
-      options: shuffleArray([...question.options]), // Shuffle the options for each question
+      options: shuffleArray([...question.options]),
     }));
 
     setShuffledQuestions(shuffled);
-
-    const userId = localStorage.getItem("userId");
 
     const checkSubmission = async () => {
       try {
@@ -38,6 +41,7 @@ const FillInBlankQuiz = () => {
         );
         if (response.data.alreadySubmitted) {
           setQuizSubmitted(true);
+          fetchTotalScore(userId); // Fetch the score if already submitted
         }
       } catch (error) {
         console.error("Error checking submission:", error);
@@ -47,6 +51,26 @@ const FillInBlankQuiz = () => {
     checkSubmission();
   }, []);
 
+  const fetchTotalScore = async (userId) => {
+    try {
+      const response = await axios.get(
+        `https://ramadan-server-topaz.vercel.app/api/answers/${userId}`
+      );
+
+      const userScore = response.data.find(
+        (item) => item.userId._id === userId
+      );
+
+      if (userScore) {
+        setTotalScore(userScore.totalScore);
+      } else {
+        console.log("User score not found.");
+      }
+    } catch (error) {
+      console.error("Error fetching total score:", error);
+    }
+  };
+
   useEffect(() => {
     const userId = localStorage.getItem("userId");
 
@@ -54,16 +78,14 @@ const FillInBlankQuiz = () => {
       axios
         .get(`https://ramadan-server-topaz.vercel.app/api/users/${userId}`)
         .then((response) => {
-          // Set the user data to state
           setUserData(response.data);
         })
         .catch((error) => {
           console.error("Error fetching user data:", error);
         });
     }
-  }, []); // Empty dependency array ensures this runs only once on component mount
+  }, []);
 
-  // Handle selection of answers
   const handleSelect = (questionId, selectedOption) => {
     setAnswers((prev) => ({
       ...prev,
@@ -74,12 +96,11 @@ const FillInBlankQuiz = () => {
   const handleSubmit = async () => {
     const userIdd = localStorage.getItem("userId");
     setLoading(true);
-    // Ensure all questions have an answer before submitting
     const unansweredQuestions = shuffledQuestions.filter((q) => !answers[q.id]);
 
     if (unansweredQuestions.length > 0) {
       setNotification({
-        message: "Please answer all questions before submitting.",
+        message: "الرجاء أجب عن جميع الأسئلة.",
         type: "error",
       });
       return;
@@ -104,16 +125,14 @@ const FillInBlankQuiz = () => {
       setLoading(false);
 
       setNotification({
-        message: response.data.message || "Quiz submitted successfully!",
+        message: "تمّ إرسال الإجابات بنجاح! رضي الله عنك",
         type: "success",
       });
     } catch (error) {
       setLoading(false);
 
-      console.error("Error submitting answers:", error);
       setNotification({
-        message:
-          "There was an error submitting your answers. Please try again.",
+        message: "حدث خطأ ما، الرجاء اعادة المحاولة",
         type: "error",
       });
     }
@@ -125,15 +144,32 @@ const FillInBlankQuiz = () => {
       <Header />
       <div dir="rtl" className="bg-white min-h-screen flex flex-col py-8 px-4">
         <Logo />
-        <h2 className="text-xl bold text-main my-4 text-center">
-          املأ الفراغ بالجواب المناسب
-        </h2>
-
-        {/* Display the message if quiz is already submitted */}
         {quizSubmitted ? (
           <p className="text-center text-lg bold text-secondary">
             لقد أتممت هذه المسابقة مُسبقاً!
           </p>
+        ) : (
+          <>
+            <h2 className="text-xl bold text-main my-4 text-center">
+              املأ الفراغ بالجواب المناسب
+            </h2>
+            <p className="text-secondary text-center regular">
+              بعد مشاهداتك لمقاطع سارة وسعود، املأ الفراغات في الأسئلة باختيارك
+              للجواب الصحيح
+            </p>
+          </>
+        )}
+
+        {quizSubmitted && totalScore !== null && (
+          <div className="text-center my-4">
+            <p className="text-lg semi text-main">
+              مجموعك هو: {totalScore} من 15
+            </p>
+          </div>
+        )}
+
+        {quizSubmitted ? (
+          <></>
         ) : (
           shuffledQuestions.map((q) => (
             <div key={q.id} className="mb-4 p-4">
@@ -165,19 +201,20 @@ const FillInBlankQuiz = () => {
             </div>
           ))
         )}
+
         {quizSubmitted ? (
           <></>
         ) : (
           <button
+            dir="rtl"
             className="mt-4 p-2 semi bg-secondary text-white rounded"
             onClick={handleSubmit}
             disabled={submitted}
           >
-            {loading ? "جاري الإرسال" : "إرســــــال"}
+            {loading ? "جاري الإرسال..." : "إرســــــال"}
           </button>
         )}
 
-        {/* Display notification */}
         <Notification message={notification.message} type={notification.type} />
       </div>
     </>
