@@ -1,0 +1,4594 @@
+[00:00:24.328] Server  LOG     ✓ Ready in 7.5s
+[00:00:31.280] Server  ERROR   ⨯ The requested resource "https://api.dicebear.com/9.x/avataaars/svg?seed=Abdulrahman" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[00:01:49.320] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:00.132] Browser WARN    Image with src "https://api.dicebear.com/9.x/avataaars/svg?seed=Abdulrahman" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:02:00.132] Browser WARN    Image with src "http://localhost:3000/_next/static/media/LogoWithNoSlugn.020b7f23.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:02:11.668] Server  LOG     ✓ Compiled in 8.6s
+[00:05:13.757] Server  LOG     ✓ Compiled in 3.7s
+[00:05:27.148] Server  LOG     ✓ Finished writing to filesystem cache in 11.1s
+[00:05:28.112] Server  LOG     ✓ Compiled in 9.6s
+[00:05:50.762] Server  LOG     ✓ Compiled in 336ms
+[00:06:27.566] Server  ERROR   ⨯ The requested resource "https://api.dicebear.com/9.x/avataaars/svg?seed=Abdulrahman" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[00:06:27.634] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:28.384] Browser WARN    Image with src "https://api.dicebear.com/9.x/avataaars/svg?seed=Abdulrahman" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:06:28.384] Browser WARN    Image with src "http://localhost:3000/_next/static/media/LogoWithNoSlugn.020b7f23.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:07:47.041] Server  ERROR   ⨯ The requested resource "https://api.dicebear.com/9.x/avataaars/svg?seed=Abdulrahman" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[00:08:17.632] Server  LOG     ✓ Compiled in 978ms
+[00:09:05.944] Server  LOG     ✓ Compiled in 3.5s
+[00:09:28.546] Server  LOG     ✓ Finished writing to filesystem cache in 21.0s
+[00:09:43.407] Server  LOG     ✓ Compiled in 213ms
+[00:10:39.686] Server  LOG     ✓ Compiled in 109ms
+[00:11:10.517] Server  ERROR   ⨯ The requested resource "https://api.dicebear.com/9.x/avataaars/svg?seed=Abdulrahman" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[00:20:03.412] Server  ERROR   ⨯ The requested resource "https://api.dicebear.com/9.x/avataaars/svg?seed=Abdulrahman" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[00:27:05.334] Server  LOG     ✓ Compiled in 828ms
+[00:27:05.849] Server  ERROR   ⨯ The requested resource "https://api.dicebear.com/9.x/avataaars/svg?seed=Abdulrahman" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[00:27:07.612] Browser ERROR   uncaughtError: Error: Invalid src prop (https://images.unsplash.com/photo-1585036156171-384164a8c675) on `next/image`, hostname "images.unsplash.com" is not configured under images in your `next.config.js`
+See more info: https://nextjs.org/docs/messages/next-image-unconfigured-host
+[00:27:09.873] Server  ERROR   ⨯ Error: Invalid src prop (https://images.unsplash.com/photo-1585036156171-384164a8c675) on `next/image`, hostname "images.unsplash.com" is not configured under images in your `next.config.js`
+See more info: https://nextjs.org/docs/messages/next-image-unconfigured-host
+[00:27:13.743] Browser ERROR   uncaughtError: Error: Invalid src prop (https://images.unsplash.com/photo-1585036156171-384164a8c675) on `next/image`, hostname "images.unsplash.com" is not configured under images in your `next.config.js`
+See more info: https://nextjs.org/docs/messages/next-image-unconfigured-host
+[00:37:29.663] Server  LOG     ✓ Compiled in 4.5s
+[00:37:29.666] Browser ERROR   ./app/components/Navbar.js:9:1
+Parsing ecmascript source code failed
+   7 | import { FaStar } from "react-icons/fa";
+   8 | import AVatar 
+>  9 | const TopNav = () => {
+     | ^^^^^
+  10 |   return (
+  11 |     <header
+  12 |       className="w-full px-4 pt-6 pb-4 bg-main text-white flex flex-col gap-4 rounded-b-2xl"
+
+Expected ',', got 'const'
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+[00:37:40.488] Server  LOG     ✓ Compiled in 867ms
+[00:37:40.489] Browser ERROR   ./app/components/Navbar.js:8:14
+Parsing ecmascript source code failed
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar-1 from  ""
+     |              ^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+Expected ',', got '-'
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+[00:39:12.122] Browser ERROR   ./app/components/Navbar.js:8:14
+Parsing ecmascript source code failed
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar-1 from  "../../public/avatar-1.png";
+     |              ^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+Expected ',', got '-'
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+[00:39:12.457] Browser ERROR   ./app/components/Navbar.js:8:14
+Parsing ecmascript source code failed
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar-1 from  "../../public/avatar-1.png";
+     |              ^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+Expected ',', got '-'
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+[00:39:17.481] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:17.554] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:18.247] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:18.295] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:18.463] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:18.871] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:18.989] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:19.077] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:19.114] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:19.123] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:19.167] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:19.185] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:19.197] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:19.203] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:19.251] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:19.278] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:19.895] Server  LOG     ✓ Compiled in 1934ms
+[00:39:19.896] Browser ERROR   ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:39:20.537] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:20.902] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:21.386] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:21.836] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:22.337] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:23.015] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:23.410] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:23.750] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:23.915] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:24.265] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:24.346] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:24.518] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:24.587] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:24.835] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:24.898] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:25.016] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:25.204] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:25.630] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:25.730] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:25.899] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:25.989] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:26.137] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:26.196] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:26.360] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:26.435] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:26.516] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:26.641] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:26.738] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:26.744] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:26.774] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:26.804] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:26.848] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:26.951] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:27.004] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:27.093] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:27.133] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:27.237] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:27.282] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:27.369] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:27.457] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:27.530] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:27.568] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:27.661] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:27.736] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:27.829] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:27.886] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:27.960] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:28.094] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:28.169] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:28.649] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:28.674] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:28.701] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:28.778] Server  LOG     ✓ Compiled in 835ms
+[00:39:28.881] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:28.901] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:28.934] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:28.957] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:29.019] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:29.042] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:29.050] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:29.098] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:29.108] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:29.117] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:29.382] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:29.453] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:29.472] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:29.478] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:29.486] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:29.493] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:29.499] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:29.503] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:29.511] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:29.516] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:29.521] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:29.533] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:29.539] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:29.543] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:39:29.552] Browser ERROR   ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:39:29.552] Browser ERROR   ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:39:29.552] Browser ERROR   ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:39:29.552] Browser ERROR   ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:39:29.553] Browser ERROR   ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from  "../../public/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:40:00.742] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/Avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/Avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:00.749] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/Avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/Avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:00.759] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/Avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/Avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:00.768] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/Avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/Avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:00.777] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/Avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/Avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:00.781] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/Avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/Avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:00.785] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/Avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/Avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:00.790] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/Avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/Avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:00.795] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/Avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/Avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:00.800] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/Avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/Avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:00.804] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/Avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/Avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:00.810] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/Avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/Avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:00.815] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/Avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/Avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:00.818] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/Avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/Avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:00.823] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/Avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/Avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:00.827] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/Avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/Avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:00.832] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/Avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/Avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:00.836] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/Avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/Avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:00.842] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/Avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/Avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:00.852] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/Avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/Avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:00.858] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/Avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/Avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:00.862] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/Avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/Avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:00.866] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/Avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/Avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:00.869] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/Avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/Avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:00.879] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/Avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/Avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:00.883] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/Avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/Avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:00.886] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/Avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/Avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:00.894] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/Avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/Avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:00.899] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/Avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/Avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:00.904] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/Avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/Avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:00.909] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/Avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/Avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:00.912] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/Avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/Avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:01.017] Server  LOG     ✓ Compiled in 333ms
+[00:40:01.028] Browser ERROR   ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/Avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/Avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:40:01.474] Browser ERROR   ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/Avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/Avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:40:01.846] Browser ERROR   ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/Avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/Avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:40:05.980] Browser ERROR   ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/Avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/Avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:40:06.424] Browser ERROR   ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/Avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/Avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:40:21.561] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:21.749] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:21.916] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:22.276] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:22.379] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:22.583] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:22.743] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:22.883] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:22.960] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:23.044] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:23.083] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:23.166] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:23.267] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:23.380] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:23.431] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:23.530] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:23.904] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:25.561] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:25.680] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:25.804] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:25.863] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:25.942] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:25.993] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:26.066] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:26.147] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:26.222] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:26.298] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:26.371] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:26.431] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:26.456] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:26.550] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:26.594] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:40:26.913] Server  LOG     ✓ Compiled in 411ms
+[00:40:26.934] Browser ERROR   ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:40:27.555] Browser ERROR   ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Image/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Image/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | const TopNav = () => {
+  10 |   return (
+  11 |     <header
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:40:43.307] Server  LOG     ✓ Compiled in 1508ms
+[00:40:43.563] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:40:48.729] Server  ERROR   ⨯ Error: Invalid src prop (https://images.unsplash.com/photo-1585036156171-384164a8c675) on `next/image`, hostname "images.unsplash.com" is not configured under images in your `next.config.js`
+See more info: https://nextjs.org/docs/messages/next-image-unconfigured-host
+[00:41:04.376] Browser ERROR   uncaughtError: Error: Switched to client rendering because the server rendering errored:
+
+Invalid src prop (https://images.unsplash.com/photo-1585036156171-384164a8c675) on `next/image`, hostname "images.unsplash.com" is not configured under images in your `next.config.js`
+See more info: https://nextjs.org/docs/messages/next-image-unconfigured-host
+[00:41:14.579] Server  LOG     ✓ Compiled in 0ms
+[00:41:19.623] Server  LOG     ✓ Finished writing to filesystem cache in 31.4s
+[00:41:32.895] Browser ERROR   uncaughtError: Error: Invalid src prop (https://images.unsplash.com/photo-1585036156171-384164a8c675) on `next/image`, hostname "images.unsplash.com" is not configured under images in your `next.config.js`
+See more info: https://nextjs.org/docs/messages/next-image-unconfigured-host
+[00:47:17.277] Server  LOG     ✓ Compiled in 1241ms
+[00:47:17.887] Server  LOG     ✓ Compiled in 122ms
+[00:47:18.180] Browser ERROR   ./app/components/Navbar.js:9:8
+Ecmascript file had an error
+   7 | import { FaStar } from "react-icons/fa";
+   8 | import Avatar1 from "../../public/Images/avatar-1.png";
+>  9 | import Avatar1 from "../../public/Images/avatar-1.png";
+     |        ^^^^^^^
+  10 | const TopNav = () => {
+  11 |   return (
+  12 |     <header
+
+the name `Avatar1` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+[00:47:18.293] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:47:19.959] Server  ERROR   ⨯ Error: Invalid src prop (https://images.unsplash.com/photo-1585036156171-384164a8c675) on `next/image`, hostname "images.unsplash.com" is not configured under images in your `next.config.js`
+See more info: https://nextjs.org/docs/messages/next-image-unconfigured-host
+[00:47:23.844] Server  ERROR   ⨯ ./app/components/Navbar.js:9:1
+Module not found: Can't resolve '../../public/Images/course.png'
+   7 | import { FaStar } from "react-icons/fa";
+   8 | import Avatar1 from "../../public/Images/avatar-1.png";
+>  9 | import Course from "../../public/Images/course.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | const TopNav = () => {
+  11 |   return (
+  12 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:47:24.121] Server  ERROR   ⨯ ./app/components/Navbar.js:9:1
+Module not found: Can't resolve '../../public/Images/course.png'
+   7 | import { FaStar } from "react-icons/fa";
+   8 | import Avatar1 from "../../public/Images/avatar-1.png";
+>  9 | import Course from "../../public/Images/course.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | const TopNav = () => {
+  11 |   return (
+  12 |     <header
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:47:35.045] Server  LOG     ✓ Compiled in 2.5s
+[00:48:00.102] Browser ERROR   uncaughtError: Error: Invalid src prop (https://images.unsplash.com/photo-1585036156171-384164a8c675) on `next/image`, hostname "images.unsplash.com" is not configured under images in your `next.config.js`
+See more info: https://nextjs.org/docs/messages/next-image-unconfigured-host
+[00:49:07.193] Browser WARN    Image with src "http://localhost:3000/_next/static/media/LogoWithNoSlugn.020b7f23.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:49:07.842] Server  LOG     ✓ Finished writing to filesystem cache in 45s
+[00:49:08.994] Browser WARN    Image with src "/_next/static/media/avatar-1.929b926f.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:49:08.994] Browser WARN    Image with src "/_next/static/media/course.227df05c.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:50:30.464] Server  LOG     ✓ Compiled in 9.2s
+[00:50:44.762] Server  LOG     ✓ Compiled in 1437ms
+[00:50:59.635] Server  LOG     ✓ Finished filesystem cache database compaction in 18.7s
+[00:50:59.687] Server  LOG     ✓ Finished writing to filesystem cache in 13.0s
+[00:51:09.203] Server  LOG     ✓ Compiled in 96ms
+[00:51:13.417] Server  LOG     ✓ Compiled in 145ms
+[00:51:17.061] Server  LOG     ✓ Compiled in 608ms
+[00:51:25.554] Server  LOG     ✓ Compiled in 190ms
+[00:51:42.699] Server  LOG     ✓ Compiled in 259ms
+[00:52:01.532] Server  LOG     ✓ Compiled in 378ms
+[00:52:10.199] Server  LOG     ✓ Compiled in 235ms
+[00:52:20.082] Server  LOG     ✓ Compiled in 205ms
+[00:53:05.494] Server  LOG     ✓ Compiled in 206ms
+[00:53:17.975] Server  LOG     ✓ Compiled in 1140ms
+[00:53:23.217] Server  LOG     ✓ Compiled in 304ms
+[00:53:46.415] Server  LOG     ✓ Compiled in 3.5s
+[00:53:49.274] Server  LOG     ✓ Compiled in 451ms
+[00:54:03.062] Server  LOG     ✓ Compiled in 604ms
+[00:54:15.376] Server  LOG     ✓ Compiled in 1143ms
+[00:54:52.442] Server  LOG     ✓ Finished writing to filesystem cache in 19.0s
+[00:55:44.823] Server  LOG     ✓ Compiled in 95ms
+[00:55:57.271] Server  LOG     ✓ Compiled in 199ms
+[00:56:06.218] Server  LOG     ✓ Compiled in 1426ms
+[00:56:20.716] Server  LOG     ✓ Compiled in 380ms
+[00:56:28.360] Server  LOG     ✓ Compiled in 99ms
+[00:56:33.016] Server  LOG     ✓ Compiled in 290ms
+[00:57:24.423] Server  LOG     ✓ Compiled in 7.2s
+[00:57:28.216] Server  LOG     ✓ Compiled in 338ms
+[00:57:31.885] Server  LOG     ✓ Compiled in 197ms
+[00:57:42.155] Server  LOG     ✓ Compiled in 485ms

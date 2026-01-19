@@ -1,5 +1,5 @@
 import "./globals.css";
-
+import BottomNav from "./components/BottomNavbar";
 export const metadata = {
   title: "تحدي مأرب الرّمضاني",
   description:
@@ -13,7 +13,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <BottomNav />
+      </body>
     </html>
   );
 }

@@ -11,9 +11,10 @@ export default {
         tufuli: ["Tufuli", "sans-serif"], // Add Tufuli font
       },
       colors: {
-        white: "#FCFCFC",
-        main: "#1D1A49",
-        secondary: "#E96117",
+        white: "#F9FFF6",
+        main: "#86977D",
+        secondary: "#DA8568",
+        thirdly: "#414C62",
         foreground: "var(--foreground)",
       },
     },

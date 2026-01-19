@@ -90,7 +90,7 @@ const Login = () => {
         <div className="hidden lg:block w-px bg-gray-300 mx-4"></div>
         <hr className="block lg:hidden text-main my-12" />
 
-        {/* Login Form */}
+        {/* Login Forللااىتةىوm */}
         <div className="flex-1">
           <div className="mb-6 flex flex-col gap-1 text-center md:text-right">
             <Image
