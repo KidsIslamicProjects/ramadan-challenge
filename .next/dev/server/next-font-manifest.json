@@ -1,5 +1,6 @@
 {
   "app": {
+    "[project]/app/_not-found/page": [],
     "[project]/app/page": []
   },
   "appUsingSizeAdjust": false,

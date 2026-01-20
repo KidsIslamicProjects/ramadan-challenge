@@ -3,7 +3,6 @@
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-// Importing icons from Heroicons (clean & minimal)
 import {
   HiHome,
   HiAcademicCap,
@@ -15,38 +14,18 @@ import {
 const BottomNav = () => {
   const pathname = usePathname();
 
-  // Navigation Items Configuration
   const navItems = [
-    {
-      label: "الرئيسية", // Home
-      href: "/",
-      icon: HiHome,
-    },
-    {
-      label: "المساقات", // Courses/Tracks
-      href: "/courses",
-      icon: HiRectangleStack,
-    },
-    {
-      label: "العقيدة", // Creed
-      href: "/aqidah",
-      icon: HiBookOpen,
-    },
-    {
-      label: "المكتبة", // Placeholder 1 (Library)
-      href: "/library",
-      icon: HiAcademicCap,
-    },
-    {
-      label: "حسابي", // Placeholder 2 (My Account)
-      href: "/profile",
-      icon: HiUser,
-    },
+    { label: "الرئيسية", href: "/", icon: HiHome },
+    { label: "المساقات", href: "/courses", icon: HiRectangleStack },
+    { label: "العقيدة", href: "/aqidah", icon: HiBookOpen },
+    { label: "المكتبة", href: "/library", icon: HiAcademicCap },
+    { label: "حسابي", href: "/profile", icon: HiUser },
   ];
 
   return (
-    <div className="fixed bottom-0 left-0 z-50 w-full h-16 bg-white border-t border-gray-100 pb-safe">
-      <div className="h-full max-w-lg mx-auto font-medium flex flex-row-reverse items-center justify-content">
+    // Outer Container: Centered, Floating, Rounded
+    <div className="fixed bottom-6 left-1/2 z-50 w-[90%] max-w-md -translate-x-1/2 transform">
+      <div className="flex h-16 flex-row-reverse items-center justify-between rounded-full border border-gray-100 bg-white/95 px-4 shadow-xl backdrop-blur-md pb-safe">
         {navItems.map((item) => {
           const isActive = pathname === item.href;
           const Icon = item.icon;
@@ -55,7 +34,7 @@ const BottomNav = () => {
             <Link
               key={item.href}
               href={item.href}
-              className={`inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 group transition-colors duration-200
+              className={`group relative flex flex-col items-center justify-center p-2 transition-colors duration-200
                 ${
                   isActive
                     ? "text-[#86977D]"
@@ -65,17 +44,19 @@ const BottomNav = () => {
             >
               {/* Icon */}
               <Icon
-                className={`w-6 h-6 mb-1 transition-transform duration-200 ${
+                className={`mb-1 h-6 w-6 transition-transform duration-200 ${
                   isActive ? "-translate-y-1" : ""
                 }`}
               />
 
               {/* Label */}
-              <span className="text-[10px] md:text-xs">{item.label}</span>
+              <span className="text-xs font-medium md:text-sm">
+                {item.label}
+              </span>
 
-              {/* Active Indicator Dot (Optional - adds a nice minimal touch) */}
+              {/* Active Indicator Dot */}
               {isActive && (
-                <span className="absolute bottom-1 w-1 h-1 bg-[#86977D] rounded-full"></span>
+                <span className="absolute bottom-1 h-1 w-1 rounded-full bg-[#86977D]"></span>
               )}
             </Link>
           );

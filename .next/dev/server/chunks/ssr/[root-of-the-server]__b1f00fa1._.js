@@ -34,7 +34,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-ssr] (ecmascript)");
-// Importing icons from Heroicons (clean & minimal)
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$hi2$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react-icons/hi2/index.mjs [app-ssr] (ecmascript)");
 "use client";
 ;
@@ -44,7 +43,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$ico
 ;
 const BottomNav = ()=>{
     const pathname = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["usePathname"])();
-    // Navigation Items Configuration
     const navItems = [
         {
             label: "الرئيسية",
@@ -72,58 +70,59 @@ const BottomNav = ()=>{
             icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$hi2$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["HiUser"]
         }
     ];
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "fixed bottom-0 left-0 z-50 w-full h-16 bg-white border-t border-gray-100 pb-safe",
+    return(// Outer Container: Centered, Floating, Rounded
+    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "fixed bottom-6 left-1/2 z-50 w-[90%] max-w-md -translate-x-1/2 transform",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "h-full max-w-lg mx-auto font-medium flex flex-row-reverse items-center justify-content",
+            className: "flex h-16 flex-row-reverse items-center justify-between rounded-full border border-gray-100 bg-white/95 px-4 shadow-xl backdrop-blur-md pb-safe",
             children: navItems.map((item)=>{
                 const isActive = pathname === item.href;
                 const Icon = item.icon;
                 return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                     href: item.href,
-                    className: `inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 group transition-colors duration-200
+                    className: `group relative flex flex-col items-center justify-center p-2 transition-colors duration-200
                 ${isActive ? "text-[#86977D]" : "text-gray-400 hover:text-gray-600"}
               `,
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Icon, {
-                            className: `w-6 h-6 mb-1 transition-transform duration-200 ${isActive ? "-translate-y-1" : ""}`
+                            className: `mb-1 h-6 w-6 transition-transform duration-200 ${isActive ? "-translate-y-1" : ""}`
                         }, void 0, false, {
                             fileName: "[project]/app/components/BottomNavbar.js",
-                            lineNumber: 67,
+                            lineNumber: 46,
                             columnNumber: 15
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                            className: "text-[10px] md:text-xs",
+                            className: "text-xs font-medium md:text-sm",
                             children: item.label
                         }, void 0, false, {
                             fileName: "[project]/app/components/BottomNavbar.js",
-                            lineNumber: 74,
+                            lineNumber: 53,
                             columnNumber: 15
                         }, ("TURBOPACK compile-time value", void 0)),
                         isActive && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                            className: "absolute bottom-1 w-1 h-1 bg-[#86977D] rounded-full"
+                            className: "absolute bottom-1 h-1 w-1 rounded-full bg-[#86977D]"
                         }, void 0, false, {
                             fileName: "[project]/app/components/BottomNavbar.js",
-                            lineNumber: 78,
+                            lineNumber: 59,
                             columnNumber: 17
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, item.href, true, {
                     fileName: "[project]/app/components/BottomNavbar.js",
-                    lineNumber: 55,
+                    lineNumber: 34,
                     columnNumber: 13
                 }, ("TURBOPACK compile-time value", void 0));
             })
         }, void 0, false, {
             fileName: "[project]/app/components/BottomNavbar.js",
-            lineNumber: 49,
+            lineNumber: 28,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/app/components/BottomNavbar.js",
-        lineNumber: 48,
+        lineNumber: 27,
         columnNumber: 5
-    }, ("TURBOPACK compile-time value", void 0));
+    }, ("TURBOPACK compile-time value", void 0)));
 };
 const __TURBOPACK__default__export__ = BottomNav;
 }),

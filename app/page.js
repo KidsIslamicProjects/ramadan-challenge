@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Banner from "./data/images/bannerHero.jpg";
 import Navbar from "./components/Navbar";
+import NotFound from "./components/NotFound";
 import Countdown from "./components/CountDown";
 import ChallengeItems from "./components/ChallengeItems";
 
@@ -32,16 +33,16 @@ export default function MaribChallenge() {
       </div>
 
       {/* Countdown Overlay */}
-      {isCountdownActive && (
+      {/* {isCountdownActive && (
         <div className="absolute w-full inset-0 flex items-center justify-center z-40 pointer-events-none">
           <div className="pointer-events-auto w-full">
             <Countdown />
           </div>
         </div>
-      )}
+      )} */}
 
       {/* Content */}
-      <div
+      {/* <div
         className={`${
           isCountdownActive ? "opacity-40 blur-md" : "opacity-100"
         } transition-all duration-500`}
@@ -61,8 +62,9 @@ export default function MaribChallenge() {
         </div>
 
         {/* Always show ChallengeItems */}
-        <ChallengeItems />
-      </div>
+      {/* <ChallengeItems />
+      </div> */}
+      <NotFound content="جاري العمل على إضافة المساقات" />
     </div>
   );
 }

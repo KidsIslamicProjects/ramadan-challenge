@@ -11,7 +11,7 @@ import Course from "../../public/Images/course.jpg";
 const TopNav = () => {
   return (
     <header
-      className="w-full px-4 pt-6 pb-4 bg-main text-white flex flex-col gap-4 rounded-b-2xl"
+      className="w-full px-4 pt-6 pb-4 bg-main text-white flex flex-col gap-4 rounded-b-3xl"
       dir="rtl"
     >
       {/* TOP ROW */}
@@ -23,7 +23,7 @@ const TopNav = () => {
           </div>
 
           <div className="flex items-center gap-1">
-            <span className="text-sm font-bold text-gray-100">
+            <span className="font-bold text-gray-100">
               السلامُ عليكُم، عبد الرحمن
             </span>
             <FaStar className="w-3 h-3 md:w-4 md:h-4 text-yellow-500" />
@@ -33,9 +33,9 @@ const TopNav = () => {
         {/* LEFT SIDE: Notifications */}
         <button className="relative p-2 rounded-full hover:bg-white/5 transition-colors">
           <HiOutlineBell className="w-5 h-5 md:w-7 md:h-7 text-white" />
-          <div className="absolute top-1 right-1 flex items-center justify-center min-w-[18px] h-[18px] bg-red-600 rounded-full">
+          <div className="absolute top-1 right-1 flex items-center justify-center w-[14px] h-[14px] md:min-w-[18px] md:h-[18px] bg-red-600 rounded-full">
             <span className="text-[10px] font-bold text-white leading-none px-1">
-              10
+              1
             </span>
           </div>
         </button>
@@ -47,7 +47,7 @@ const TopNav = () => {
 
         <Link
           href="/courses/quran-level-1"
-          className="flex items-center gap-3 hover:bg-white/5 rounded-lg p-2 transition"
+          className="flex items-center gap-3 hover:bg-white/5 rounded-lg py-2 transition"
         >
           <div className="relative w-14 h-14 rounded-lg overflow-hidden flex-shrink-0">
             <Image src={Course} alt="Course" fill className="object-cover" />
