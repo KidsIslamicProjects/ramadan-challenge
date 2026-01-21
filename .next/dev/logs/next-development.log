@@ -1,1699 +1,851 @@
-[00:00:02.967] Server  LOG     ✓ Ready in 1979ms
-[00:00:39.459] Server  LOG     ○ Compiling / ...
-[00:01:11.867] Browser WARN    Image with src "/_next/static/media/avatar-1.929b926f.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:01:11.867] Browser WARN    Image with src "/_next/static/media/course.227df05c.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:06:10.405] Server  LOG     ✓ Compiled in 357ms
-[00:06:29.343] Server  LOG     ✓ Finished writing to filesystem cache in 10.5s
-[00:06:32.604] Server  LOG     ✓ Compiled in 354ms
-[00:06:36.354] Server  LOG     ✓ Compiled in 253ms
-[00:07:01.770] Server  LOG     ✓ Compiled in 9.7s
-[00:07:09.534] Server  LOG     ✓ Compiled in 575ms
-[00:07:14.649] Server  LOG     ✓ Compiled in 809ms
-[00:07:17.558] Server  LOG     ✓ Compiled in 556ms
-[00:07:21.430] Server  LOG     ✓ Compiled in 329ms
-[00:07:53.307] Server  LOG     ✓ Compiled in 789ms
-[00:14:14.796] Server  LOG     ✓ Finished writing to filesystem cache in 16.3s
-[00:15:53.003] Server  LOG     ✓ Finished writing to filesystem cache in 34.5s
-[00:16:15.343] Server  LOG     ✓ Finished writing to filesystem cache in 16.5s
-[00:16:42.587] Server  LOG     ✓ Finished writing to filesystem cache in 18.9s
-[00:16:56.988] Server  LOG     ✓ Compiled in 13.8s
-[00:17:12.401] Browser ERROR   ./app/page.js:35:31
+[00:00:04.078] Server  LOG     ✓ Ready in 2.8s
+[00:00:33.819] Server  LOG     ✓ Finished writing to filesystem cache in 24.0s
+[00:00:46.519] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:52.038] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:59.973] Server  LOG     ✓ Compiled in 2.1s
+[00:11:14.433] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:12:29.514] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:36.831] Server  LOG     ✓ Compiled in 18.2s
+[00:15:16.300] Server  LOG     ✓ Compiled in 247ms
+[00:15:20.685] Server  LOG     ✓ Compiled in 170ms
+[00:15:22.544] Server  LOG     ✓ Compiled in 205ms
+[00:15:28.311] Server  LOG     ✓ Compiled in 305ms
+[00:15:30.951] Server  LOG     ✓ Compiled in 318ms
+[00:16:18.745] Server  LOG     ✓ Compiled in 896ms
+[00:16:20.710] Server  LOG     ✓ Compiled in 184ms
+[00:18:15.469] Server  LOG     ✓ Compiled in 773ms
+[00:19:38.509] Server  LOG     ✓ Compiled in 1208ms
+[00:33:03.027] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Images/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Images/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import Course from "../../public/Images/course.jpg";
+  10 |
+  11 | const TopNav = () => {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:33:03.050] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Images/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Images/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import Course from "../../public/Images/course.jpg";
+  10 |
+  11 | const TopNav = () => {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:33:03.073] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Images/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Images/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import Course from "../../public/Images/course.jpg";
+  10 |
+  11 | const TopNav = () => {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:33:03.082] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Images/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Images/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import Course from "../../public/Images/course.jpg";
+  10 |
+  11 | const TopNav = () => {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:33:03.098] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Images/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Images/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import Course from "../../public/Images/course.jpg";
+  10 |
+  11 | const TopNav = () => {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:33:03.114] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Images/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Images/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import Course from "../../public/Images/course.jpg";
+  10 |
+  11 | const TopNav = () => {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:33:03.127] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Images/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Images/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import Course from "../../public/Images/course.jpg";
+  10 |
+  11 | const TopNav = () => {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:33:03.139] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Images/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Images/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import Course from "../../public/Images/course.jpg";
+  10 |
+  11 | const TopNav = () => {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:33:03.154] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Images/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Images/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import Course from "../../public/Images/course.jpg";
+  10 |
+  11 | const TopNav = () => {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:33:03.161] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Images/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Images/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import Course from "../../public/Images/course.jpg";
+  10 |
+  11 | const TopNav = () => {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:33:03.182] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Images/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Images/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import Course from "../../public/Images/course.jpg";
+  10 |
+  11 | const TopNav = () => {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:33:03.198] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Images/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Images/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import Course from "../../public/Images/course.jpg";
+  10 |
+  11 | const TopNav = () => {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:33:03.217] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Images/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Images/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import Course from "../../public/Images/course.jpg";
+  10 |
+  11 | const TopNav = () => {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:33:03.223] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Images/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Images/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import Course from "../../public/Images/course.jpg";
+  10 |
+  11 | const TopNav = () => {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:33:03.234] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Images/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Images/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import Course from "../../public/Images/course.jpg";
+  10 |
+  11 | const TopNav = () => {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:33:03.241] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Images/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Images/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import Course from "../../public/Images/course.jpg";
+  10 |
+  11 | const TopNav = () => {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:33:03.250] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Images/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Images/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import Course from "../../public/Images/course.jpg";
+  10 |
+  11 | const TopNav = () => {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:33:03.259] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Images/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Images/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import Course from "../../public/Images/course.jpg";
+  10 |
+  11 | const TopNav = () => {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:33:03.269] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Images/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Images/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import Course from "../../public/Images/course.jpg";
+  10 |
+  11 | const TopNav = () => {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:33:03.282] Server  ERROR   ⨯ ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Images/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Images/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import Course from "../../public/Images/course.jpg";
+  10 |
+  11 | const TopNav = () => {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:33:04.690] Browser ERROR   ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Images/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Images/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import Course from "../../public/Images/course.jpg";
+  10 |
+  11 | const TopNav = () => {
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:52.673] Browser ERROR   ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Images/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Images/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import Course from "../../public/Images/course.jpg";
+  10 |
+  11 | const TopNav = () => {
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:56.675] Browser ERROR   ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Images/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Images/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import Course from "../../public/Images/course.jpg";
+  10 |
+  11 | const TopNav = () => {
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:36:55.709] Browser ERROR   ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Images/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Images/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import Course from "../../public/Images/course.jpg";
+  10 |
+  11 | const TopNav = () => {
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:36:59.672] Browser ERROR   ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Images/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Images/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import Course from "../../public/Images/course.jpg";
+  10 |
+  11 | const TopNav = () => {
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:37:40.707] Browser ERROR   ./app/components/Navbar.js:8:1
+Module not found: Can't resolve '../../public/Images/avatar-1.png'
+   6 | import { HiOutlineBell } from "react-icons/hi2";
+   7 | import { FaStar } from "react-icons/fa";
+>  8 | import Avatar1 from "../../public/Images/avatar-1.png";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import Course from "../../public/Images/course.jpg";
+  10 |
+  11 | const TopNav = () => {
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Navbar.js [Client Component Browser]
+    ./app/page.js [Client Component Browser]
+    ./app/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/components/Navbar.js [Client Component SSR]
+    ./app/page.js [Client Component SSR]
+    ./app/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:38:44.430] Server  LOG     ✓ Compiled in 1987ms
+[00:39:03.492] Server  LOG     ✓ Compiled in 422ms
+[00:59:38.144] Server  LOG     ✓ Compiled in 3.1s
+[00:59:44.033] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:59:44.591] Browser WARN    Image with src "/_next/static/media/Register.7b58d219.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[01:00:36.478] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:00:36.932] Browser WARN    Image with src "/_next/static/media/Register.7b58d219.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[01:02:15.708] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:02:16.099] Browser WARN    Image with src "/_next/static/media/Register.7b58d219.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[01:02:36.452] Browser WARN    Image with src "/Images/avatar-boy-1.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:02:55.886] Server  LOG     ✓ Compiled in 1804ms
+[01:03:00.941] Server  LOG     ✓ Compiled in 1791ms
+[01:03:07.738] Server  LOG     ✓ Compiled in 226ms
+[01:03:10.918] Server  LOG     ✓ Compiled in 117ms
+[01:03:15.487] Server  LOG     ✓ Compiled in 270ms
+[01:03:26.963] Server  LOG     ✓ Compiled in 426ms
+[01:03:34.624] Server  LOG     ✓ Compiled in 229ms
+[01:05:43.899] Server  LOG     ✓ Compiled in 12.5s
+[01:05:44.942] Server  LOG     ✓ Finished writing to filesystem cache in 15.6s
+[01:07:32.220] Server  LOG     ✓ Compiled in 176ms
+[01:08:10.311] Server  LOG     ✓ Compiled in 2.5s
+[01:08:24.497] Server  LOG     ✓ Finished writing to filesystem cache in 11.9s
+[01:08:36.556] Server  LOG     ✓ Compiled in 1184ms
+[01:08:37.633] Server  LOG     ✓ Compiled in 602ms
+[01:08:51.821] Server  LOG     ✓ Compiled in 950ms
+[01:09:29.364] Server  LOG     ○ Compiling /login ...
+[01:09:29.901] Server  ERROR   ⨯ ./app/login/page.js:81:12
 Parsing ecmascript source code failed
-  33 |       </div>
-  34 | <Main
-> 35 |       {/* Countdown Overlay */}
-     |                               ^
-  36 |       {/* {isCountdownActive && (
-  37 |         <div className="absolute w-full inset-0 flex items-center justify-center z-40 pointer-events-none">
-  38 |           <div className="pointer-events-auto w-full">
-
-Expected '</', got '}'
-[00:17:18.282] Server  LOG     ✓ Compiled in 487ms
-[00:17:34.831] Server  ERROR   ⨯ ReferenceError: Main is not defined
-[00:18:08.799] Server  LOG     ✓ Finished writing to filesystem cache in 26.0s
-[00:18:28.906] Browser ERROR   uncaughtError: ReferenceError: Main is not defined
-[00:18:49.584] Server  LOG     ✓ Finished writing to filesystem cache in 30.5s
-[00:19:22.984] Server  LOG     ✓ Finished writing to filesystem cache in 10.7s
-[00:20:12.945] Server  LOG     ✓ Finished writing to filesystem cache in 34.2s
-[00:20:20.190] Browser WARN    Image with src "/_next/static/media/avatar-1.929b926f.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:20:20.190] Browser WARN    Image with src "/_next/static/media/course.227df05c.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:23:59.558] Server  LOG     ○ Compiling /profile ...
-[00:24:31.726] Server  LOG     ○ Compiling /login ...
-[00:24:40.707] Server  LOG     ✓ Finished writing to filesystem cache in 20.9s
-[00:24:42.237] Browser WARN    Image with src "http://localhost:3000/_next/static/media/LogoWithNoSlugn.020b7f23.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:27:12.265] Server  LOG     ✓ Compiled in 1668ms
-[00:27:29.235] Server  LOG     ✓ Compiled in 362ms
-[00:27:59.061] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '....//images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "....//images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:27:59.106] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '....//images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "....//images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:27:59.139] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '....//images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "....//images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:27:59.156] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '....//images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "....//images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:27:59.168] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '....//images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "....//images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:27:59.176] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '....//images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "....//images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:27:59.186] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '....//images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "....//images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:27:59.218] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '....//images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "....//images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:27:59.255] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '....//images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "....//images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:27:59.278] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '....//images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "....//images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:27:59.316] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '....//images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "....//images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:27:59.323] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '....//images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "....//images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:27:59.589] Server  LOG     ✓ Compiled in 689ms
-[00:27:59.590] Browser ERROR   ./app/login/page.js:4:1
-Module not found: Can't resolve '....//images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "....//images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-[00:28:04.398] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:04.624] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:04.856] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:05.058] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:05.127] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:05.141] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:05.974] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:06.182] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:06.204] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:06.240] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:06.327] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:06.375] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:06.439] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:06.501] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:06.520] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:06.552] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:06.593] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:06.609] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:06.618] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:06.651] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:06.733] Server  LOG     ✓ Compiled in 200ms
-[00:28:06.822] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:06.851] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:06.872] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:06.884] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:06.886] Browser ERROR   ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-[00:28:06.886] Browser ERROR   ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-[00:28:06.887] Browser ERROR   ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-[00:28:06.887] Browser ERROR   ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Login.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Login.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-[00:28:10.825] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Registr.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Registr.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:10.840] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Registr.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Registr.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:10.855] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Registr.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Registr.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:10.889] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Registr.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Registr.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:10.912] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Registr.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Registr.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:10.946] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Registr.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Registr.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:10.974] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Registr.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Registr.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:10.982] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Registr.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Registr.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:10.990] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Registr.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Registr.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:11.000] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Registr.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Registr.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:11.006] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Registr.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Registr.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:11.017] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Registr.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Registr.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:11.083] Server  LOG     ✓ Compiled in 134ms
-[00:28:11.151] Browser ERROR   ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Registr.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Registr.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-[00:28:15.759] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Register.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Register.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:16.019] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Register.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Register.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:16.363] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Register.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Register.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:16.487] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Register.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Register.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:16.821] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Register.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Register.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:17.118] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Register.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Register.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:17.284] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Register.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Register.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:17.750] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Register.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Register.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:31.042] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Register.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Register.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:31.216] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Register.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Register.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:31.364] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Register.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Register.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:31.569] Server  ERROR   ⨯ ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Register.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Register.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:28:31.682] Server  LOG     ✓ Compiled in 388ms
-[00:28:31.853] Browser ERROR   ./app/login/page.js:4:1
-Module not found: Can't resolve '../../public/Images/Register.svg'
-  2 |
-  3 | import React, { useState, useEffect } from "react";
-> 4 | import LoginImage from "../../public/Images/Register.svg";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import Logo from "../data/images/LogoWithNoSlugn.svg";
-  6 | import Image from "next/image";
-  7 | import Notification from "../components/Notification";
-
-Import traces:
-  Client Component Browser:
-    ./app/login/page.js [Client Component Browser]
-    ./app/login/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/login/page.js [Client Component SSR]
-    ./app/login/page.js [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-[00:28:32.448] Server  LOG     ✓ Compiled in 15.1s
-[00:29:28.995] Server  LOG     ✓ Compiled in 11.6s
-[00:30:04.103] Server  LOG     ✓ Finished writing to filesystem cache in 29.2s
-[00:30:34.131] Server  LOG     ✓ Compiled in 979ms
-[00:31:16.944] Server  LOG     ✓ Compiled in 698ms
-[00:31:23.341] Server  LOG     ✓ Compiled in 602ms
-[00:31:28.603] Server  LOG     ✓ Compiled in 2.4s
-[00:31:33.206] Server  LOG     ✓ Compiled in 593ms
-[00:31:42.037] Server  LOG     ✓ Compiled in 118ms
-[00:32:43.704] Server  LOG     ✓ Finished writing to filesystem cache in 16.5s
-[00:33:42.290] Server  LOG     ✓ Compiled in 957ms
-[00:33:47.424] Server  LOG     ✓ Compiled in 670ms
-[00:34:24.089] Server  LOG     ✓ Compiled in 1947ms
-[00:34:39.144] Server  LOG     ✓ Compiled in 9s
-[00:35:00.352] Server  LOG     ✓ Compiled in 13.5s
-[00:35:05.350] Server  LOG     ✓ Finished filesystem cache database compaction in 24.1s
-[00:35:15.570] Server  LOG     ✓ Compiled in 1277ms
-[00:36:39.283] Server  LOG     ✓ Finished writing to filesystem cache in 31.7s
-[00:36:54.143] Server  LOG     ✓ Compiled in 1781ms
-[00:37:00.162] Server  LOG     ✓ Compiled in 558ms
-[00:37:02.080] Server  LOG     ✓ Compiled in 333ms
-[00:37:55.801] Server  LOG     ✓ Finished writing to filesystem cache in 16.6s
-[00:38:25.674] Server  LOG     ✓ Compiled in 1493ms
-[00:38:58.932] Server  LOG     ✓ Compiled in 5s
-[00:38:58.932] Browser ERROR   uncaughtError: ReferenceError: Header is not defined
-[00:39:12.649] Server  LOG     ✓ Compiled in 179ms
-[00:39:12.770] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:39:48.880] Server  LOG     ✓ Finished writing to filesystem cache in 20.2s
-[00:40:00.550] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-https://react.dev/link/hydration-mismatch
-
-  ...
-    <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
-      <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
-        <LoadingBoundary name="signup/" loading={null}>
-          <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
-            <RedirectBoundary>
-              <RedirectErrorBoundary router={{...}}>
-                <InnerLayoutRouter url="/signup" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
-                  <SegmentViewNode type="page" pagePath="signup/pag...">
-                    <SegmentTrieNode>
-                    <ClientPageRoot Component={function Signup} serverProvidedParams={{...}}>
-                      <Signup params={Promise} searchParams={Promise}>
-                        <div dir="rtl" className="flex flex-...">
-                          <div>
-                          <div>
-                          <hr>
-                          <div className="flex-1">
-                            <div className="mb-6 flex ...">
-+                             <h3 className="text-main bold text-lg">
--                             <div>
-                              ...
-                            ...
-                  ...
-                ...
-      ...
-
-[00:40:53.093] Server  LOG     ✓ Compiled in 721ms
-[00:41:43.368] Server  LOG     ✓ Compiled in 161ms
-[00:42:00.997] Server  LOG     ✓ Finished writing to filesystem cache in 15.2s
-[00:42:08.046] Server  LOG     ✓ Compiled in 2.4s
+  79 |             alt="Login illustration"
+  80 |             src={LoginImage}
+> 81 |           />
+     |            ^
+  82 |         </div>
+  83 |
+  84 |         {/* Vertical Line */}
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+
+
+[01:09:30.350] Browser ERROR   ./app/login/page.js:81:12
+Parsing ecmascript source code failed
+  79 |             alt="Login illustration"
+  80 |             src={LoginImage}
+> 81 |           />
+     |            ^
+  82 |         </div>
+  83 |
+  84 |         {/* Vertical Line */}
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[01:09:30.350] Browser ERROR   ./app/login/page.js:81:12
+Parsing ecmascript source code failed
+  79 |             alt="Login illustration"
+  80 |             src={LoginImage}
+> 81 |           />
+     |            ^
+  82 |         </div>
+  83 |
+  84 |         {/* Vertical Line */}
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[01:09:31.730] Browser ERROR   ./app/login/page.js:81:12
+Parsing ecmascript source code failed
+  79 |             alt="Login illustration"
+  80 |             src={LoginImage}
+> 81 |           />
+     |            ^
+  82 |         </div>
+  83 |
+  84 |         {/* Vertical Line */}
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[01:09:31.730] Browser ERROR   ./app/login/page.js:81:12
+Parsing ecmascript source code failed
+  79 |             alt="Login illustration"
+  80 |             src={LoginImage}
+> 81 |           />
+     |            ^
+  82 |         </div>
+  83 |
+  84 |         {/* Vertical Line */}
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[01:09:32.750] Browser ERROR   ./app/login/page.js:81:12
+Parsing ecmascript source code failed
+  79 |             alt="Login illustration"
+  80 |             src={LoginImage}
+> 81 |           />
+     |            ^
+  82 |         </div>
+  83 |
+  84 |         {/* Vertical Line */}
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[01:09:32.763] Server  ERROR   ⨯ ./app/login/page.js:81:12
+Parsing ecmascript source code failed
+  79 |             alt="Login illustration"
+  80 |             src={LoginImage}
+> 81 |           />
+     |            ^
+  82 |         </div>
+  83 |
+  84 |         {/* Vertical Line */}
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+
+
+[01:09:35.885] Browser ERROR   uncaughtError: Error: ./app/login/page.js:81:12
+Parsing ecmascript source code failed
+  79 |             alt="Login illustration"
+  80 |             src={LoginImage}
+> 81 |           />
+     |            ^
+  82 |         </div>
+  83 |
+  84 |         {/* Vertical Line */}
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+
+
+[01:09:35.885] Browser ERROR   ./app/login/page.js:81:12
+Parsing ecmascript source code failed
+  79 |             alt="Login illustration"
+  80 |             src={LoginImage}
+> 81 |           />
+     |            ^
+  82 |         </div>
+  83 |
+  84 |         {/* Vertical Line */}
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[01:09:49.414] Browser ERROR   ./app/login/page.js:81:12
+Parsing ecmascript source code failed
+  79 |             alt="Login illustration"
+  80 |             src={LoginImage}
+> 81 |           />
+     |            ^
+  82 |         </div>
+  83 |
+  84 |         {/* Vertical Line */}
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[01:10:08.113] Server  LOG     ✓ Finished writing to filesystem cache in 17.5s
+[01:10:35.040] Server  LOG     ✓ Compiled in 13.6s
+[01:10:35.680] Browser ERROR   ./app/login/page.js:81:12
+Parsing ecmascript source code failed
+  79 |             alt="Login illustration"
+  80 |             src={LoginImage}
+> 81 |           />
+     |            ^
+  82 |         </div>
+  83 |
+  84 |         {/* Vertical Line */}
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[01:10:45.671] Browser ERROR   ./app/login/page.js:81:12
+Parsing ecmascript source code failed
+  79 |             alt="Login illustration"
+  80 |             src={LoginImage}
+> 81 |           />
+     |            ^
+  82 |         </div>
+  83 |
+  84 |         {/* Vertical Line */}
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[01:10:50.430] Server  LOG     ✓ Compiled in 550ms
+[01:12:57.213] Browser WARN    Image with src "/_next/static/media/Register.7b58d219.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[01:13:04.704] Server  LOG     ✓ Finished writing to filesystem cache in 29.7s
+[01:13:28.145] Server  LOG     ✓ Finished writing to filesystem cache in 21.4s
+[01:16:19.144] Server  LOG     ✓ Compiled in 89ms
+[01:25:56.561] Server  LOG     ✓ Finished writing to filesystem cache in 24.7s
+[01:26:08.552] Browser WARN    Image with src "/Images/avatar-boy-1.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:26:18.573] Browser WARN    Image with src "/_next/static/media/avatar-1.929b926f.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:26:19.832] Browser WARN    Image with src "/_next/static/media/course.227df05c.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:26:43.247] Browser ERROR   {}
+[01:26:43.508] Browser ERROR   {}
+[01:26:43.839] Browser WARN    Image with src "http://localhost:3000/_next/static/media/LogoWithNoSlugn.020b7f23.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.

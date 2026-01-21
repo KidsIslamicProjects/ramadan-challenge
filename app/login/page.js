@@ -67,15 +67,11 @@ const Login = () => {
     <>
       <div
         dir="rtl"
-        className="flex flex-col-reverse justify-between px-4 pt-8 lg:flex-row-reverse lg:justify-between lg:gap-12"
+        className="bg-white flex flex-col-reverse justify-between px-4 pt-8 lg:flex-row-reverse lg:justify-between lg:gap-12"
       >
         {/* Illustration */}
-        <div className="flex-1 flex justify-center">
-          <Image
-            className="w-48 md:w-64"
-            alt="Login illustration"
-            src={LoginImage}
-          />
+        <div className="flex-1 flex justify-center mb-24 md:mb-0">
+          <Image className="w-52" alt="Login illustration" src={LoginImage} />
         </div>
 
         {/* Vertical Line */}

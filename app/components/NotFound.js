@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const NotFound = ({ content }) => {
   return (
-    <div className="flex flex-col items-center justify-center h-[80vh]">
+    <div className="flex flex-col items-center justify-center h-[70vh]">
       <Image
         src={NotFoundd}
         alt="Not Found"
