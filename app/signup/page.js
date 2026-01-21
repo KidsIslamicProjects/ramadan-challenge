@@ -121,11 +121,14 @@ const Signup = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:3001/api/users", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(dataToSend),
-      });
+      const response = await fetch(
+        "https://ramadan-server-topaz.vercel.app/api/users",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(dataToSend),
+        },
+      );
 
       if (!response.ok) {
         throw new Error("فشل في إنشاء الحساب، حاول مرة أخرى.");
