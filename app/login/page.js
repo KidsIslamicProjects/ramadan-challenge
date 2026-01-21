@@ -1,9 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import LoginImage from "../data/images/Login.svg";
-import Logo from "../data/images/LogoWithNoSlugn.svg";
-import Lattern from "../data/images/latterns.png";
+import LoginImage from "../../public/Images/Register.png";
 import Image from "next/image";
 import Notification from "../components/Notification";
 import { useRouter } from "next/navigation";
@@ -43,7 +41,7 @@ const Login = () => {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(formData),
-        }
+        },
       );
 
       if (!response.ok) {
@@ -67,12 +65,6 @@ const Login = () => {
 
   return (
     <>
-      <div className="absolute top-0 left-0 z-10">
-        <Image src={Lattern} width={55} height={77} alt="lattern" />
-      </div>
-      <div className="absolute top-0 right-0 z-10">
-        <Image src={Lattern} width={55} height={77} alt="lattern" />
-      </div>
       <div
         dir="rtl"
         className="flex flex-col-reverse justify-between px-4 pt-8 lg:flex-row-reverse lg:justify-between lg:gap-12"
@@ -80,7 +72,7 @@ const Login = () => {
         {/* Illustration */}
         <div className="flex-1 flex justify-center">
           <Image
-            className="w-32 md:w-80"
+            className="w-48 md:w-64"
             alt="Login illustration"
             src={LoginImage}
           />
@@ -88,18 +80,11 @@ const Login = () => {
 
         {/* Vertical Line */}
         <div className="hidden lg:block w-px bg-gray-300 mx-4"></div>
-        <hr className="block lg:hidden text-main my-12" />
+        <hr className="block lg:hidden text-main mt-8 mb-4" />
 
         {/* Login Forللااىتةىوm */}
         <div className="flex-1">
-          <div className="mb-6 flex flex-col gap-1 text-center md:text-right">
-            <Image
-              alt="logo"
-              src={Logo}
-              width={45}
-              height={45}
-              className="mb-2 mx-auto"
-            />
+          <div className="mb-4 flex flex-col gap-1 text-center md:text-right">
             <h3 className="text-main bold text-lg">صفحة تسجيل الدخول</h3>
             <p className="text-secondary regular">
               أدخل بياناتك لتتمكن من متابعة التحديات اليومية
@@ -159,7 +144,7 @@ const Login = () => {
             className="text-secondary text-sm regular pt-4 flex items-center justify-center"
           >
             ليس لديك حساب؟
-            <span className="underline semi"> أنشئ حساب جديد من هنا</span>
+            <span className="underline semi mr-1"> أنشئ حساب جديد من هنا</span>
           </Link>
         </div>
       </div>

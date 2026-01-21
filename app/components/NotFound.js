@@ -4,13 +4,13 @@ import Image from "next/image";
 
 const NotFound = ({ content }) => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-[80%] ">
+    <div className="flex flex-col items-center justify-center h-[80vh]">
       <Image
         src={NotFoundd}
         alt="Not Found"
         className="w-64 h-64 object-contain"
       />
-      <h1 className="text-xl font-regular text-main mt-4">{content} </h1>
+      <h1 className="text-2xl font-regular text-main mt-4">{content} </h1>
     </div>
   );
 };

@@ -1,13 +1,11 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import SignupImage from "../data/images/Login.svg";
+import SignupImage from "../../public/Images/Register.png";
 import Image from "next/image";
 import Notification from "../components/Notification";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import confetti from "canvas-confetti";
-import Header from "../components/Header";
-import Logo from "../components/Logo";
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -43,7 +41,7 @@ const Signup = () => {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(formData),
-        }
+        },
       );
 
       if (!response.ok) {
@@ -71,26 +69,24 @@ const Signup = () => {
 
   return (
     <>
-      <Header />
       <div
         dir="rtl"
-        className="flex flex-col-reverse justify-between px-4 pt-8 lg:flex-row-reverse lg:justify-between lg:gap-12"
+        className="bg-white flex flex-col-reverse justify-between px-4 pt-8 lg:flex-row-reverse lg:justify-between lg:gap-12"
       >
         {/* Illustration */}
         <div className="flex-1 flex justify-center">
           <Image
-            className="w-32 md:w-80"
+            className="w-48 md:w-64"
             alt="Signup illustration"
             src={SignupImage}
           />
         </div>
         {/* Vertical Line */}
         <div className="hidden lg:block w-px bg-gray-300 mx-4"></div>
-        <hr className="block lg:hidden text-main my-12" />
+        <hr className="block lg:hidden text-main mt-8 mb-4" />
         {/* Signup Form */}
         <div className="flex-1">
           <div className="mb-6 flex flex-col gap-1 text-center md:text-right">
-            <Logo />
             <h3 className="text-main bold text-lg">صفحة إنشاء حساب جديد</h3>
             <p className="text-secondary regular">
               أهلاً وسهلاً بكَ في تحدّي مأرب! كن جاهزاً لرحلة مليئة بالتحدّيات

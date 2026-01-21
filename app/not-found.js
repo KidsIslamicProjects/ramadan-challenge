@@ -10,7 +10,10 @@ const NotFound = () => {
         alt="Not Found"
         className="w-64 h-64 object-contain"
       />
-      <h1 className="text-2xl font-regular text-main mt-4"> لم يتم العثور على هذه الصفحة</h1>
+      <h1 className="text-2xl font-regular text-main mt-4">
+        {" "}
+        لم يتم العثور على هذه الصفحة
+      </h1>
     </div>
   );
 };
