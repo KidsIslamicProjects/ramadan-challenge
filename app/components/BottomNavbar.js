@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 import {
   HiHome,
   HiAcademicCap,
-  HiBookOpen,
   HiUser,
   HiRectangleStack,
 } from "react-icons/hi2";
@@ -17,8 +16,7 @@ const BottomNav = () => {
   const navItems = [
     { label: "الرئيسية", href: "/", icon: HiHome },
     { label: "المساقات", href: "/courses", icon: HiRectangleStack },
-    { label: "العقيدة", href: "/aqidah", icon: HiBookOpen },
-    { label: "المكتبة", href: "/library", icon: HiAcademicCap },
+    { label: "غُرف التحديات", href: "/room", icon: HiAcademicCap },
     { label: "حسابي", href: "/profile", icon: HiUser },
   ];
 
