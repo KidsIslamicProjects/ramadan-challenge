@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/User/Desktop/Ramadan/ramadan-ui/app/loading.js"],"sourcesContent":["import React from \"react\";\r\n\r\nconst Loading = () => {\r\n  return (\r\n    <>\r\n      <div className=\"absolute bottom-[50%] left-[50%] \">\r\n        <div className=\"loader \"></div>\r\n      </div>\r\n      ;\r\n    </>\r\n  );\r\n};\r\n\r\nexport default Loading;\r\n"],"names":[],"mappings":";;;;;AAAA;;;AAEA,MAAM,UAAU;IACd,qBACE;;0BACE,8OAAC;gBAAI,WAAU;0BACb,cAAA,8OAAC;oBAAI,WAAU;;;;;;;;;;;YACX;;;AAIZ;uCAEe"}}]
-}
