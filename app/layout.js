@@ -1,5 +1,6 @@
 import "./globals.css";
 import BottomNav from "./components/BottomNavbar";
+import InstallPrompt from "./components/InstallPrompt";
 export const metadata = {
   title: "تحدي مأرب الرّمضاني",
   description:
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         {children}
+        <InstallPrompt />
         <BottomNav />
       </body>
     </html>

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ducanh2912/next-pwa": "^10.2.9",
     "@umalqura/core": "^0.0.7",
     "axios": "^1.7.9",
     "canvas-confetti": "^1.9.3",
