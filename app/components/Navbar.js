@@ -59,7 +59,7 @@ const TopNav = () => {
 
   return (
     <header
-      className="w-full px-4 pt-6 pb-4 bg-main/50 flex flex-col gap-4"
+      className="w-full px-4 pt-6 pb-4 bg-main flex flex-col gap-4"
       dir="rtl"
     >
       {/* TOP ROW */}
@@ -83,7 +83,7 @@ const TopNav = () => {
 
           {/* Name & Greeting */}
           <div className="flex flex-col justify-center gap-0.5">
-            <span className="font-bold text-white text-sm md:text-base leading-tight">
+            <span className="font-bold text-white text-lg md:text-xl leading-tight">
               {loading
                 ? "جاري التحميل..."
                 : `السلام عليكم،  ${user?.name?.split(" ")[0] || "يا بطل"}`}
