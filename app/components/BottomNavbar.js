@@ -24,7 +24,7 @@ const BottomNav = () => {
     // Outer Container: Centered, Floating, Rounded
     <div
       dir="rtl"
-      className="fixed bottom-6 left-1/2 z-50 w-[90%] max-w-md -translate-x-1/2 transform"
+      className="fixed regular bottom-6 left-1/2 z-50 w-[90%] max-w-md -translate-x-1/2 transform"
     >
       <div className="flex h-16 flex-row items-center justify-between rounded-full border border-gray-100 bg-white/95 px-4 shadow-xl backdrop-blur-md pb-safe">
         {navItems.map((item) => {

@@ -7,7 +7,10 @@
   font-family: "text";
   src: url("./fonts/ArbFONTS-FFHekaya-Light.otf") format("truetype");
 }
-
+@font-face {
+  font-family: "Myriad Arabic-mob";
+  src: url("./fonts/Myriad Arabic-mob.otf") format("truetype");
+}
 .regular,
 .semi,
 .font-medium,
@@ -17,7 +20,7 @@
 
 .font-bold,
 .bold {
-  font-family: "Lalezar", system-ui;
+  font-family: "Myriad Arabic-mob";
 }
 
 @keyframes wave {
