@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Banner from "./data/images/bannerHero.jpg";
 import Navbar from "./components/Navbar";
+
 import Main from "./components/Main";
 
 import NotFound from "./components/NotFound";

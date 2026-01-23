@@ -15,8 +15,8 @@ const BottomNav = () => {
 
   const navItems = [
     { label: "الرئيسية", href: "/", icon: HiHome },
-    { label: "المساقات", href: "/", icon: HiRectangleStack },
-    { label: "غُرف التحديات", href: "/", icon: HiAcademicCap },
+    { label: "المساقات", href: "/courses", icon: HiRectangleStack },
+    { label: "غُرف التحديات", href: "/rooms", icon: HiAcademicCap },
     { label: "حسابي", href: "/profile", icon: HiUser },
   ];
 
@@ -26,7 +26,7 @@ const BottomNav = () => {
       dir="rtl"
       className="fixed bottom-6 left-1/2 z-50 w-[90%] max-w-md -translate-x-1/2 transform"
     >
-      <div className="flex h-16 flex-row-reverse items-center justify-between rounded-full border border-gray-100 bg-white/95 px-4 shadow-xl backdrop-blur-md pb-safe">
+      <div className="flex h-16 flex-row items-center justify-between rounded-full border border-gray-100 bg-white/95 px-4 shadow-xl backdrop-blur-md pb-safe">
         {navItems.map((item) => {
           const isActive = pathname === item.href;
           const Icon = item.icon;
