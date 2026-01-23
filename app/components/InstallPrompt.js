@@ -47,7 +47,7 @@ const InstallPrompt = () => {
 
   return (
     <div
-      className="fixed bottom-4 left-4 right-4 bg-white p-4 shadow-2xl rounded-lg border border-gray-200 z-50 flex items-center justify-between flex-row-reverse"
+      className="fixed top-4 left-4 right-4 bg-white p-4 shadow-2xl rounded-lg border border-gray-200 z-50 flex items-center justify-between flex-row-reverse"
       dir="rtl"
     >
       <div className="text-right">
