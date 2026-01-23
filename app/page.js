@@ -33,7 +33,7 @@ export default function MaribChallenge() {
       <div className="relative z-50">
         <Navbar />
       </div>
-      <Main />
+      {/* <Main /> */}
       {/* Countdown Overlay */}
       {/* {isCountdownActive && (
         <div className="absolute w-full inset-0 flex items-center justify-center z-40 pointer-events-none">

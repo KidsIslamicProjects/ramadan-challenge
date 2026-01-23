@@ -95,7 +95,7 @@ const TopNav = () => {
         </span>
 
         <Link
-          href="/courses/quran-level-1"
+          href="/"
           className="flex items-center gap-3 bg-white/5 hover:bg-white/10 rounded-xl p-2 transition-all active:scale-[0.98]"
         >
           <div className="relative w-14 h-14 rounded-lg overflow-hidden flex-shrink-0">

@@ -90,7 +90,7 @@ const Profile = () => {
   return (
     <div
       dir="rtl"
-      className="min-h-screen bg-gray-50 flex flex-col items-center py-6 px-4 font-sans text-gray-800"
+      className="min-h-screen bg-gray-50 mb-4 flex flex-col items-center py-6 px-4 font-sans text-gray-800"
     >
       {/* Page Title - Description removed as requested */}
       <h2 className="text-2xl font-bold text-main mb-8 mt-4">الملف الشخصي</h2>
@@ -109,7 +109,7 @@ const Profile = () => {
               src={getAvatarPath(user.avatar)}
               alt="User Avatar"
               fill
-              className="object-cover mt-2" // Added slight mt to adjust illustration alignment
+              className="object-cover mt-4" // Added slight mt to adjust illustration alignment
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               priority
             />
@@ -118,11 +118,13 @@ const Profile = () => {
 
         {/* User Info */}
         <div className="text-center pt-4 pb-8 px-6">
-          <h3 className="text-2xl font-bold text-gray-800 mb-1">{user.name}</h3>
+          <h3 className="text-2xl font-bold text-secondary mb-1">
+            {user.name}
+          </h3>
 
           {/* Location & Age */}
-          <div className="flex items-center justify-center gap-2 text-gray-500 text-sm mt-1 mb-6">
-            <FaMapMarkerAlt className="text-gray-400" />
+          <div className="flex items-center justify-center gap-2 regular text-gray-500 text-sm mt-1 mb-6">
+            <FaMapMarkerAlt className="text-gray-400 " />
             <span>{user.country || "غير محدد"}</span>
             <span className="mx-1 text-gray-300">•</span>
             <span>{user.age} سنة</span>
@@ -154,7 +156,7 @@ const Profile = () => {
               <FaClipboardCheck className="text-amber-600 text-lg" />
               تقييم المُشرف:
             </h4>
-            <p className="text-gray-700 text-sm leading-relaxed pr-6">
+            <p className="text-thirdly text-sm regular leading-relaxed pr-6">
               {user.evaluation ||
                 "لم يتم إضافة تقييم بعد.. استمر في العمل الجاد!"}
             </p>

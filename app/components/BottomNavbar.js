@@ -15,8 +15,8 @@ const BottomNav = () => {
 
   const navItems = [
     { label: "الرئيسية", href: "/", icon: HiHome },
-    { label: "المساقات", href: "/courses", icon: HiRectangleStack },
-    { label: "غُرف التحديات", href: "/room", icon: HiAcademicCap },
+    { label: "المساقات", href: "/", icon: HiRectangleStack },
+    { label: "غُرف التحديات", href: "/", icon: HiAcademicCap },
     { label: "حسابي", href: "/profile", icon: HiUser },
   ];
 

@@ -15,7 +15,6 @@ const InstallPrompt = () => {
 
     window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
 
-    // Cleanup
     return () => {
       window.removeEventListener(
         "beforeinstallprompt",
