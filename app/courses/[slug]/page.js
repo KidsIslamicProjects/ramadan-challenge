@@ -1,6 +1,6 @@
 // app/courses/[slug]/page.jsx
 import { notFound, redirect } from "next/navigation";
-import GamifiedMap from "../../components/GamifiedMap";
+import GamifiedMap from "../../components/Gamifiedmap";
 
 // Mock Auth Check
 async function getUser() {
