@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Banner from "./data/images/bannerHero.jpg";
 import Navbar from "./components/Navbar";
-
+import CoursesList from "./components/CoursesList";
 import Main from "./components/Main";
 
 import NotFound from "./components/NotFound";
@@ -11,6 +11,17 @@ import Countdown from "./components/CountDown";
 import ChallengeItems from "./components/ChallengeItems";
 
 export default function MaribChallenge() {
+  const LANDING_CATEGORIES = [
+    {
+      id: 1,
+      title: "المساقات المتاحة",
+      courses: [
+        { id: 101, title: "عالم الفضاء", slug: "space-science" },
+        { id: 102, title: "جسم الإنسان", slug: "human-body" },
+      ],
+    },
+  ];
+
   const targetDate = new Date("2025-02-28T23:59:59").getTime();
   const [isCountdownActive, setIsCountdownActive] = useState(true);
 
@@ -33,6 +44,9 @@ export default function MaribChallenge() {
       {/* Ensure Navbar stays clickable */}
       <div className="relative z-50">
         <Navbar />
+      </div>
+      <div>
+        <CoursesList categories={LANDING_CATEGORIES} />
       </div>
       {/* <Main /> */}
       {/* Countdown Overlay */}
@@ -67,7 +81,7 @@ export default function MaribChallenge() {
         {/* Always show ChallengeItems */}
       {/* <ChallengeItems />
       </div> */}
-      <NotFound content="جاري العمل على إضافة المساقات" />
+      {/* <NotFound content="جاري العمل على إضافة المساقات" /> */}
     </div>
   );
 }
