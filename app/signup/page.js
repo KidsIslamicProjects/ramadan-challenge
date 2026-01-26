@@ -33,7 +33,7 @@ const countries = [
 ];
 
 // Avatar Constants
-const boyAvatars = ["avatar-boy-1.png", "avatar-boy-2.png", "avatar-boy-3.png"];
+const boyAvatars = ["avatar-boy-1.png", "avatar-boy-2.png", "avatar-boy-4.png"];
 const girlAvatars = [
   "avatar-girl-1.png",
   "avatar-girl-2.png",

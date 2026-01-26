@@ -2,8 +2,6 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import Course from "../../public/Images/course.jpg";
 
 const TopNav = () => {
   const [user, setUser] = useState(null);
@@ -11,7 +9,7 @@ const TopNav = () => {
   const [greeting, setGreeting] = useState({ text: "", iconSrc: "" });
 
   const getAvatarPath = (avatarName) => {
-    if (!avatarName) return "/Images/avatar-boy-1.png";
+    if (!avatarName) return "/Images/avatar-boy-3.png";
     return `/Images/${avatarName}`;
   };
 

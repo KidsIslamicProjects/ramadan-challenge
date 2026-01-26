@@ -1,53 +1,95 @@
-// components/learning/CoursesList.jsx
 "use client";
 
 import { useRouter } from "next/navigation";
 import {
-  FaBookOpen as BookOpen,
-  FaStar as Star,
-  FaExclamationCircle as AlertCircle,
+  FaExclamationCircle,
+  FaBookOpen,
+  FaClock,
+  FaLayerGroup,
 } from "react-icons/fa";
+
 export default function CoursesList({ categories }) {
   const router = useRouter();
 
   return (
-    <div className="grid gap-8 max-w-xl mx-auto w-full">
+    <div className="max-w-4xl mx-auto w-full space-y-12 pb-10">
       {categories.map((cat) => (
-        <div
-          key={cat.id}
-          className="bg-white rounded-3xl p-6 shadow-lg border-b-4 border-main/20"
-        >
-          {/* Section Title */}
-          <h2 className="text-2xl font-bold text-thirdly mb-6 flex items-center gap-3">
-            <div className="bg-secondary/10 p-2 rounded-lg">
-              <BookOpen className="text-secondary w-6 h-6" />
-            </div>
-            {cat.title}
-          </h2>
-
-          {/* Courses List or Empty State */}
+        <div key={cat.id}>
+          {/* Grid of Course Cards */}
           {cat.courses && cat.courses.length > 0 ? (
-            <div className="space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {cat.courses.map((course) => (
-                <button
+                <div
                   key={course.id}
-                  onClick={() => router.push(`/courses/${course.slug}`)}
-                  className="group w-full bg-surface hover:bg-main hover:text-white transition-all duration-300 rounded-2xl p-4 flex items-center justify-between text-right border border-transparent hover:border-main/50 shadow-sm"
+                  className="bg-white rounded-[2.5rem] p-6 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col justify-between"
                 >
-                  <span className="font-bold text-thirdly group-hover:text-white text-lg">
-                    {course.title}
-                  </span>
-                  <div className="bg-white rounded-full p-2 shadow-sm group-hover:scale-110 transition-transform">
-                    <Star className="text-secondary w-5 h-5 fill-current" />
+                  {/* Top Section: Image & Info */}
+                  <div className="flex gap-5 mb-2">
+                    {/* Course Image (Right side in RTL) */}
+                    <div className="shrink-0 relative">
+                      {/* Placeholder or Real Image */}
+                      <div className="w-24 h-32 rounded-2xl bg-surface flex items-center justify-center overflow-hidden shadow-inner border border-gray-100">
+                        {/* If you have a real image in DB, use <img src={course.image} /> here */}
+                        <FaBookOpen className="text-gray-300 w-8 h-8 opacity-50" />
+                      </div>
+
+                      {/* Badge (Optional) */}
+                      <div className="absolute -top-2 -right-2 bg-secondary text-white text-[10px] font-bold px-2 py-1 rounded-full shadow-sm">
+                        جديد
+                      </div>
+                    </div>
+
+                    {/* Text Info (Left side in RTL) */}
+                    <div className="flex-1 py-1">
+                      <h3 className="font-bold text-thirdly text-lg leading-tight mb-1">
+                        {course.title}
+                      </h3>
+
+                      {/* Stats */}
+                      <div className="space-y-2">
+                        <div className="flex items-center gap-2 text-gray-500 text-xs font-bold">
+                          <FaClock className="text-main w-3 h-3" />
+                          <span>وقت القراءة اليوميّة: 15 دقيقة</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-gray-500 text-xs font-bold">
+                          <FaLayerGroup className="text-secondary w-3 h-3" />
+                          <span>عدد المراحل: 0/4</span>
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex justify-between text-[10px] text-gray-400 font-bold mb-2">
+                            <span>مقدار الإنجاز</span>
+                            <span>0%</span>
+                          </div>
+                          <div className="h-3 w-full bg-surface rounded-full overflow-hidden relative inner-shadow">
+                            {/* Progress Fill */}
+                            <div className="absolute right-0 top-0 bottom-0 w-[5%] bg-main rounded-full"></div>
+                          </div>
+                        </div>{" "}
+                      </div>
+                    </div>
                   </div>
-                </button>
+
+                  {/* Divider */}
+                  <div className="border-t border-gray-100 mb-5"></div>
+
+                  {/* Bottom Section: Progress & Button */}
+                  <div className="flex items-start justify-between gap-4">
+                    {/* Action Button (Left side in RTL) */}
+                    <button
+                      onClick={() => router.push(`/courses/${course.slug}`)}
+                      className="bg-main text-white text-sm font-bold py-1 px-4 rounded shadow-lg shadow-main/20 hover:scale-105 active:scale-95 transition-all"
+                    >
+                      ابدأ
+                    </button>
+                  </div>
+                </div>
               ))}
             </div>
           ) : (
             // Empty State
-            <div className="bg-surface/50 border-2 border-dashed border-gray-300 rounded-2xl p-8 text-center">
-              <AlertCircle className="w-10 h-10 text-gray-400 mx-auto mb-3" />
-              <p className="font-bold text-thirdly/60 text-sm">
+            <div className="bg-white/50 border-2 border-dashed border-gray-200 rounded-[2rem] p-10 text-center">
+              <FaExclamationCircle className="w-12 h-12 text-gray-300 mx-auto mb-4" />
+              <p className="font-bold text-thirdly/60">
                 جاري العمل على اضافة مواد لهذا المساق
               </p>
             </div>

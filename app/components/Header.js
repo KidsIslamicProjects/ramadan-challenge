@@ -11,7 +11,6 @@ const Header = () => {
         <Image src={Lattern} width={55} height={77} alt="lattern" />
       </div>
     </>
-  );
-};
+  );};
 
 export default Header;
