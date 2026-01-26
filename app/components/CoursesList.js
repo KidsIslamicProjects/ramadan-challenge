@@ -7,12 +7,12 @@ import {
   FaClock,
   FaLayerGroup,
 } from "react-icons/fa";
-
+import Image from "next/image";
 export default function CoursesList({ categories }) {
   const router = useRouter();
 
   return (
-    <div className="max-w-4xl mx-auto w-full space-y-12 pb-10">
+    <div className="w-full space-y-12 pt-4 pb-24 px-4">
       {categories.map((cat) => (
         <div key={cat.id}>
           {/* Grid of Course Cards */}
@@ -21,7 +21,7 @@ export default function CoursesList({ categories }) {
               {cat.courses.map((course) => (
                 <div
                   key={course.id}
-                  className="bg-white rounded-[2.5rem] p-6 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col justify-between"
+                  className="bg-white rounded-lg py-4 px-6 hover:shadow-xl transition-all duration-300 border-2 border-gray-100 flex flex-col justify-between"
                 >
                   {/* Top Section: Image & Info */}
                   <div className="flex gap-5 mb-2">
@@ -30,7 +30,12 @@ export default function CoursesList({ categories }) {
                       {/* Placeholder or Real Image */}
                       <div className="w-24 h-32 rounded-2xl bg-surface flex items-center justify-center overflow-hidden shadow-inner border border-gray-100">
                         {/* If you have a real image in DB, use <img src={course.image} /> here */}
-                        <FaBookOpen className="text-gray-300 w-8 h-8 opacity-50" />
+                        {/* <FaBookOpen className="text-gray-300 w-8 h-8 opacity-50" /> */}
+                        <Image
+                          src={course.img}
+                          className="w-full h-full object-cover"
+                          alt="course image"
+                        />
                       </div>
 
                       {/* Badge (Optional) */}
@@ -41,7 +46,7 @@ export default function CoursesList({ categories }) {
 
                     {/* Text Info (Left side in RTL) */}
                     <div className="flex-1 py-1">
-                      <h3 className="font-bold text-thirdly text-lg leading-tight mb-1">
+                      <h3 className="font-bold text-secondary text-lg leading-tight mb-1">
                         {course.title}
                       </h3>
 
@@ -53,7 +58,7 @@ export default function CoursesList({ categories }) {
                         </div>
                         <div className="flex items-center gap-2 text-gray-500 text-xs font-bold">
                           <FaLayerGroup className="text-secondary w-3 h-3" />
-                          <span>عدد المراحل: 0/4</span>
+                          <span>عدد المراحل: 0/10</span>
                         </div>
                         <div className="flex-1">
                           <div className="flex justify-between text-[10px] text-gray-400 font-bold mb-2">
@@ -77,7 +82,7 @@ export default function CoursesList({ categories }) {
                     {/* Action Button (Left side in RTL) */}
                     <button
                       onClick={() => router.push(`/courses/${course.slug}`)}
-                      className="bg-main text-white text-sm font-bold py-1 px-4 rounded shadow-lg shadow-main/20 hover:scale-105 active:scale-95 transition-all"
+                      className="bg-main text-white text-sm font-bold py-1 px-4 rounded hover:scale-105 active:scale-95 transition-all"
                     >
                       ابدأ
                     </button>
