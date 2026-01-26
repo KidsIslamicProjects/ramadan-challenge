@@ -1,8 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
 import { questions } from "../data/quiz";
-import Header from "../components/Header";
-import Logo from "../components/Logo";
 import axios from "axios";
 import Notification from "../components/Notification";
 import { useRouter } from "next/navigation";
@@ -143,9 +141,7 @@ const FillInBlankQuiz = () => {
 
   return (
     <>
-      <Header />
       <div dir="rtl" className="bg-white min-h-screen flex flex-col py-8 px-4">
-        <Logo />
         {quizSubmitted ? (
           <p className="text-center text-lg bold text-secondary">
             لقد أتممت هذه المسابقة مُسبقاً!

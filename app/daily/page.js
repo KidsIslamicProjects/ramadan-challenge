@@ -4,8 +4,6 @@ import { useRouter } from "next/navigation";
 import axios from "axios";
 import { IoLockClosed, IoLockOpen } from "react-icons/io5";
 import Loading from "../loading";
-import Logo from "../components/Logo";
-import Header from "../components/Header";
 
 const DailyPage = () => {
   const [tasks, setTasks] = useState([]);
@@ -124,12 +122,10 @@ const DailyPage = () => {
 
   return (
     <>
-      <Header />
       <div
         className="flex bg-white min-h-screen flex-col items-center w-full py-8"
         dir="rtl"
       >
-        <Logo />
         <h1 className="text-xl bold text-main mb-2">
           يوميّات قائِد المُستقبَل
         </h1>

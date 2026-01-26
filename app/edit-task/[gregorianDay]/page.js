@@ -4,8 +4,6 @@ import React, { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import axios from "axios";
 import Notification from "../../components/Notification";
-import Header from "@/app/components/Header";
-import Logo from "@/app/components/Logo";
 
 const EditTaskPage = () => {
   const { gregorianDay } = useParams();
@@ -71,7 +69,6 @@ const EditTaskPage = () => {
   return (
     <>
       <Notification message={notification.message} type={notification.type} />
-      <Header />
 
       <div
         dir="rtl"

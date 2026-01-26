@@ -2,16 +2,11 @@ import React from "react";
 import Image from "next/image";
 import { challengesData } from "../data/challengesData";
 import { FaArrowRight } from "react-icons/fa6";
-import Header from "../components/Header";
-import Logo from "../components/Logo";
 
 export default function Page() {
   return (
     <div className="bg-white min-h-screen">
-      <Header />
-
       <div className="flex flex-col justify-center items-center pt-8">
-        <Logo />
         <h1 className="text-xl bold text-main mb-2">
           عائلَتي تحتَ كنفِ النُّبوة
         </h1>

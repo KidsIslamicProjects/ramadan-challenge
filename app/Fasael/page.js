@@ -2,8 +2,6 @@
 import React, { useState, useEffect } from "react";
 import Soil from "../data/images/Soil.svg";
 import Image from "next/image";
-import Logo from "../components/Logo";
-import Header from "../components/Header";
 import confetti from "canvas-confetti";
 import { useRouter } from "next/navigation";
 import Notification from "../components/Notification";
@@ -32,7 +30,7 @@ const Page = () => {
           // Check if today's task is already done
           if (data?.dailyDoleProgress) {
             const todayTask = data.dailyDoleProgress.find(
-              (task) => task.hijriDate === hijriDate && task.done === true
+              (task) => task.hijriDate === hijriDate && task.done === true,
             );
             if (todayTask) {
               setTaskCompleted(true);
@@ -87,7 +85,7 @@ const Page = () => {
             hijriDate: hijriDate,
             dole: dole,
           }),
-        }
+        },
       );
 
       if (response.ok) {
@@ -113,12 +111,10 @@ const Page = () => {
 
   return (
     <>
-      <Header />
       {notification && (
         <Notification message={notification.message} type={notification.type} />
       )}
       <div dir="rtl" className="min-h-screen bg-white py-8 px-4">
-        <Logo />
         <div className="flex flex-col gap-2 justify-center items-center">
           <p className="semi text-secondary">
             السلام عليكم ورحمة الله وبركاته، أهلاً بكم في
@@ -164,8 +160,8 @@ const Page = () => {
           {loading
             ? "جاري الزرع..."
             : taskCompleted
-            ? "المهمة مُكتملة"
-            : "ازرع الفَســــــــــيلة"}
+              ? "المهمة مُكتملة"
+              : "ازرع الفَســــــــــيلة"}
         </button>
         <Image
           alt="soil"

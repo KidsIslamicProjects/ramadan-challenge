@@ -7,8 +7,6 @@ import axios from "axios";
 import confetti from "canvas-confetti";
 import Notification from "../../components/Notification";
 import Ribbon from "../../data/images/Ribbon.svg";
-import Header from "@/app/components/Header";
-import Logo from "@/app/components/Logo";
 import Loading from "@/app/loading";
 
 const Checkbox = ({ label, onChange }) => (
@@ -58,7 +56,7 @@ const DailyTaskPage = () => {
     try {
       await axios.post(
         "https://ramadan-server-topaz.vercel.app/api/tasks/submit",
-        payload
+        payload,
       );
       setIsLoading(false);
       confetti({
@@ -96,7 +94,7 @@ const DailyTaskPage = () => {
 
         // Find the score for the current hijriDate
         const taskProgress = userProgressData.find(
-          (progress) => progress.hijriDate === taskData?.hijriDate
+          (progress) => progress.hijriDate === taskData?.hijriDate,
         );
 
         if (taskProgress) {
@@ -127,7 +125,7 @@ const DailyTaskPage = () => {
       .get("https://ramadan-server-topaz.vercel.app/api/tasks")
       .then((response) => {
         const task = response.data.find(
-          (task) => task.gregorianDay === Number(gregorianDay)
+          (task) => task.gregorianDay === Number(gregorianDay),
         );
         setTaskData(task || null);
       });
@@ -141,7 +139,7 @@ const DailyTaskPage = () => {
 
   const getTaskStatus = () => {
     const completedTask = userProgress.find(
-      (progress) => progress.hijriDate === taskData?.hijriDate
+      (progress) => progress.hijriDate === taskData?.hijriDate,
     );
 
     if (completedTask) {
@@ -160,13 +158,11 @@ const DailyTaskPage = () => {
   return (
     <>
       <Notification message={notification.message} type={notification.type} />
-      <Header />
 
       <div
         dir="rtl"
         className="bg-white relative flex flex-col items-center w-full py-8 px-6"
       >
-        <Logo />
         <h1 className="text-xl bold text-main mb-2">
           يوميّات قائِد المُستقبَل
         </h1>
@@ -285,8 +281,8 @@ const DailyTaskPage = () => {
               {isLoading
                 ? "جاري إرسال التحدي"
                 : taskStatus === "completed"
-                ? "لا يمكنك إتمام المهمّة مرّتين"
-                : "إرسال الإجابات"}
+                  ? "لا يمكنك إتمام المهمّة مرّتين"
+                  : "إرسال الإجابات"}
             </button>
             {isAdmin && (
               <button
