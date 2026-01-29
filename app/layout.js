@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
     <html lang="en" dir="rtl">
       <body>
         {children}
-        <InstallPrompt />
+        {/* <InstallPrompt /> */}
         <BottomNav />
       </body>
     </html>

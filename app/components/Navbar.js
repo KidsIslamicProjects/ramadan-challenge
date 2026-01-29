@@ -81,10 +81,10 @@ const TopNav = () => {
 
           {/* Name & Greeting */}
           <div className="flex flex-col justify-center gap-0.5">
-            <span className="font-bold text-white text-lg md:text-xl leading-tight">
+            <span className="title text-white text-lg md:text-xl leading-tight">
               {loading
                 ? "جاري التحميل..."
-                : `السلام عليكم،  ${user?.name?.split(" ")[0] || "يا بطل"}`}
+                : `السـلام عليكـم،  ${user?.name?.split(" ")[0] || "يا بطل"}`}
             </span>
 
             {/* Greeting: Icon Image + Text */}

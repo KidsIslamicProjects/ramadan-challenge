@@ -1,25 +1,30 @@
-@import url("https://fonts.googleapis.com/css2?family=Lalezar&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @font-face {
-  font-family: "text";
-  src: url("./fonts/ArbFONTS-FFHekaya-Light.otf") format("truetype");
+  font-family: "ibm-medium";
+  src: url("./fonts/IBMPlexSansArabic-Medium.ttf");
+}
+@font-face {
+  font-family: "ibm-bold";
+  src: url("./fonts/IBMPlexSansArabic-SemiBold.ttf");
 }
 @font-face {
   font-family: "Myriad Arabic-mob";
-  src: url("./fonts/Myriad Arabic-mob.otf") format("truetype");
+  src: url("./fonts/ArbFONTS-TheYearofHandicrafts-Bold.otf") format("truetype");
 }
 .regular,
-.semi,
-.font-medium,
-.font-regular {
-  font-family: "text";
+.semi {
+  font-family: "ibm-medium";
 }
 
 .font-bold,
 .bold {
+  font-family: "ibm-bold";
+}
+
+.title {
   font-family: "Myriad Arabic-mob";
 }
 

@@ -8,8 +8,8 @@ export default function MaribChallenge() {
     {
       id: 1,
       courses: [
-        { id: 101, title: "المساق العقدي", slug: "space-science", img: Aakida },
-        { id: 102, title: "المساق المقدسي", slug: "human-body", img: Aakida },
+        { id: 101, title: "المسـاق العقدي", slug: "space-science", img: Aakida },
+        { id: 102, title: "المسـاق المقدسـي", slug: "human-body", img: Aakida },
       ],
     },
   ];

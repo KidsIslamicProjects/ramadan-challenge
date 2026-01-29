@@ -46,17 +46,17 @@ export default function CoursesList({ categories }) {
 
                     {/* Text Info (Left side in RTL) */}
                     <div className="flex-1 py-1">
-                      <h3 className="font-bold text-secondary text-lg leading-tight mb-1">
+                      <h3 className="title text-secondary text-lg leading-tight mb-1">
                         {course.title}
                       </h3>
 
                       {/* Stats */}
                       <div className="space-y-2">
-                        <div className="flex items-center gap-2 text-gray-500 text-xs font-bold">
+                        <div className="flex items-center gap-2 text-gray-500 text-xs regular">
                           <FaClock className="text-main w-3 h-3" />
                           <span>وقت القراءة اليوميّة: 15 دقيقة</span>
                         </div>
-                        <div className="flex items-center gap-2 text-gray-500 text-xs font-bold">
+                        <div className="flex items-center gap-2 text-gray-500 text-xs regular">
                           <FaLayerGroup className="text-secondary w-3 h-3" />
                           <span>عدد المراحل: 0/10</span>
                         </div>

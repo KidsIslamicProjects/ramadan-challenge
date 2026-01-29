@@ -74,7 +74,6 @@ const EditTaskPage = () => {
         dir="rtl"
         className="bg-white relative flex flex-col items-center w-full py-8 px-6"
       >
-        <Logo />
         <h1 className="text-xl bold text-main mb-2">
           تعديل المهام ليوم {gregorianDay}
         </h1>
