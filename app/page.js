@@ -2,13 +2,18 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import CoursesList from "./components/CoursesList";
-import Aakida from "../public/Images/لبنات-العقيدة.jpg";
+import Aakida from "../public/Images/aakida.jpg";
 export default function MaribChallenge() {
   const LANDING_CATEGORIES = [
     {
       id: 1,
       courses: [
-        { id: 101, title: "المسـاق العقدي", slug: "space-science", img: Aakida },
+        {
+          id: 101,
+          title: "المسـاق  العقدي | رحلة عقديّة مع غُندَر",
+          slug: "space-science",
+          img: Aakida,
+        },
         { id: 102, title: "المسـاق المقدسـي", slug: "human-body", img: Aakida },
       ],
     },

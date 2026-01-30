@@ -71,7 +71,11 @@ const Login = () => {
       >
         {/* Illustration */}
         <div className="flex-1 flex justify-center mb-24 md:mb-0">
-          <Image className="w-52" alt="Login illustration" src={LoginImage} />
+          <Image
+            className="w-52 object-cover"
+            alt="Login illustration"
+            src={LoginImage}
+          />
         </div>
 
         {/* Vertical Line */}

@@ -14,12 +14,7 @@ const countries = [
   { code: "PS", name: "فلسطين", dial_code: "+970", flag: "🇵🇸" },
   { code: "SY", name: "سوريا", dial_code: "+963", flag: "🇸🇾" },
   { code: "EG", name: "مصر", dial_code: "+20", flag: "🇪🇬" },
-  {
-    code: "SA",
-    name: "السعودية",
-    dial_code: "+966",
-    flag: "🇸🇦",
-  },
+  { code: "SA", name: "السعودية", dial_code: "+966", flag: "🇸🇦" },
   { code: "AE", name: "الإمارات", dial_code: "+971", flag: "🇦🇪" },
   { code: "JO", name: "الأردن", dial_code: "+962", flag: "🇯🇴" },
   { code: "IQ", name: "العراق", dial_code: "+964", flag: "🇮🇶" },
@@ -41,18 +36,21 @@ const girlAvatars = [
 ];
 
 const Signup = () => {
+  // Role State
+  const [role, setRole] = useState("student");
+
   const [formData, setFormData] = useState({
     name: "",
     password: "",
-    age: "",
+    dob: "", // Changed from age to dob
     gender: "",
     phoneNumber: "",
-    avatar: "", // Stores the filename of the selected avatar
+    groupName: "",
+    avatar: "",
   });
 
   const [selectedCountry, setSelectedCountry] = useState(countries[0]);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
   const [isLoading, setIsLoading] = useState(false);
   const [notification, setNotification] = useState({ message: "", type: "" });
 
@@ -61,25 +59,17 @@ const Signup = () => {
 
   useEffect(() => {
     const userId = localStorage.getItem("userId");
-    if (userId) {
-      router.push("/");
-    }
+    if (userId) router.push("/");
   }, []);
 
-  // Twemoji Effect
   useEffect(() => {
     if (dropdownRef.current) {
-      twemoji.parse(dropdownRef.current, {
-        folder: "svg",
-        ext: ".svg",
-      });
+      twemoji.parse(dropdownRef.current, { folder: "svg", ext: ".svg" });
     }
   }, [isDropdownOpen, selectedCountry]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-
-    // If gender changes, reset the avatar so they don't keep a wrong gender avatar
     if (name === "gender") {
       setFormData({ ...formData, [name]: value, avatar: "" });
     } else {
@@ -101,10 +91,18 @@ const Signup = () => {
     setIsLoading(true);
     setNotification(null);
 
-    // Validation: Ensure avatar is selected
     if (!formData.avatar) {
       setNotification({
         message: "الرجاء اختيار شخصية (Avatar)",
+        type: "error",
+      });
+      setIsLoading(false);
+      return;
+    }
+
+    if (role === "supervisor" && !formData.groupName) {
+      setNotification({
+        message: "الرجاء إدخال اسم الحلقة",
         type: "error",
       });
       setIsLoading(false);
@@ -118,6 +116,7 @@ const Signup = () => {
       ...formData,
       phoneNumber: fullPhoneNumber,
       country: selectedCountry.name,
+      role: role,
     };
 
     try {
@@ -130,17 +129,21 @@ const Signup = () => {
         },
       );
 
+      const data = await response.json();
+
       if (!response.ok) {
-        throw new Error("فشل في إنشاء الحساب، حاول مرة أخرى.");
+        // Display the specific error from backend (e.g., Duplicate Name)
+        throw new Error(data.error || "فشل في إنشاء الحساب، حاول مرة أخرى.");
       }
 
-      const user = await response.json();
-      localStorage.setItem("userId", user._id);
+      localStorage.setItem("userId", data._id);
+
       confetti({
         particleCount: 100,
         spread: 70,
         origin: { y: 0.6 },
       });
+
       setNotification({ message: "تم إنشاء الحساب بنجاح!", type: "success" });
 
       setTimeout(() => {
@@ -153,7 +156,6 @@ const Signup = () => {
     }
   };
 
-  // Determine which avatars to show
   const currentAvatars =
     formData.gender === "ذكر"
       ? boyAvatars
@@ -169,7 +171,11 @@ const Signup = () => {
       >
         {/* Illustration */}
         <div className="flex-1 flex justify-center mb-24 md:mb-0">
-          <Image className="w-52" alt="Signup illustration" src={SignupImage} />
+          <Image
+            className="w-[75%] object-cover"
+            alt="Signup illustration"
+            src={SignupImage}
+          />
         </div>
 
         {/* Vertical Line */}
@@ -181,8 +187,34 @@ const Signup = () => {
           <div className="mb-6 flex flex-col gap-1 text-center md:text-right">
             <h3 className="text-main bold text-lg">صفحة إنشاء حساب جديد</h3>
             <p className="text-secondary regular">
-              أهلاً بك في تحدّي مأرب! استعد لرحلة إيمانية ممتعة.
+              أهلاً بك في منصّتنا! استعد لرحلة إيمانية ممتعة.
             </p>
+          </div>
+
+          {/* Role Switcher */}
+          <div className="flex bg-[#F4F4F4] p-1 rounded-sm mb-6">
+            <button
+              type="button"
+              onClick={() => setRole("student")}
+              className={`flex-1 py-2 text-center rounded-sm transition-all regular ${
+                role === "student"
+                  ? "bg-main text-white shadow-sm semi"
+                  : "text-gray-500 hover:text-main"
+              }`}
+            >
+              طالب
+            </button>
+            <button
+              type="button"
+              onClick={() => setRole("supervisor")}
+              className={`flex-1 py-2 text-center rounded-sm transition-all regular ${
+                role === "supervisor"
+                  ? "bg-main text-white shadow-sm semi"
+                  : "text-gray-500 hover:text-main"
+              }`}
+            >
+              مُشرف
+            </button>
           </div>
 
           {notification && notification.message && (
@@ -209,6 +241,24 @@ const Signup = () => {
               />
             </div>
 
+            {/* Supervisor Group Name */}
+            {role === "supervisor" && (
+              <div className="flex flex-col gap-1 fade-in">
+                <label className="text-main text-right semi">
+                  اسم الحلقة / المجموعة
+                </label>
+                <input
+                  type="text"
+                  name="groupName"
+                  value={formData.groupName}
+                  onChange={handleChange}
+                  placeholder="مثال: حلقة النور"
+                  className="bg-[#F4F4F4] rounded-sm shadow py-2 px-3 w-full placeholder:text-right regular"
+                  required
+                />
+              </div>
+            )}
+
             {/* Password */}
             <div className="flex flex-col gap-1">
               <label className="text-main text-right semi">كلمة المرور</label>
@@ -223,16 +273,15 @@ const Signup = () => {
               />
             </div>
 
-            {/* Age */}
+            {/* Date of Birth (Replaces Age) */}
             <div className="flex flex-col gap-1">
-              <label className="text-main text-right semi">العمر</label>
+              <label className="text-main text-right semi">تاريخ الميلاد</label>
               <input
-                type="number"
-                name="age"
-                value={formData.age}
+                type="date"
+                name="dob"
+                value={formData.dob}
                 onChange={handleChange}
-                placeholder="ادخل عمرك هنا، مثال: 12"
-                className="bg-[#F4F4F4] rounded-sm shadow py-2 px-3 w-full placeholder:text-right regular"
+                className="bg-[#F4F4F4] rounded-sm shadow py-2 px-3 w-full text-right regular"
                 required
               />
             </div>
@@ -282,7 +331,8 @@ const Signup = () => {
                   value={formData.phoneNumber}
                   onChange={handleChange}
                   placeholder="70123456"
-                  className="bg-transparent border-none outline-none w-full regular placeholder:text-left"
+                  /* CHANGED: placeholder:text-right to align placeholder to the right */
+                  className="bg-transparent border-none outline-none w-full regular placeholder:text-right"
                   required
                 />
               </div>
@@ -304,7 +354,7 @@ const Signup = () => {
               </select>
             </div>
 
-            {/* --- AVATAR SELECTION (LOGIC: Show based on Gender) --- */}
+            {/* Avatar Selection */}
             {formData.gender && (
               <div className="flex flex-col gap-2 mt-2 fade-in">
                 <label className="text-main text-right semi">
@@ -334,7 +384,6 @@ const Signup = () => {
               </div>
             )}
 
-            {/* Submit Button */}
             <div className="flex flex-col gap-2">
               <button
                 type="submit"
