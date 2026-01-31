@@ -18,7 +18,8 @@ export default function TeacherDashboard() {
   const [message, setMessage] = useState({ text: "", type: "" });
   const [selectedStudent, setSelectedStudent] = useState(null); // For Modal
 
-  const API_URL = process.env.NODE_API || "http://localhost:3001/api";
+  const API_URL =
+    process.env.NODE_API || "https://ramadan-server-topaz.vercel.app/api";
 
   useEffect(() => {
     const savedStudents = JSON.parse(
