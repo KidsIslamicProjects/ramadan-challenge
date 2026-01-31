@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { FaBookOpen, FaStar, FaChevronLeft } from "react-icons/fa";
+import { FaBookOpen, FaChevronLeft, FaLayerGroup } from "react-icons/fa"; // Added FaLayerGroup
 import Image from "next/image";
 
 export default function CoursesList({ categories }) {
@@ -14,7 +14,7 @@ export default function CoursesList({ categories }) {
         <h1 className="title text-3xl md:text-4xl text-main font-bold">
           رحلتك التعليمية تبدأ هنا
         </h1>
-        <p className="regular text-gray-500  mx-auto leading-relaxed">
+        <p className="regular text-gray-500 mx-auto leading-relaxed">
           اختر المسار الذي يناسبك وابدأ في اكتساب مهارات جديدة ومعرفة قيمة من
           خلال دوراتنا المتخصصة
         </p>
@@ -25,9 +25,6 @@ export default function CoursesList({ categories }) {
       <div className="space-y-12">
         {categories.map((cat) => (
           <div key={cat.id} className="space-y-6">
-            {/* Optional Category Title (If needed) */}
-            {/* <h2 className="title text-2xl text-main border-r-4 border-secondary pr-3">{cat.name}</h2> */}
-
             {cat.courses && cat.courses.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {cat.courses.map((course) => (
@@ -36,8 +33,8 @@ export default function CoursesList({ categories }) {
                     onClick={() => router.push(`/courses/${course.slug}`)}
                     className="group bg-white rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 overflow-hidden cursor-pointer flex flex-col h-full"
                   >
-                    {/* 1. Image Section (Top, Full Width like reference) */}
-                    <div className="relative h-48 w-full overflow-hidden bg-gray-100">
+                    {/* 1. Image Section - UPDATED: Aspect Ratio 2:1 */}
+                    <div className="relative w-full aspect-[2/1] overflow-hidden bg-gray-100">
                       <Image
                         src={course.img}
                         alt={course.title}
@@ -58,30 +55,32 @@ export default function CoursesList({ categories }) {
                         {course.title}
                       </h3>
 
-                      {/* Description (Matches the text below title in reference) */}
+                      {/* Description */}
                       <p className="regular text-gray-500 text-sm leading-relaxed mb-6 line-clamp-3 flex-1">
                         {course.description ||
                           "تأتي هذه الدورة استشعاراً لأهمية هذا المتن الجليل، الذي يُعد من أنفس ما ينبغي أن يعتني به المصلحون..."}
                       </p>
 
-                      {/* Info Row: Progress & Rating (الانجاز) */}
+                      {/* Info Row: Progress & Course Count - UPDATED */}
                       <div className="flex items-center justify-between mb-6 text-xs font-bold text-gray-500 bg-gray-50 p-2 rounded-lg">
+                        {/* Progress Bar */}
                         <div className="flex items-center gap-2 w-1/2">
                           <span>الإنجاز:</span>
                           <div className="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
-                            {/* Change width style based on actual progress */}
                             <div className="h-full bg-secondary w-[0%]"></div>
                           </div>
                           <span className="text-secondary">0%</span>
                         </div>
 
-                        <div className="flex items-center gap-1 text-yellow-500">
-                          <span>4.9</span>
-                          <FaStar className="mb-0.5" />
+                        {/* Course Count (Replaced Rating) */}
+                        <div className="flex items-center gap-1.5 text-main">
+                          <FaLayerGroup className="text-secondary text-sm" />
+                          {/* You can make this dynamic later: {course.count || 3} */}
+                          <span>عدد الدورات : 3</span>
                         </div>
                       </div>
 
-                      {/* 3. Button (Full Width, Dark Purple like reference) */}
+                      {/* 3. Button */}
                       <button className="w-full bg-secondary text-white regular py-3 rounded-lg hover:bg-[#382c46] transition-colors flex items-center justify-center gap-2 group-hover:shadow-lg">
                         <span>انضم إلينا</span>
                         <FaChevronLeft className="text-xs mt-1 transition-transform group-hover:-translate-x-1" />

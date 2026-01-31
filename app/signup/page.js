@@ -137,7 +137,7 @@ const Signup = () => {
       }
 
       localStorage.setItem("userId", data._id);
-
+      localStorage.setItem("userRole", role);
       confetti({
         particleCount: 100,
         spread: 70,
