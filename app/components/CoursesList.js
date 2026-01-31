@@ -51,7 +51,7 @@ export default function CoursesList({ categories }) {
                       dir="rtl"
                     >
                       {/* Title */}
-                      <h3 className="bold text-main text-xl font-bold mb-3 leading-snug line-clamp-2 min-h-[3.5rem]">
+                      <h3 className="bold text-main text-xl font-bold mb-1 leading-snug line-clamp-2 min-h-[3.5rem]">
                         {course.title}
                       </h3>
 
@@ -76,13 +76,13 @@ export default function CoursesList({ categories }) {
                         <div className="flex items-center gap-1.5 text-main">
                           <FaLayerGroup className="text-secondary text-sm" />
                           {/* You can make this dynamic later: {course.count || 3} */}
-                          <span>عدد الدورات : 3</span>
+                          <span>عدد الدورات : {course.lessons}</span>
                         </div>
                       </div>
 
                       {/* 3. Button */}
                       <button className="w-full bg-secondary text-white regular py-3 rounded-lg hover:bg-[#382c46] transition-colors flex items-center justify-center gap-2 group-hover:shadow-lg">
-                        <span>انضم إلينا</span>
+                        <span>الانتقال الى المساق </span>
                         <FaChevronLeft className="text-xs mt-1 transition-transform group-hover:-translate-x-1" />
                       </button>
                     </div>

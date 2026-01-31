@@ -10,46 +10,51 @@ import {
   FaStar,
   FaLock,
 } from "react-icons/fa";
+import Course1 from "@/public/Images/akhalk.jpg";
+import Course2 from "@/public/Images/ousool.jpg";
+import Course3 from "@/public/Images/labinat.jpg";
 
 // --- MOCK DATA (Simulating your Database) ---
 // In a real app, you would fetch this data based on the params.slug
 const TRACK_DATA = {
-  title: "المساق العقدي",
+  title: " رحلة عقديّة مع غُندَر | المسـاق  العقدي ",
+  description:
+    "المساق العقدي: رحلةٌ شيّقةٌ في أجلّ العلوم وأشرفها، بتعرّف بها الطالب على خالقه ودينه",
+
   slug: "aqeedah",
-  description: "رحلة ممتعة نتعلم فيها أصول ديننا ومن هو ربنا ولماذا نعبده.",
   progress: 15, // Total track progress
   totalCourses: 3,
   completedCourses: 0,
   courses: [
-    {
+   {
       id: 1,
-      title: "لبنات العقيدة",
-      slug: "building-blocks-aqeedah",
-      img: "https://images.unsplash.com/photo-1609557927087-f9cf8e88de18?q=80&w=1000&auto=format&fit=crop", // Placeholder
-      description: "مدخل ميسر وسهل لفهم العقيدة الإسلامية",
-      duration: "20 دقيقة",
-      isLocked: false, // First one is open
-      rating: 5.0,
-    },
-    {
+      title: "منظومة الأصول الثلاثة",
+      slug: "usool-thalatha",
+      img: Course2,
+      description: "نظم شعري يسهل حفظ الأصول الثلاثة",
+      duration: "40 دقيقة",
+      isLocked: false,
+      rating: 4.8,
+    },  {
       id: 2,
       title: "منظومة أحسن الإيمان",
       slug: "ahsan-al-iman",
-      img: "https://images.unsplash.com/photo-1542816323-d154da4fc07c?q=80&w=1000&auto=format&fit=crop", // Placeholder
+      img: Course1,
       description: "قصيدة جميلة نحفظ بها أسماء الله الحسنى",
       duration: "35 دقيقة",
-      isLocked: true, // Locked until previous is done (Gamification)
+      isLocked: true,
       rating: 4.9,
     },
+   
     {
       id: 3,
-      title: "منظومة الأصول الثلاثة",
-      slug: "usool-thalatha",
-      img: "https://images.unsplash.com/photo-1519817650390-64a93db51149?q=80&w=1000&auto=format&fit=crop", // Placeholder
-      description: "نظم شعري يسهل حفظ الأصول الثلاثة",
-      duration: "40 دقيقة",
-      isLocked: true,
-      rating: 4.8,
+      title: "لبنات العقيدة",
+      slug: "building-blocks-aqeedah",
+      img: Course3,
+      description: "مدخل ميسر وسهل لفهم العقيدة الإسلامية",
+      duration: "20 دقيقة",
+      isLocked: true, // First one is open
+      rating: 5.0,
     },
   ],
 };

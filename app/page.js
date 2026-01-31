@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import CoursesList from "./components/CoursesList";
 import Aakida from "../public/Images/aakida.jpg";
+import Aakida1 from "../public/Images/aakida1.jpg";
+
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { BsPersonVideo3 } from "react-icons/bs";
@@ -25,11 +27,22 @@ export default function MaribChallenge() {
       courses: [
         {
           id: 101,
-          title: "المسـاق  العقدي | رحلة عقديّة مع غُندَر",
-          slug: "space-science",
+          title: " رحلة عقديّة مع غُندَر | المسـاق  العقدي ",
+          description:
+            "المساق العقدي: رحلةٌ شيّقةٌ في أجلّ العلوم وأشرفها، بتعرّف بها الطالب على خالقه ودينه",
+          slug: "aakida",
+          lessons: 3,
           img: Aakida,
         },
-        { id: 102, title: "المسـاق المقدسـي", slug: "human-body", img: Aakida },
+        {
+          id: 102,
+          title: "رحلة إلى القدس مع حنبل | المسـاق المقدسـي",
+          description:
+            "المساق المقدسي: مساق توعويّ تجاه مسجدنا الأقصى المبارك، يرنو لتعريف الطالب بمركزية هذا االمسجد المبارك",
+          slug: "qudus",
+          lessons: 7,
+          img: Aakida1,
+        },
       ],
     },
   ];
@@ -105,13 +118,13 @@ export default function MaribChallenge() {
             <div className="flex gap-4 justify-center">
               <Link
                 href="/login"
-                className="bg-main text-white px-6 py-2 rounded-sm shadow hover:bg-main/90 transition"
+                className="bg-main text-white px-6 py-2 rounded-sm  hover:bg-main/90 transition"
               >
                 تسجيل دخول
               </Link>
               <Link
                 href="/signup"
-                className="bg-gray-100 text-gray-700 px-6 py-2 rounded-sm shadow hover:bg-gray-200 transition"
+                className="bg-gray-100 text-gray-700 px-6 py-2 rounded-sm  hover:bg-gray-200 transition"
               >
                 إنشاء حساب
               </Link>
