@@ -19,7 +19,7 @@ import Course3 from "@/public/Images/labinat.jpg";
 const TRACK_DATA = {
   title: " رحلة عقديّة مع غُندَر | المسـاق  العقدي ",
   description:
-    "المساق العقدي: رحلةٌ شيّقةٌ في أجلّ العلوم وأشرفها، بتعرّف بها الطالب على خالقه ودينه",
+    "رحلةٌ شيّقةٌ في أجلّ العلوم وأشرفها، بتعرّف بها الطالب على خالقه ودينه",
 
   slug: "aqeedah",
   progress: 15, // Total track progress
@@ -35,7 +35,8 @@ const TRACK_DATA = {
       duration: "40 دقيقة",
       isLocked: false,
       rating: 4.8,
-    },  {
+    },
+      {
       id: 2,
       title: "منظومة أحسن الإيمان",
       slug: "ahsan-al-iman",
