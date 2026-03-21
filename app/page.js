@@ -17,7 +17,7 @@ export default function MaribChallenge() {
   const [authState, setAuthState] = useState({
     isLoading: true,
     isLoggedIn: false,
-    role: "student", // default
+    role: "student",
   });
 
   // 2. Data Constants
@@ -49,26 +49,34 @@ export default function MaribChallenge() {
 
   // 3. Check Authentication on Mount
   useEffect(() => {
-    const userId = localStorage.getItem("userId");
-    const userRole = localStorage.getItem("userRole"); // Need to ensure Signup/Login saves this!
+    // Check for user object in localStorage
+    const userStr = localStorage.getItem("user");
+    let userRole = "student";
+    let isLoggedIn = false;
+
+    if (userStr) {
+      const user = JSON.parse(userStr);
+      isLoggedIn = true;
+      userRole = user.role || "student";
+    }
 
     setAuthState({
       isLoading: false,
-      isLoggedIn: !!userId, // true if userId exists
-      role: userRole || "student",
+      isLoggedIn: isLoggedIn,
+      role: userRole,
     });
   }, []);
 
   // 4. View Components
 
-  // View A: Teacher Dashboard (The 2 Big Cards)
+  // View A: Teacher Dashboard
   const TeacherView = () => (
     <div className="container mx-auto px-4 py-12 flex flex-col md:flex-row gap-8 justify-center items-center min-h-[60vh]">
       {/* Card 1: Courses */}
       <button
         onClick={() =>
           setAuthState((prev) => ({ ...prev, role: "viewing_courses" }))
-        } // Temporary switch to view courses
+        }
         className="w-full md:w-1/2 h-64 bg-main text-white rounded-lg  hover:scale-105 transition-all flex flex-col justify-center items-center gap-2 group"
       >
         <span className="text-6xl flex gap-1 items-center justify-center group-hover:-translate-y-2 transition-transform">
@@ -80,7 +88,7 @@ export default function MaribChallenge() {
 
       {/* Card 2: Student Tracking */}
       <Link
-        href="/dashboard/students" // You will need to create this page later
+        href="/dashboard/students"
         className="w-full md:w-1/2 h-64 bg-white border-2 border-main text-main rounded-lg hover:scale-105 transition-all flex flex-col justify-center items-center gap-2 group"
       >
         <span className="text-6xl flex gap-1 items-center justify-center group-hover:-translate-y-2 transition-transform">
@@ -95,18 +103,17 @@ export default function MaribChallenge() {
   );
 
   // View B: Guest Overlay Wrapper
-  // This wraps the course list and blocks clicks if the user is a guest
   const GuestWrapper = ({ children }) => {
+    // CRITICAL: If logged in (Supervisor viewing courses OR Student), return content directly (No Blur)
     if (authState.isLoggedIn) return children;
 
+    // If NOT logged in (Guest), show blur
     return (
       <div className="relative">
-        {/* The Content (Blurred or Disabled) */}
         <div className="pointer-events-none opacity-60 grayscale-[50%] select-none">
           {children}
         </div>
 
-        {/* The "Gate" Overlay */}
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-white/30 backdrop-blur-[2px]">
           <div className="bg-white p-8 rounded-lg text-center border border-gray-100 max-w-md mx-4">
             <h3 className="text-2xl semi text-main mb-2">
@@ -135,7 +142,7 @@ export default function MaribChallenge() {
     );
   };
 
-  if (authState.isLoading) return null; // Or a loading spinner
+  if (authState.isLoading) return null;
 
   return (
     <div
@@ -150,25 +157,17 @@ export default function MaribChallenge() {
         {authState.isLoggedIn && authState.role === "supervisor" ? (
           <TeacherView />
         ) : (
-          /* SCENARIO 2 & 3: STUDENT OR GUEST VIEW */
-          /* If guest, the wrapper blocks interaction. If student, wrapper does nothing. */
+          /* Here, if the role was switched to 'viewing_courses', 
+             GuestWrapper checks isLoggedIn. Since supervisor is logged in, 
+             it renders the CoursesList WITHOUT blur.
+          */
           <GuestWrapper>
             <CoursesList categories={LANDING_CATEGORIES} />
           </GuestWrapper>
         )}
       </div>
 
-      {/* Back button logic for Teacher if they clicked "Courses" */}
-      {authState.role === "viewing_courses" && (
-        <button
-          onClick={() =>
-            setAuthState((prev) => ({ ...prev, role: "supervisor" }))
-          }
-          className="fixed bottom-8 right-8 bg-gray-800 text-white px-4 py-2 rounded-full z-50"
-        >
-          ↩ العودة للوحة المشرف
-        </button>
-      )}
+      
     </div>
   );
 }

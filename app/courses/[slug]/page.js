@@ -26,7 +26,7 @@ const TRACK_DATA = {
   totalCourses: 3,
   completedCourses: 0,
   courses: [
-   {
+    {
       id: 1,
       title: "منظومة الأصول الثلاثة",
       slug: "usool-thalatha",
@@ -36,7 +36,7 @@ const TRACK_DATA = {
       isLocked: false,
       rating: 4.8,
     },
-      {
+    {
       id: 2,
       title: "منظومة أحسن الإيمان",
       slug: "ahsan-al-iman",
@@ -46,7 +46,7 @@ const TRACK_DATA = {
       isLocked: true,
       rating: 4.9,
     },
-   
+
     {
       id: 3,
       title: "لبنات العقيدة",
@@ -85,10 +85,10 @@ export default function TrackPage({ params }) {
           <span className="inline-block bg-secondary text-white text-xs font-bold px-3 py-1 rounded-full mb-2">
             المسار الحالي
           </span>
-          <h1 className="title text-4xl text-white drop-shadow-sm">
+          <h1 className="title text-2xl md:text-4xl text-white drop-shadow-sm">
             {data.title}
           </h1>
-          <p className="regular text-white/90 text-lg max-w-md mx-auto leading-relaxed">
+          <p className="regular text-white/90  text-sm md:text-lg max-w-md mx-auto leading-relaxed">
             {data.description}
           </p>
 

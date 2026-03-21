@@ -5,8 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Notification from "../components/Notification";
 import Loading from "../loading";
-// Import the new InstallPrompt
-import InstallPrompt from "../components/InstallPrompt"; 
+import InstallPrompt from "../components/InstallPrompt";
 
 import {
   FaMapMarkerAlt,
@@ -17,6 +16,10 @@ import {
   FaSpinner,
 } from "react-icons/fa";
 
+// Constants
+const API_URL =
+  process.env.NEXT_PUBLIC_API_URL || "https://ramadan-server-topaz.vercel.app";
+
 const Profile = () => {
   const [user, setUser] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -25,21 +28,34 @@ const Profile = () => {
   const router = useRouter();
 
   useEffect(() => {
-    const userId = localStorage.getItem("userId");
+    // 1. Get User from LocalStorage (UI Proxy)
+    const storedUserString = localStorage.getItem("user");
 
-    if (!userId) {
+    if (!storedUserString) {
       router.push("/login");
       return;
     }
 
+    const storedUser = JSON.parse(storedUserString);
+    const userId = storedUser._id || storedUser.id; // Handle both cases
+
     const fetchUserData = async () => {
       setIsDataLoading(true);
       try {
-        const response = await fetch(
-          `https://ramadan-server-topaz.vercel.app/api/users/${userId}`
-        );
+        const response = await fetch(`${API_URL}/api/users/${userId}`, {
+          // CRITICAL: Send the cookie to the backend
+          credentials: "include",
+        });
 
-        if (!response.ok) throw new Error("Failed to fetch user data");
+        if (!response.ok) {
+          if (response.status === 401) {
+            // Cookie expired or invalid
+            localStorage.removeItem("user");
+            router.push("/login");
+            return;
+          }
+          throw new Error("Failed to fetch user data");
+        }
 
         const data = await response.json();
 
@@ -62,18 +78,34 @@ const Profile = () => {
     fetchUserData();
   }, [router]);
 
-  const handleLogout = () => {
+  const handleLogout = async () => {
     setIsLoading(true);
     setNotification(null);
-    setTimeout(() => {
-      setNotification({
-        message: "تمّ تسجيل الخروج! لا تطيل الغياب علينا",
-        type: "error",
+
+    try {
+      // 1. Call Backend to clear cookie
+      await fetch(`${API_URL}/api/users/logout`, {
+        method: "POST",
+        credentials: "include",
       });
-      localStorage.removeItem("userId");
+    } catch (error) {
+      console.error("Logout API failed", error);
+    }
+
+    // 2. Clear Client Storage
+    localStorage.removeItem("user");
+    localStorage.removeItem("userId"); // Cleanup legacy
+
+    // 3. UI Feedback
+    setNotification({
+      message: "تمّ تسجيل الخروج! لا تطيل الغياب علينا",
+      type: "success", // Green for success
+    });
+
+    setTimeout(() => {
       router.push("/login");
       setIsLoading(false);
-    }, 2000);
+    }, 1500);
   };
 
   const getAvatarPath = (avatarName) => {
@@ -121,7 +153,7 @@ const Profile = () => {
             <FaMapMarkerAlt className="text-gray-400 " />
             <span>{user.country || "غير محدد"}</span>
             <span className="mx-1 text-gray-300">•</span>
-            <span>{user.age} سنة</span>
+            <span>{user.age || "--"} سنة</span>
           </div>
 
           <div className="grid grid-cols-2 gap-4 mb-6">
@@ -153,9 +185,7 @@ const Profile = () => {
                 "لم يتم إضافة تقييم بعد.. استمر في العمل الجاد!"}
             </p>
           </div>
-          
-          {/* --- INSERTING INSTALL PROMPT HERE --- */}
-          {/* It will only render if the browser says the app is installable */}
+
           <InstallPrompt />
 
           <div className="space-y-3">

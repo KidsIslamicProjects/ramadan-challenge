@@ -11,14 +11,14 @@ export default function CoursesList({ categories }) {
     <div className="w-full pt-8 pb-24 px-4 sm:px-6">
       {/* --- Professional Header Section --- */}
       <div className="text-center mb-12 space-y-2">
-        <h1 className="title text-3xl md:text-4xl text-main font-bold">
+        <h1 className="title text-2xl md:text-3xl text-main font-bold">
           رحلتك التعليمية تبدأ هنا
         </h1>
-        <p className="regular text-gray-500 mx-auto leading-relaxed">
+        <p className="text-sm md:text-base regular text-gray-500 mx-auto leading-relaxed">
           اختر المسار الذي يناسبك وابدأ في اكتساب مهارات جديدة ومعرفة قيمة من
           خلال دوراتنا المتخصصة
         </p>
-        <div className="h-1.5 w-24 bg-secondary mx-auto rounded-full mt-4"></div>
+        <div className="h-1 w-24 bg-secondary mx-auto rounded-full mt-4"></div>
       </div>
       {/* ----------------------------------- */}
 

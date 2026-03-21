@@ -8,7 +8,9 @@ import Link from "next/link";
 import confetti from "canvas-confetti";
 import twemoji from "twemoji";
 
-// Country list
+// --- Constants ---
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
 const countries = [
   { code: "LB", name: "لبنان", dial_code: "+961", flag: "🇱🇧" },
   { code: "PS", name: "فلسطين", dial_code: "+970", flag: "🇵🇸" },
@@ -27,7 +29,6 @@ const countries = [
   { code: "MA", name: "المغرب", dial_code: "+212", flag: "🇲🇦" },
 ];
 
-// Avatar Constants
 const boyAvatars = ["avatar-boy-1.png", "avatar-boy-2.png", "avatar-boy-4.png"];
 const girlAvatars = [
   "avatar-girl-1.png",
@@ -36,13 +37,14 @@ const girlAvatars = [
 ];
 
 const Signup = () => {
-  // Role State
-  const [role, setRole] = useState("student");
+  const router = useRouter();
 
+  // --- State ---
+  const [role, setRole] = useState("student");
   const [formData, setFormData] = useState({
     name: "",
     password: "",
-    dob: "", // Changed from age to dob
+    dob: "",
     gender: "",
     phoneNumber: "",
     groupName: "",
@@ -55,18 +57,27 @@ const Signup = () => {
   const [notification, setNotification] = useState({ message: "", type: "" });
 
   const dropdownRef = useRef(null);
-  const router = useRouter();
 
+  // --- Effects ---
+
+  // 1. Check for Authentication (Updated: Check if User object exists)
   useEffect(() => {
-    const userId = localStorage.getItem("userId");
-    if (userId) router.push("/");
-  }, []);
+    // We can't check for 'token' anymore because it is in a cookie.
+    // We check if the user data exists in local storage as a proxy.
+    const user = localStorage.getItem("user");
+    if (user) {
+      router.push("/");
+    }
+  }, [router]);
 
+  // 2. Parse Emoji Flags
   useEffect(() => {
     if (dropdownRef.current) {
       twemoji.parse(dropdownRef.current, { folder: "svg", ext: ".svg" });
     }
   }, [isDropdownOpen, selectedCountry]);
+
+  // --- Handlers ---
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -91,6 +102,7 @@ const Signup = () => {
     setIsLoading(true);
     setNotification(null);
 
+    // Frontend Validation
     if (!formData.avatar) {
       setNotification({
         message: "الرجاء اختيار شخصية (Avatar)",
@@ -101,14 +113,12 @@ const Signup = () => {
     }
 
     if (role === "supervisor" && !formData.groupName) {
-      setNotification({
-        message: "الرجاء إدخال اسم الحلقة",
-        type: "error",
-      });
+      setNotification({ message: "الرجاء إدخال اسم الحلقة", type: "error" });
       setIsLoading(false);
       return;
     }
 
+    // Format Phone Number
     const cleanPhone = formData.phoneNumber.replace(/^0+/, "");
     const fullPhoneNumber = `${selectedCountry.dial_code}${cleanPhone}`;
 
@@ -120,24 +130,27 @@ const Signup = () => {
     };
 
     try {
-      const response = await fetch(
-        "https://ramadan-server-topaz.vercel.app/api/users",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(dataToSend),
-        },
-      );
+      const response = await fetch(`${API_URL}/users/register`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        // CRITICAL: This allows the cookie to be set by the backend
+        credentials: "include",
+        body: JSON.stringify(dataToSend),
+      });
 
       const data = await response.json();
 
       if (!response.ok) {
-        // Display the specific error from backend (e.g., Duplicate Name)
         throw new Error(data.error || "فشل في إنشاء الحساب، حاول مرة أخرى.");
       }
 
-      localStorage.setItem("userId", data._id);
-      localStorage.setItem("userRole", role);
+      // --- Professional Auth Handling ---
+      // NO TOKEN STORAGE HERE (It's in the cookie)
+
+      // We only store public user info for the UI (Name, Avatar, etc.)
+      localStorage.setItem("user", JSON.stringify(data.user));
+
+      // Success UI
       confetti({
         particleCount: 100,
         spread: 70,
@@ -148,7 +161,7 @@ const Signup = () => {
 
       setTimeout(() => {
         router.push("/");
-      }, 3000);
+      }, 2000);
     } catch (error) {
       setNotification({ message: error.message, type: "error" });
     } finally {
@@ -167,36 +180,37 @@ const Signup = () => {
     <>
       <div
         dir="rtl"
-        className="bg-white flex flex-col-reverse justify-between px-4 pt-8 lg:flex-row-reverse lg:justify-between lg:gap-12"
+        className="bg-white flex flex-col-reverse justify-between px-4 pt-8 lg:flex-row-reverse lg:justify-between lg:gap-12 min-h-screen"
       >
-        {/* Illustration */}
-        <div className="flex-1 flex justify-center mb-24 md:mb-0">
+        {/* Illustration Side */}
+        <div className="flex-1 flex justify-center items-center mb-24 md:mb-0">
           <Image
-            className="w-[75%] object-cover"
+            className="w-[75%] object-cover hover:scale-105 transition-transform duration-500"
             alt="Signup illustration"
             src={SignupImage}
+            priority
           />
         </div>
 
-        {/* Vertical Line */}
-        <div className="hidden lg:block w-px bg-gray-300 mx-4"></div>
-        <hr className="block lg:hidden text-main mt-8 mb-4" />
+        {/* Divider */}
+        <div className="hidden lg:block w-px bg-gray-200 mx-4"></div>
+        <hr className="block lg:hidden text-main mt-8 mb-4 opacity-50" />
 
-        {/* Signup Form */}
-        <div className="flex-1">
+        {/* Signup Form Side */}
+        <div className="flex-1 max-w-2xl mx-auto w-full">
           <div className="mb-6 flex flex-col gap-1 text-center md:text-right">
-            <h3 className="text-main bold text-lg">صفحة إنشاء حساب جديد</h3>
+            <h3 className="text-main bold text-2xl">صفحة إنشاء حساب جديد</h3>
             <p className="text-secondary regular">
               أهلاً بك في منصّتنا! استعد لرحلة إيمانية ممتعة.
             </p>
           </div>
 
           {/* Role Switcher */}
-          <div className="flex bg-[#F4F4F4] p-1 rounded-sm mb-6">
+          <div className="flex bg-[#F4F4F4] p-1 rounded-md mb-6 shadow-inner">
             <button
               type="button"
               onClick={() => setRole("student")}
-              className={`flex-1 py-2 text-center rounded-sm transition-all regular ${
+              className={`flex-1 py-2 text-center rounded-sm transition-all regular duration-300 ${
                 role === "student"
                   ? "bg-main text-white shadow-sm semi"
                   : "text-gray-500 hover:text-main"
@@ -207,7 +221,7 @@ const Signup = () => {
             <button
               type="button"
               onClick={() => setRole("supervisor")}
-              className={`flex-1 py-2 text-center rounded-sm transition-all regular ${
+              className={`flex-1 py-2 text-center rounded-sm transition-all regular duration-300 ${
                 role === "supervisor"
                   ? "bg-main text-white shadow-sm semi"
                   : "text-gray-500 hover:text-main"
@@ -224,11 +238,11 @@ const Signup = () => {
             />
           )}
 
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-5">
             {/* Name */}
             <div className="flex flex-col gap-1">
               <label className="text-main text-right semi">
-                اسمك الثلاثي -باللغة العربية-
+                اسمك الثلاثي (باللغة العربية)
               </label>
               <input
                 type="text"
@@ -236,8 +250,9 @@ const Signup = () => {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="ادخل اسمك الثلاثي هنا"
-                className="bg-[#F4F4F4] rounded-sm shadow py-2 px-3 w-full placeholder:text-right regular"
+                className="bg-[#F4F4F4] rounded-sm focus:ring-2 focus:ring-main/50 outline-none transition-all shadow-sm py-2 px-3 w-full placeholder:text-right regular"
                 required
+                minLength={3}
               />
             </div>
 
@@ -253,7 +268,7 @@ const Signup = () => {
                   value={formData.groupName}
                   onChange={handleChange}
                   placeholder="مثال: حلقة النور"
-                  className="bg-[#F4F4F4] rounded-sm shadow py-2 px-3 w-full placeholder:text-right regular"
+                  className="bg-[#F4F4F4] rounded-sm focus:ring-2 focus:ring-main/50 outline-none transition-all shadow-sm py-2 px-3 w-full placeholder:text-right regular"
                   required
                 />
               </div>
@@ -268,12 +283,13 @@ const Signup = () => {
                 value={formData.password}
                 onChange={handleChange}
                 placeholder="ادخل كلمة المرور هنا"
-                className="bg-[#F4F4F4] rounded-sm shadow py-2 px-3 w-full placeholder:text-right regular"
+                className="bg-[#F4F4F4] rounded-sm focus:ring-2 focus:ring-main/50 outline-none transition-all shadow-sm py-2 px-3 w-full placeholder:text-right regular"
                 required
+                minLength={6}
               />
             </div>
 
-            {/* Date of Birth (Replaces Age) */}
+            {/* Date of Birth */}
             <div className="flex flex-col gap-1">
               <label className="text-main text-right semi">تاريخ الميلاد</label>
               <input
@@ -281,7 +297,7 @@ const Signup = () => {
                 name="dob"
                 value={formData.dob}
                 onChange={handleChange}
-                className="bg-[#F4F4F4] rounded-sm shadow py-2 px-3 w-full text-right regular"
+                className="bg-[#F4F4F4] rounded-sm focus:ring-2 focus:ring-main/50 outline-none transition-all shadow-sm py-2 px-3 w-full text-right regular"
                 required
               />
             </div>
@@ -291,23 +307,28 @@ const Signup = () => {
               <label className="text-main text-right semi">البلد</label>
               <div
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="bg-[#F4F4F4] rounded-sm shadow py-2 px-3 w-full text-right regular cursor-pointer flex items-center justify-between"
+                className="bg-[#F4F4F4] rounded-sm focus:ring-2 focus:ring-main/50 outline-none transition-all shadow-sm py-2 px-3 w-full text-right regular cursor-pointer flex items-center justify-between"
               >
                 <div className="flex items-center gap-2">
-                  <span>{selectedCountry.flag}</span>
+                  <span className="text-xl">{selectedCountry.flag}</span>
                   <span>{selectedCountry.name}</span>
                 </div>
-                <span className="text-gray-500 text-xs">▼</span>
+                <span
+                  className={`text-gray-500 text-xs transition-transform ${isDropdownOpen ? "rotate-180" : ""}`}
+                >
+                  ▼
+                </span>
               </div>
+
               {isDropdownOpen && (
-                <div className="absolute top-[105%] left-0 w-full bg-white border border-gray-200 shadow-lg rounded-sm z-10 max-h-60 overflow-y-auto">
+                <div className="absolute top-[110%] left-0 w-full bg-white border border-gray-100 shadow-xl rounded-sm z-50 max-h-60 overflow-y-auto">
                   {countries.map((country) => (
                     <div
                       key={country.code}
                       onClick={() => handleCountrySelect(country)}
-                      className="px-3 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2 text-right regular border-b border-gray-50 last:border-0"
+                      className="px-3 py-2 hover:bg-gray-50 cursor-pointer flex items-center gap-2 text-right regular border-b border-gray-50 last:border-0"
                     >
-                      <span className="text-lg">{country.flag}</span>
+                      <span className="text-xl">{country.flag}</span>
                       <span>{country.name}</span>
                     </div>
                   ))}
@@ -320,9 +341,9 @@ const Signup = () => {
               <label className="text-main text-right semi">رقم الهاتف</label>
               <div
                 dir="ltr"
-                className="bg-[#F4F4F4] rounded-sm shadow px-3 py-2 w-full flex items-center gap-2"
+                className="bg-[#F4F4F4] rounded-sm focus-within:ring-2 focus-within:ring-main/50 transition-all shadow-sm px-3 py-2 w-full flex items-center gap-2"
               >
-                <span className="text-gray-500 semi select-none">
+                <span className="text-gray-600 semi select-none bg-gray-200 px-2 rounded text-sm">
                   {selectedCountry.dial_code}
                 </span>
                 <input
@@ -331,7 +352,6 @@ const Signup = () => {
                   value={formData.phoneNumber}
                   onChange={handleChange}
                   placeholder="70123456"
-                  /* CHANGED: placeholder:text-right to align placeholder to the right */
                   className="bg-transparent border-none outline-none w-full regular placeholder:text-right"
                   required
                 />
@@ -345,7 +365,7 @@ const Signup = () => {
                 name="gender"
                 value={formData.gender}
                 onChange={handleChange}
-                className="bg-[#F4F4F4] rounded-sm shadow py-2 px-3 w-full text-right regular"
+                className="bg-[#F4F4F4] rounded-sm focus:ring-2 focus:ring-main/50 outline-none transition-all shadow-sm py-2 px-3 w-full text-right regular"
                 required
               >
                 <option value="">اختر الجنس</option>
@@ -360,15 +380,15 @@ const Signup = () => {
                 <label className="text-main text-right semi">
                   اختر الشخصية (Avatar)
                 </label>
-                <div className="flex flex-wrap justify-center gap-4 py-2">
+                <div className="flex flex-wrap justify-center gap-4 py-4 bg-gray-50 rounded-lg border border-gray-100">
                   {currentAvatars.map((avatarName) => (
                     <div
                       key={avatarName}
                       onClick={() => handleAvatarSelect(avatarName)}
-                      className={`cursor-pointer rounded-full p-1 transition-all duration-200 ${
+                      className={`cursor-pointer rounded-full p-1 transition-all duration-200 transform hover:scale-105 ${
                         formData.avatar === avatarName
-                          ? "ring-4 ring-main bg-main/10 scale-110"
-                          : "ring-2 ring-gray-200 hover:ring-main/50"
+                          ? "ring-4 ring-main bg-main/10 scale-110 shadow-lg"
+                          : "ring-2 ring-transparent grayscale hover:grayscale-0"
                       }`}
                     >
                       <Image
@@ -384,11 +404,11 @@ const Signup = () => {
               </div>
             )}
 
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 pt-4">
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full bg-main regular text-white rounded-sm shadow py-1 px-4 mt-4"
+                className="w-full bg-main hover:bg-main/90 active:scale-[0.98] transition-all regular text-white rounded-sm shadow-md py-2 px-4 text-lg"
               >
                 {isLoading ? "جاري إنشاء الحســاب ..." : "إنشاء حســــاب"}
               </button>
@@ -397,9 +417,9 @@ const Signup = () => {
 
           <Link
             href="/login"
-            className="text-secondary text-sm regular pt-4 flex items-center justify-center"
+            className="text-secondary text-sm regular pt-6 pb-8 flex items-center justify-center gap-1 hover:text-main transition-colors"
           >
-            لديك حساب مُسبقاً؟{" "}
+            <span>لديك حساب مُسبقاً؟</span>
             <span className="underline semi">الانتقال لصفحة تسجيل الدخول</span>
           </Link>
         </div>
@@ -425,6 +445,11 @@ const Signup = () => {
             opacity: 1;
             transform: translateY(0);
           }
+        }
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
         }
       `}</style>
     </>

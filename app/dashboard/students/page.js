@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Navbar from "../../components/Navbar";
+import { useRouter } from "next/navigation";
 import {
   FaUserPlus,
   FaTrash,
@@ -8,25 +9,57 @@ import {
   FaSearch,
   FaEye,
   FaTimes,
+  FaSignOutAlt, // Imported Logout Icon
 } from "react-icons/fa";
 import Image from "next/image";
 
 export default function TeacherDashboard() {
+  const router = useRouter();
   const [studentIdInput, setStudentIdInput] = useState("");
   const [students, setStudents] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [message, setMessage] = useState({ text: "", type: "" });
-  const [selectedStudent, setSelectedStudent] = useState(null); // For Modal
+  const [selectedStudent, setSelectedStudent] = useState(null);
 
-  const API_URL =
-    process.env.NODE_API || "https://ramadan-server-topaz.vercel.app/api";
+  const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
   useEffect(() => {
+    // 1. Auth Check (User object must exist and be supervisor)
+    const storedUser = JSON.parse(localStorage.getItem("user") || "null");
+
+    if (!storedUser) {
+      router.push("/login");
+      return;
+    }
+
+    if (storedUser.role !== "supervisor") {
+      router.push("/"); // Redirect students away
+      return;
+    }
+
     const savedStudents = JSON.parse(
       localStorage.getItem("myStudents") || "[]",
     );
     setStudents(savedStudents);
-  }, []);
+  }, [router]);
+
+  // --- LOGOUT LOGIC ---
+  const handleLogout = async () => {
+    if (!confirm("هل أنت متأكد من تسجيل الخروج؟")) return;
+
+    try {
+      await fetch(`${API_URL}/users/logout`, {
+        method: "POST",
+        credentials: "include",
+      });
+    } catch (e) {
+      console.error("Logout error", e);
+    }
+
+    localStorage.removeItem("user");
+    // We optionally keep 'myStudents' so the teacher doesn't lose their list on logout
+    router.push("/login");
+  };
 
   const handleAddStudent = async (e) => {
     e.preventDefault();
@@ -42,7 +75,14 @@ export default function TeacherDashboard() {
     setMessage({ text: "", type: "" });
 
     try {
-      const response = await fetch(`${API_URL}/find-student/${studentIdInput}`);
+      // Added /api/users prefix if your routes are set that way, or keep as is if correct
+      const response = await fetch(
+        `${API_URL}/api/users/find-student/${studentIdInput}`,
+        {
+          // Note: Finding a student might require auth credentials depending on your backend
+          credentials: "include",
+        },
+      );
       const data = await response.json();
 
       if (!response.ok) throw new Error(data.error || "تعذر العثور على الطالب");
@@ -87,39 +127,60 @@ export default function TeacherDashboard() {
       <Navbar />
 
       <main className="container mx-auto px-4 py-8">
-        {/* Header and Input Sections (Same as your previous version) */}
-        <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
-          <div>
-            <h1 className="text-2xl bold text-main flex items-center gap-2 font-bold">
-              <FaUserGraduate className="text-secondary" />
-              لوحة متابعة الطّلاب
-            </h1>
+        {/* Header Section with Logout */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
+          <div className="flex justify-between w-full md:w-auto items-center gap-4">
+            <div>
+              <h1 className="text-lg lg:text-2xl bold text-main flex items-center gap-2 font-bold">
+                <FaUserGraduate className="text-secondary" />
+                لوحة متابعة الطّلاب
+              </h1>
+            </div>
+
+            {/* Mobile Logout Button */}
+            <button
+              onClick={handleLogout}
+              className="md:hidden text-red-500 bg-red-50 p-2 rounded-lg text-sm font-bold flex items-center gap-1"
+            >
+              <FaSignOutAlt /> خروج
+            </button>
           </div>
 
-          <form
-            onSubmit={handleAddStudent}
-            className="flex gap-2 w-full md:w-auto"
-          >
-            <div className="relative flex-1">
-              <span className="absolute inset-y-0 right-3 flex items-center text-gray-400">
-                #
-              </span>
-              <input
-                type="text"
-                placeholder="الرقم التعريفي (6 أرقام)"
-                value={studentIdInput}
-                onChange={(e) => setStudentIdInput(e.target.value)}
-                className="pr-8 pl-4 py-2 border rounded-lg focus:ring-2 focus:ring-main outline-none w-full md:w-64 regular"
-              />
-            </div>
+          {/* Desktop Logout Button & Search */}
+          <div className="flex flex-col md:flex-row gap-3 w-full md:w-auto">
+            {/* Desktop Logout */}
             <button
-              disabled={isLoading}
-              className="bg-main text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-opacity-90 transition shadow-md"
+              onClick={handleLogout}
+              className="hidden md:flex text-red-500 bg-white border border-red-100 hover:bg-red-50 px-4 py-2 rounded-lg font-bold items-center gap-2 transition-all shadow-sm"
             >
-              <FaUserPlus />
-              {isLoading ? "جاري البحث..." : "إضافة"}
+              تسجيل خروج <FaSignOutAlt />
             </button>
-          </form>
+
+            <form
+              onSubmit={handleAddStudent}
+              className="flex gap-2 w-full md:w-auto"
+            >
+              <div className="relative flex-1">
+                <span className="absolute inset-y-0 right-3 flex items-center text-gray-400">
+                  #
+                </span>
+                <input
+                  type="text"
+                  placeholder="الرقم التعريفي (6 أرقام)"
+                  value={studentIdInput}
+                  onChange={(e) => setStudentIdInput(e.target.value)}
+                  className="pr-8 pl-4 py-2 placeholder:text-xs border rounded-lg focus:ring-2 focus:ring-main outline-none w-full md:w-64 regular"
+                />
+              </div>
+              <button
+                disabled={isLoading}
+                className="bg-main text-sm md:text-base text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-opacity-90 transition shadow-md"
+              >
+                <FaUserPlus />
+                {isLoading ? "جاري البحث..." : "إضافة"}
+              </button>
+            </form>
+          </div>
         </div>
 
         {message.text && (
@@ -142,63 +203,71 @@ export default function TeacherDashboard() {
               </tr>
             </thead>
             <tbody className="regular text-gray-700">
-              {students.map((student) => (
-                <tr
-                  key={student.id}
-                  className="border-b hover:bg-gray-50 transition-colors"
-                >
-                  <td className="p-4">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-gray-100 relative overflow-hidden hidden sm:block">
-                        <Image
-                          src={`/Images/${student.avatar || "avatar-boy-1.png"}`}
-                          fill
-                          alt="avatar"
-                          className="object-cover"
-                        />
-                      </div>
-                      <div>
-                        <p className="bold text-main">{student.name}</p>
-                        <p className="text-xs font-mono text-secondary">
-                          #{student.id}
-                        </p>
-                      </div>
-                    </div>
-                  </td>
-                  <td className="p-4 text-sm hidden md:table-cell">
-                    {student.joinDate}
-                  </td>
-                  <td className="p-4 hidden md:table-cell">
-                    <div className="flex items-center gap-2 w-32">
-                      <div className="flex-1 h-1.5 bg-gray-100 rounded-full overflow-hidden">
-                        <div
-                          className="h-full bg-green-500"
-                          style={{ width: student.progress }}
-                        ></div>
-                      </div>
-                      <span className="text-[10px]">{student.progress}</span>
-                    </div>
-                  </td>
-                  <td className="p-4 text-center">
-                    <div className="flex justify-center gap-3">
-                      <button
-                        onClick={() => setSelectedStudent(student)}
-                        className="text-blue-500 hover:bg-blue-50 p-2 rounded-full transition"
-                        title="عرض التفاصيل"
-                      >
-                        <FaEye />
-                      </button>
-                      <button
-                        onClick={() => removeStudent(student.id)}
-                        className="text-red-400 hover:bg-red-50 p-2 rounded-full transition"
-                        title="حذف"
-                      >
-                        <FaTrash />
-                      </button>
-                    </div>
+              {students.length === 0 ? (
+                <tr>
+                  <td colSpan="4" className="text-sm md:text-base p-8 text-center text-gray-400">
+                    لم تقم بإضافة طلاب بعد
                   </td>
                 </tr>
-              ))}
+              ) : (
+                students.map((student) => (
+                  <tr
+                    key={student.id}
+                    className="border-b hover:bg-gray-50 transition-colors"
+                  >
+                    <td className="p-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-full bg-gray-100 relative overflow-hidden hidden sm:block">
+                          <Image
+                            src={`/Images/${student.avatar || "avatar-boy-1.png"}`}
+                            fill
+                            alt="avatar"
+                            className="object-cover"
+                          />
+                        </div>
+                        <div>
+                          <p className="bold text-main">{student.name}</p>
+                          <p className="text-xs font-mono text-secondary">
+                            #{student.id}
+                          </p>
+                        </div>
+                      </div>
+                    </td>
+                    <td className="p-4 text-sm hidden md:table-cell">
+                      {student.joinDate}
+                    </td>
+                    <td className="p-4 hidden md:table-cell">
+                      <div className="flex items-center gap-2 w-32">
+                        <div className="flex-1 h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                          <div
+                            className="h-full bg-green-500"
+                            style={{ width: student.progress }}
+                          ></div>
+                        </div>
+                        <span className="text-[10px]">{student.progress}</span>
+                      </div>
+                    </td>
+                    <td className="p-4 text-center">
+                      <div className="flex justify-center gap-3">
+                        <button
+                          onClick={() => setSelectedStudent(student)}
+                          className="text-blue-500 hover:bg-blue-50 p-2 rounded-full transition"
+                          title="عرض التفاصيل"
+                        >
+                          <FaEye />
+                        </button>
+                        <button
+                          onClick={() => removeStudent(student.id)}
+                          className="text-red-400 hover:bg-red-50 p-2 rounded-full transition"
+                          title="حذف"
+                        >
+                          <FaTrash />
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                ))
+              )}
             </tbody>
           </table>
         </div>

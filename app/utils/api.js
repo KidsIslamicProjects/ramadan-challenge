@@ -1,5 +1,5 @@
-export const API_URL = "http://localhost:3001/api";
-
+// export const API_URL = "http://localhost:3001/api";
+export const API_URL = "https://ramadan-server-topaz.vercel.app/";
 export const loginUser = async (userData) => {
   try {
     const response = await fetch(`${API_URL}/users`, {
